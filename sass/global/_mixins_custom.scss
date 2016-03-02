@@ -1,0 +1,177 @@
+/*¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤
+----- MIXINS DE STYLES PROVENCE FORMATION -----
+¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤*/
+
+/*---------- PIE pour CSS3 IE --------------*/
+@mixin PIE {
+    behavior: url(/sites/all/libraries/PIE/PIE.htc);
+}
+
+/*------- GESTION DU TEXTE -------------*/
+@mixin cesure-txt{
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    -o-hyphens: auto;
+    hyphens: auto;
+}
+
+/*-------- IMAGES ADAPTABLES -----------*/
+@mixin adaptable-img {
+    max-width: 100%;
+}
+/*--------- MASQUAGE ELEMENTS ---------*/
+@mixin visuallyhidden {
+  margin: -1px;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
+  position: absolute;
+}
+@mixin blinkEffect($opaciteDepart:1.0,$opaciteMedium:0.0,$opaciteFinal:1.0){
+    @-moz-keyframes blinker {  
+    0% { opacity: $opaciteDepart; }
+    50% { opacity: $opaciteMedium; }
+    100% { opacity: $opaciteFinal; }
+}
+
+@-webkit-keyframes blinker {  
+    0% { opacity: $opaciteDepart; }
+    50% { opacity: $opaciteMedium; }
+    100% { opacity: $opaciteFinal; }
+}
+
+@keyframes blinker {  
+   0% { opacity: $opaciteDepart; }
+    50% { opacity: $opaciteMedium; }
+    100% { opacity: $opaciteFinal; }
+}
+}
+/*------- EFFETS VISUELS GENERIQUES--------------*/
+@mixin cadre-ombre($epaisseur-cadre:0.5em,$couleur-cadre:#fff){
+     border: $epaisseur-cadre solid $couleur-cadre;
+    -moz-box-shadow: #AAAAAA 0px 0px 5px ;
+    -webkit-box-shadow: #AAAAAA 0px 0px 5px;
+    box-shadow: #AAAAAA 0px 0px 5px;
+}
+@mixin ombrage {
+    border: 5px solid #fff;
+    -moz-box-shadow: 8px 8px 12px #aaa;
+    -webkit-box-shadow: 8px 8px 12px #aaa;
+    box-shadow: 8px 8px 12px #555;
+    }
+    
+@mixin ombrage-bas {
+    -moz-box-shadow: 2px 2px 5px #aaa;
+    -webkit-box-shadow: 2px 2px 5px #aaa;
+    box-shadow: 2px 2px 5px #555;
+    }
+@mixin ombrage-effet-incurve($PositionHalo:-1em,$LargeurHalo:10em,$HauteurHalo:2em){
+        -moz-box-shadow: 0 $PositionHalo $LargeurHalo $HauteurHalo #FFF, 0 0.8em 0.7em -0.2em rgba(0, 0, 0, 1);
+        -webkit-box-shadow: 0 $PositionHalo $LargeurHalo $HauteurHalo  #FFF, 0 0.8em 0.7em -0.2em rgba(0, 0, 0, 1);
+        box-shadow: 0 $PositionHalo $LargeurHalo $HauteurHalo #FFF, 0 0.8em 0.7em -0.2em rgba(0, 0, 0, 1);
+    }    
+@mixin table-tr-ombrage-bas {
+        -moz-box-shadow: 1px 2px 2px #aaa;
+        -webkit-box-shadow: 1px 2px 2px #aaa;
+        box-shadow: 1px 2px 2px #555;
+    }
+    
+@mixin ombrage-bloc {
+    -moz-box-shadow: 2px 2px 5px #aaa;
+    -webkit-box-shadow: 2px 2px 5px #aaa;
+    box-shadow: 2px 2px 5px #555;
+    }
+    
+@mixin ombrage-bas-table-actu{
+    -moz-box-shadow: 2px 2px 5px #aaa;
+    -webkit-box-shadow: 2px 2px 5px #aaa;
+    box-shadow: 2px 2px 5px #555;
+}
+@mixin opacity ($opacite:1){
+ opacity:$opacite;/*0.6*/
+-moz-opacity : $opacite;
+-ms-filter: "alpha(opacity=$opacite)"; /* IE 8 */
+filter : alpha(opacity=$opacite); /* IE < 8 */
+-khtml-opacity : $opacite;
+}
+
+@mixin rgba-background($color, $opacity) {
+    position: relative;
+    background: $color;
+    background: rgba($color, $opacity);
+    -pie-background: rgba($color, $opacity);
+    @include PIE;
+}
+@mixin img-border-shadow ($margin : 0.3em, $bordersize:0.5em, $bordercolor : white,$shadowcolor : #AAAAAA) {
+    margin: $margin;
+    border: $bordersize solid $bordercolor;
+    -moz-box-shadow: $shadowcolor 0px 0px 5px ;
+    -webkit-box-shadow: $shadowcolor 0px 0px 5px;
+    box-shadow: $shadowcolor 0px 0px 5px;
+}
+@mixin arrondis ($angle : 0.5em){
+    -moz-border-radius: $angle;
+    -webkit-border-radius: $angle;
+    border-radius: $angle;
+}
+@mixin clignote($duree:1s,$startopacity:1.0,$midopacity:0.0,$finalopacity:1.0){
+     -webkit-animation-name: blinker;
+        -webkit-animation-duration: $duree;
+        -webkit-animation-timing-function: linear;
+        -webkit-animation-iteration-count: infinite;
+
+        -moz-animation-name: blinker;
+        -moz-animation-duration: $duree;
+        -moz-animation-timing-function: linear;
+        -moz-animation-iteration-count: infinite;
+
+        animation-name: blinker;
+        animation-duration: $duree;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite; 
+    
+    @-moz-keyframes blinker {  
+        0% { opacity: $startopacity; }
+        50% { opacity: $midopacity; }
+        100% { opacity: $finalopacity; }
+    }
+
+    @-webkit-keyframes blinker {  
+        0% { opacity: $startopacity; }
+        50% { opacity: $midopacity; }
+        100% { opacity: $finalopacity; }
+    }
+
+    @keyframes blinker {  
+        0% { opacity: $startopacity; }
+        50% { opacity: $midopacity; }
+        100% { opacity: $finalopacity; }
+}
+}
+
+/*//////////////// BORDER RIGHT \\\\\\\\\\\\\\\\*/
+@mixin border-R-orangePF{border-right: em(1px) solid #DA5714;}
+@mixin border-R-anthracite{border-left: em(1px) solid #606171;}
+@mixin border-R-vert{border-right: em(1px) solid #ADC91F;}
+@mixin border-R-violet{border-right: em(1px) solid #93117E;}
+/*//////////////// BORDER COLONNE 2 \\\\\\\\\\\\\\\\*/
+@mixin border-rouge-bleu{ border-left: em(1px) solid #E2001A; border-right: em(1px) solid #00AAD2;}
+@mixin border-rose-bleu { border-left: em(1px) solid #E2007A; border-right: em(1px) solid #00AAD2;}
+@mixin border-noir-vert { border-left: em(1px) solid #606171; border-right: em(1px) solid #C8D215;}
+@mixin border-bleu-violet { border-left: em(1px) solid #00AAD2; border-right: em(1px) solid #93117E;}
+@mixin border-vert-violet { border-left: em(1px) solid #ADC91F; border-right: em(1px) solid #93117E;}
+@mixin border-anthracite-anthracite { border-left: em(1px) solid #606171; border-right: em(1px) solid #606171;}
+@mixin border-anthracite-orangePF{border-left: em(1px) solid #606071;border-right: em(1px) solid #DA5714;}
+@mixin border-orangePF-orangePF{border-left: em(1px) solid #da5714;border-right: em(1px) solid #da5714;}
+
+/*//////////////// BORDER LEFT \\\\\\\\\\\\\\\\*/
+@mixin border-L-bleu{border-left: em(1px) solid #02A7D5;}
+@mixin border-L-grisclair{border-left: em(1px) solid #CFD0D2;}
+@mixin border-L-vert{border-left: em(1px) solid #ADC91F;}
+@mixin border-L-violet{border-left: em(1px) solid #93117E;}
+@mixin border-L-anthracite{border-left: em(1px) solid #606171;}
+@mixin border-L-rose { border-left: em(1px) solid #E2007A;}
