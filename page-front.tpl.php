@@ -3,9 +3,7 @@ global $theme_path;
 include ($theme_path.'/includes/inc_header.php');
 ?>
 
-<!--     ______________________ LAYOUT HOMEPAGE VERTICAL D_______________________ -->
-
-
+<!-- ______________________ LAYOUT HOMEPAGE HORIZONTAL _______________________ -->
 <!--  ______________________ CONTENU _______________________ -->
 
           <?php if ($content_top): ?>
@@ -14,46 +12,35 @@ include ($theme_path.'/includes/inc_header.php');
             </div>   <!--  /content-top -->
           <?php endif; ?>
 
- 
-
-     <!--        ______________________ PARTIE GAUCHE _______________________ -->
-
-	<div class="HPGauche">
-
-        <?php if ($PartieGauche1): ?>
-     <div class="HPGauche1"><?php print $PartieGauche1; ?></div>
-        <?php endif; ?>
-
-     <?php if ($PartieGauche2): ?>
-     <div class="HPGauche2"><?php print $PartieGauche2; ?></div>
-        <?php endif; ?>
-
-     <?php if ($PartieGauche3): ?>
-     <div class="HPGauche3"><?php print $PartieGauche3; ?></div>
-        <?php endif; ?>
-
-   </div> 
-
-    <!--______________________ ZONE DIAPO DROITE_______________________ -->
-
-               <?php if ($DiapoDroiteHP): ?>
-       <div class="HPDiapoVerticalDroite"><?php print $DiapoDroiteHP; ?></div>
+<!--    ______________________ ZONE DIAPO _______________________ -->
+			
+              <?php if ($DiapoPanoHP): ?>
+                 <div class="HPDiapo"><?php print $DiapoPanoHP; ?></div>
               <?php endif; ?>
+        
 
+ <!--______________________ PARTIE BAS GAUCHE _______________________ -->
+                 <?php if ($HPBasGauche): ?>
+                 <div class="HPBasGauche"><?php print $HPBasGauche; ?></div>
+              <?php endif; ?>  
+		 
+ <!--______________________ PARTIE BAS DROITE _______________________ -->
+   
+        <?php if ($HPBasDroit): ?>
+     <div class="HPBasDroit"><?php print $HPBasDroit; ?></div>
+        <?php endif; ?>
+
+ <!--______________________ FIN LAYOUT PAGE _______________________ -->
 	
-<!--    ______________________ FIN LAYOUT PAGE _______________________ -->
-
-
-	<!-- ______________________ CONTENU BAS _______________________ -->
+		<!-- ______________________ CONTENU BAS _______________________ -->
     <?php if ($content_bottom_home): ?>
     <div class="content-bottom-home">
       <?php print $content_bottom_home; ?>
         <?php //print $feed_icons; ?>
-         </div><!-- /#content-bottom -->
          <?php endif; ?>
 
 
-   
+    </div><!-- /#content-bottom -->
         <?php
 global $theme_path;
 include ($theme_path.'/includes/inc_footer.php');
