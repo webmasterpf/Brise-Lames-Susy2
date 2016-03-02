@@ -63,9 +63,10 @@ breakpoint-2.5.0
 @import "ui/style-backoffice";
 //@import "ui/volet_coulissant_css";
 
-//Import Homepage - choisir quel layout et style utiliser
-@import "layout/layout-vertical-hp-gauche";
-@import "content-type-style/frontpage-verticalGauche";
+//Import Homepage - choisir quel layout et style utiliser - Layout de la page et layout du diaporama
+@import "layout/layout-diapo-frontpage";
+@import "layout/_layout-homepage-pano.scss";
+@import "content-type-style/frontpage-pano";
 
 
 
@@ -92,7 +93,7 @@ breakpoint-2.5.0
 
 //developpement
 
-//@import "layout/layout-debug-colour";
+@import "layout/layout-debug-colour";
 
 //Galeries slideshow views
 @import "galeries/views_slideshow";

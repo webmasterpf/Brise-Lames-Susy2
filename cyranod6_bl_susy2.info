@@ -68,8 +68,8 @@ regions[DiapoPanoHP] = Diaporama Panoramique Homepage - Bloc
 ;regions[DiapoDroiteHP] = Diaporama Droite Homepage - Bloc
 
 ;Diaporama panoramique
-regions[HPBasGauche] = Zone Bas Gauche HP - Bloc
-regions[HPBasDroit] = Zone Bas Droit HP - Bloc
+regions[HPBasG] = Zone Bas Gauche HP - Bloc
+regions[HPBasD] = Zone Bas Droit HP - Bloc
 
 ;Region pour les node.tpl (ajouter dans template.php)
 regions[actuAssociation] = Zone pour RSS issu du site PF - Vue Bloc RSS

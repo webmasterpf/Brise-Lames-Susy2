@@ -38,12 +38,12 @@ aside.navStatic{
                     margin: 0.25em;
                     border: 0;
                     font-family: $AristaFont;
-                    color: $violet;
+                    color: $bleu-turquoise;//couleur des liens
                     text-decoration: none;
                     display: block;
-                     font-size: 1.8em;
+                    font-size: large;//1.8em
                     &:hover {
-                        color: $vert;
+                        color: $violet;//couleur du hover
                     }
                     img{
                    @include adaptable-img;
@@ -52,6 +52,14 @@ aside.navStatic{
                 }
                 
                 }
+               
+            }
+            li.logo{
+                background-image: image-url("logo-Pf-sites-lycees.jpg");//avec compass
+                background-position: left 0.3em;
+                background-size: contain;
+                text-indent: -9999em;
+                width: 18em;//règle la taille du logo
             }
         }
     }

@@ -20,14 +20,14 @@ include ($theme_path.'/includes/inc_header.php');
         
 
  <!--______________________ PARTIE BAS GAUCHE _______________________ -->
-                 <?php if ($HPBasGauche): ?>
-                 <div class="HPBasGauche"><?php print $HPBasGauche; ?></div>
+                 <?php if ($HPBasG): ?>
+                 <div class="HPBasGauche"><?php print $HPBasG; ?></div>
               <?php endif; ?>  
 		 
  <!--______________________ PARTIE BAS DROITE _______________________ -->
    
-        <?php if ($HPBasDroit): ?>
-     <div class="HPBasDroit"><?php print $HPBasDroit; ?></div>
+        <?php if ($HPBasD): ?>
+     <div class="HPBasDroit"><?php print $HPBasD; ?></div>
         <?php endif; ?>
 
  <!--______________________ FIN LAYOUT PAGE _______________________ -->

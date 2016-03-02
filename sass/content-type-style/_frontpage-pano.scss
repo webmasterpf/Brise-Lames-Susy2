@@ -10,60 +10,22 @@
   //@include susy-breakpoint ($desktop){}
   //@include susy-breakpoint ($tablet){}
 
-//Code imbriqué à 100%
-body .conteneur {
-    background:transparent image-url ("bg_content_etoile.gif") no-repeat left bottom;
 
-    .HPDiapo{}
-    .HPBasGauche{}
-    .HPBasDroit{}
-}
-@include breakpoint($desktop) {/*    //Dimensions pour les pc*/
-
-    .HPDiapo{
-        &:after{
-                content: " ";
-                display: block;
-                clear: both;}
-    }
-    .HPBasGauche{
-        //@include clearfix; 
-        @include span(first 6 of $desktopcol);}
-    .HPBasDroit{
-        //@include clearfix; 
-        @include span(last $desktopcol/2 of $desktopcol);
-        
-    }
+/*######-------- ||| ORDRE FLEXBOX ||| --------######*/
+body .conteneur .conteneur-flex{
+    #colonne-1.CLASS_NAME{order:1;}
+    #colonne-2.CLASS_NAME{order:2;}
+    #colonne-3.CLASS_NAME{order:3;}
+    @include breakpoint ($desktop){}
 }
 
-@include breakpoint($tablet) {/*     //Dimensions pour les tablettes*/
-
-    .HPDiapo{}
-    .HPBasGauche{@include span(first $tabletcol/2 of $tabletcol);}
-    .HPBasDroit{@include span(last $tabletcol/2 of $tabletcol);}
-
+/*######-------- ||| BORDURES ||| --------######*/
+body .conteneur .conteneur-flex{
+   @include breakpoint(($desktop,$tablet)){
+        }
+    
 }
-//Pour le dev, code visuel sur les blocs selon le breakpoint
-// à commenter ou supprimer pour la production
-body .conteneur {
-        
-    .HPDiapo{}
-    .HPBasGauche{background: #C8D215;}
-    .HPBasDroit{background: salmon;}
-   
-    @include breakpoint($desktop) {/*    //Dimensions pour les pc*/
-        
-    .HPDiapo{}
-    .HPBasGauche{background:gold;}
-    .HPBasDroit{background:bisque;}
-    }
-   
-    @include breakpoint($tablet) {/*     //Dimensions pour les tablettes*/
-        .HPDiapo{}
-        .HPBasGauche{background: #C8D215;}
-        .HPBasDroit{background: red;}
-    }
-}
+/*######-------- ||| STYLE ||| --------######*/
 /********************/
 /*ZONES PAGE ACCUEIL*/
 
@@ -79,77 +41,34 @@ body .conteneur {
 }
 
 /****************/
-.HPBasGauche, .HPBasDroit {
+body .conteneur{
+    .HPBasGauche, .HPBasDroit {
 
-    background: none;
-    color: black;
-    ul li {
-        list-style: square;
-    }
-    a {
-        text-decoration: none;
-        &:hover {
-            text-decoration: underline;
+        background: none;
+        color: black;
+        ul li {
+            list-style: square;
         }
-    }
+        a {
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+        iframe{
+            width: 98%; margin: 0 auto;
+        }
 
+    }
 }
-/*---DIAPORAMA HOMEPAGE TEXTE DYNAMIQUE  PANORAMIQUE----*/
+/*## Nav Statique ##*/
+body .conteneur{
+    .menuImg a:hover{color: #970F7D;}
+    /*couleur différente pour le bouton restaurant*/
+    .menuImg a.nav-resto {color: #970F7D;
+                           @include clignote(1s,1.0,0.3,1.0);
+                           &:hover{color:#11B0D5;}
+    } 
 
-//Layout du diaporama dynamique (Views slideshow)
-//Code imbriqué à 100%
-aside.DiapoPanoHP{
 
-
-    #transparency{
-        display: none;
-
-    }
-    #contenu-diapo{
-        display: none;
-    }
-    img{@include adaptable-img;}
-    @include susy-breakpoint($tablet) {
-        #transparency{display: block;}
-        #contenu-diapo{display: block;}
-
-    }
-    @include susy-breakpoint($desktop) { 
-        @include clearfix;
-        max-width: container($desktopcol);
-        #transparency{display: block;}
-        #contenu-diapo{display: block;}
-        img{}
-    }
-
-}
-// Style du diaporama dynamique
-.HPDiapo .field-content{
-    
-}
-#transparency{
-
-height:em(65px);
-bottom:4.7em; 
-left:em(12px);
-position:relative;
-z-index:15;
-width: 98%;
-@include rgba-background($violet,0.6);/*Couleur et opacité du fond*/
-
-h2 {
-    color: white;
-    padding: em(5px);
-    font-family: $AristaFont;
-    font-size: larger;
-     bottom:0.75em;
-     
-  }
-  a {
-    
-    text-decoration: none;
-  }
-  p{
-      margin-top: 0.2em;
-  }
 }
