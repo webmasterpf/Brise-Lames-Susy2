@@ -25,30 +25,87 @@ body .conteneur .conteneur-flex{
 }
 
 /*######-------- ||| BORDURES ||| --------######*/
-body .conteneur .conteneur-flex{
+body .conteneur {
     @include breakpoint ($desktop){
-        #colonne-2.page-lycee{@include border-vert-violet;}
+        #colonne-1.page-lycee{@include border-R-bleu;}
     }
     
 }
 /*######-------- ||| STYLE ||| --------######*/
-.liste-filtre ul #liste_filtre ul {
-    list-style: circle outside none;
-    margin: 0 0 0 15px;
+.page-lycee{
+    .titre_page{
+        @include titre-page;
+        color: $violet;
+    }
+    p{
+        //line-height: 1em;
+    }
+    a{
+        color: $bleu-turquoise;
+        text-decoration: none;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+    strong{
+            color: $rose-fushia;
+        }
+    .logo-resto{
+        float: right;
+    }
+    .menu-resto{
+        text-align: center;
+        margin: 5px;
+        background: azure;
+        a{
+            color: $rose-fushia;
+            padding: em(10px);
+            display: block;
+            &:hover{
+                color: $bleu-turquoise;
+            }
+        }
+        .filefield-icon{display: none;}
+    }
+
+    .liste-filtre{
+        ul {
+            list-style: circle outside none;
+            margin: 0 0 0 15px;
+        }
+        ul li{
+            list-style: inherit;
+        }
+        .views-field-title a{
+            color: $bleu-turquoise;
+            font-size: small;
+        }
+        p{
+            color: black;
+            text-transform: lowercase;
+        }
+        h3{
+            font-size: em(12px);
+            margin: 0;
+            padding: 0;
+        }
+        
+    }
 }
-#liste_filtre ul li, .liste-filtre ul li{
-    list-style: inherit;
-}
-#liste_filtre .views-field-title a, .liste-filtre .views-field-title a{
-    color: #11B0D5;
-    font-size: 14px;
-}
-#liste_filtre p, .liste-filtre p{
-    color: black;
-    text-transform: lowercase;
-}
-#liste_filtre h3,strong, .liste-filtre h3{
-    font-size: 12px;
-    margin: 0;
-    padding: 0;
+
+#colonne-2.page-lycee {
+    p{
+        margin: 0;
+    }
+    h3{text-align: center;color: $violet; font-size: x-large;margin: 0.27em;}
+    iframe{
+        max-width: 100%;
+        display: block;
+        margin: 0 auto;            
+    }
+    .node_col_2 img{
+        display: block;
+        margin: 0 auto;
+    }
+     .menu-resto h3{color: $bleu-turquoise}
 }

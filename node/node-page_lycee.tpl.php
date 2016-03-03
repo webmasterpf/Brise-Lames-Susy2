@@ -11,7 +11,7 @@
          * .col2_layout_3_8_3{} .col2_layout_4_5_5{} .col2_layout_5_9{}
          * .col3_layout_3_8_3{} .col3_layout_4_5_5{}
          */?>
-        <div id="colonne-1" class="col1_layout_8_4">
+        <div id="colonne-1" class="col1_layout_8_4 page-lycee">
             <?php if ($title): /*copier le titre dans la colonne desirée*/?>
             <h1 class="titre_page"><?php print $title; ?></h1>
             <?php endif; ?>
@@ -50,7 +50,7 @@
         </div>
         <!--______________COLONNE 2________________ -->
          <!-- <pre> <?php //print_r($node); ?> </pre>-->   <!-- listage des variables du $content -->
-        <div id="colonne-2" class="col2_layout_8_4">
+        <div id="colonne-2" class="col2_layout_8_4 page-lycee">
 
             <?php print $picture; ?>
 
