@@ -11,20 +11,46 @@
          * .col2_layout_3_8_3{} .col2_layout_4_5_5{} .col2_layout_5_9{}
          * .col3_layout_3_8_3{} .col3_layout_4_5_5{}
          */?>
-        <div class="col1_layout_4_8">
+        <div id="colonne-1" class="col1_layout_8_4">
             <?php if ($title): /*copier le titre dans la colonne desirée*/?>
             <h1 class="titre_page"><?php print $title; ?></h1>
             <?php endif; ?>
-        
-            <?php 
-  //$theme_path = drupal_get_path('theme', 'NOM_THEME');
-  global $theme_path;
-include($theme_path .'/includes/inc_region_col_1.php');
-?>
+     <div class="content">
+                       <?php if ($node->field_logo_resto[0]['view']): ?>
+            <div class="logo-resto">
+                    <?php  print $node->field_logo_resto[0]['view']  ?>
+            </div>
+            <?php endif;?>
+                <?php   print $node->content['body']['#value'];/*déplacer le contenu dans la colonne désirée*/ ?>
+             
+                        <?php if ($node->field_fichier_attache[0]['view']): ?>
+            <div class="fichier-joint">
+                    <?php  print $node->field_fichier_attache[0]['view']  ?>
+            </div>
+            <?php endif;?>
+                      
+         <?php if ($node->field_choix_galerie_vdl[0]['view']): /* Galerie d'images */?>
+            <div class="galerie">
+                    <?php  print $node->field_choix_galerie_vdl[0]['view']  ?>
+            </div>
+            <?php endif;?>       
+                      
+                       <?php if ($node->field_vue_vdl[0]['view']): /* Galerie d'images */?>
+            <div class="liste-filtre">
+                    <?php  print $node->field_vue_vdl[0]['view']  ?>
+            </div>
+            <?php endif;?>        
+                      
+            </div>
+             <?php
+               global $theme_path;
+              include ($theme_path.'/includes/inc_region_col_1.php');
+              ?>
+        </div>
         </div>
         <!--______________COLONNE 2________________ -->
          <!-- <pre> <?php //print_r($node); ?> </pre>-->   <!-- listage des variables du $content -->
-        <div class="col2_layout_4_8">
+        <div id="colonne-2" class="col2_layout_8_4">
 
             <?php print $picture; ?>
 
@@ -32,25 +58,13 @@ include($theme_path .'/includes/inc_region_col_1.php');
             <span class="submitted"><?php print $submitted; ?></span>
             <?php endif; ?>
 
-            <div class="content">
-                <?php   print $node->content['body']['#value'];/*déplacer le contenu dans la colonne désirée*/ ?>
-            </div>
+   
            <?php 
   //$theme_path = drupal_get_path('theme', 'NOM_THEME');
   global $theme_path;
 include($theme_path .'/includes/inc_region_col_2.php');
 ?>
-                        <?php 
-  //$theme_path = drupal_get_path('theme', 'NOM_THEME');
-  global $theme_path;
-include($theme_path .'/includes/inc_region_col_3.php');
-?>
-            <!--***********!!!!!!  EXEMPLE DE CHAMP CCK INCLUS AVEC CONDITION !!!!!!!!************ -->
-            <?php if ($node->nom_du_champ[0]['view']): ?>
-            <div id="nom-css">
-                    <?php  print $node->nom_du_champ[0]['view']  ?>
-            </div>
-            <?php endif;?>
+                  
         </div>
 
       

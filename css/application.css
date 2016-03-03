@@ -2719,12 +2719,11 @@ body .conteneur #footer a:hover {
 }
 
 /*-------------------------------------|
-|       CONTENU CUSTOM NODE.TPL        |
 |           DEFILANT VIEW              |
 |--------------------------------------*/
 /*-- DEFILANT ACCUEIL --*/
-/* line 16, ../sass/layout/_layout-defilant.scss */
-aside.content_top .annonce-container .annonce {
+/* line 15, ../sass/layout/_layout-defilant.scss */
+aside.annonce-container .annonce {
   color: #E30078;
   font-weight: bold;
   margin: 0;
@@ -2732,34 +2731,35 @@ aside.content_top .annonce-container .annonce {
   font-size: 1em;
   line-height: 1.5em;
 }
-/* line 25, ../sass/layout/_layout-defilant.scss */
-aside.content_top .annonce-container .annonce a {
+/* line 24, ../sass/layout/_layout-defilant.scss */
+aside.annonce-container .annonce a {
   color: #911381;
   text-decoration: none;
   font-weight: bold;
+  text-transform: capitalize;
 }
 /* line 29, ../sass/layout/_layout-defilant.scss */
-aside.content_top .annonce-container .annonce a:hover {
+aside.annonce-container .annonce a:hover {
   text-decoration: underline;
 }
 /* line 33, ../sass/layout/_layout-defilant.scss */
-aside.content_top .annonce-container .annonce p, aside.content_top .annonce-container .annonce h2, aside.content_top .annonce-container .annonce h2 a {
+aside.annonce-container .annonce p, aside.annonce-container .annonce h2, aside.annonce-container .annonce h2 a {
   margin: 0;
   padding: 0;
 }
 /* line 37, ../sass/layout/_layout-defilant.scss */
-aside.content_top .annonce-container .annonce img {
+aside.annonce-container .annonce img {
   max-width: 100%;
 }
 @media (min-width: 800px) and (max-width: 989px) {
-  /* line 16, ../sass/layout/_layout-defilant.scss */
-  aside.content_top .annonce-container .annonce {
+  /* line 15, ../sass/layout/_layout-defilant.scss */
+  aside.annonce-container .annonce {
     max-width: 40.2em;
   }
 }
 @media (min-width: 990px) {
-  /* line 16, ../sass/layout/_layout-defilant.scss */
-  aside.content_top .annonce-container .annonce {
+  /* line 15, ../sass/layout/_layout-defilant.scss */
+  aside.annonce-container .annonce {
     max-width: 60.8em;
   }
 }
@@ -3504,55 +3504,21 @@ body .conteneur .HPDiapo aside.DiapoPanoHP img {
   }
 }
 
-/* line 48, ../sass/layout/_layout-diapo-frontpage.scss */
-#transparency {
-  height: 4.0625em;
-  bottom: 4.7em;
-  left: 0.75em;
-  position: relative;
-  z-index: 15;
-  width: 98%;
-  position: relative;
-  background: #911381;
-  background: rgba(145, 19, 129, 0.6);
-  -pie-background: rgba(145, 19, 129, 0.6);
-  behavior: url(/sites/all/libraries/PIE/PIE.htc);
-  /*Couleur et opacité du fond*/
-}
-/* line 58, ../sass/layout/_layout-diapo-frontpage.scss */
-#transparency h2 {
-  color: white;
-  padding: 0.3125em;
-  font-family: "Arista", Trebuchet MS, sans-serif;
-  font-size: larger;
-  bottom: 0.75em;
-}
-/* line 66, ../sass/layout/_layout-diapo-frontpage.scss */
-#transparency a {
-  text-decoration: none;
-}
-/* line 70, ../sass/layout/_layout-diapo-frontpage.scss */
-#transparency p {
-  margin-top: 0.2em;
-}
-
-/* line 74, ../sass/layout/_layout-diapo-frontpage.scss */
+/* line 49, ../sass/layout/_layout-diapo-frontpage.scss */
 body .conteneur .HPDiapo {
   display: none;
 }
 @media (min-width: 990px) {
-  /* line 74, ../sass/layout/_layout-diapo-frontpage.scss */
+  /* line 49, ../sass/layout/_layout-diapo-frontpage.scss */
   body .conteneur .HPDiapo {
     display: block;
   }
-  /* line 78, ../sass/layout/_layout-diapo-frontpage.scss */
+  /* line 53, ../sass/layout/_layout-diapo-frontpage.scss */
   body .conteneur .HPDiapo #transparency {
-    background: none repeat scroll 0 0 #ADC91F;
-    /*Couleur du fond*/
     height: 3.75em;
-    bottom: 4.6875em;
+    bottom: 4.5625em;
     left: 0.75em;
-    width: 93.5%;
+    width: 98%;
     position: relative;
     z-index: 15;
     position: relative;
@@ -3562,24 +3528,28 @@ body .conteneur .HPDiapo {
     behavior: url(/sites/all/libraries/PIE/PIE.htc);
     /*Couleur et opacité du fond*/
   }
-  /* line 88, ../sass/layout/_layout-diapo-frontpage.scss */
+  /* line 63, ../sass/layout/_layout-diapo-frontpage.scss */
   body .conteneur .HPDiapo #contenu-diapo {
     position: relative;
-    bottom: 10.375em;
+    bottom: 8.375em;
     left: 0.625em;
     color: white;
     z-index: 20;
   }
-  /* line 97, ../sass/layout/_layout-diapo-frontpage.scss */
+  /* line 72, ../sass/layout/_layout-diapo-frontpage.scss */
   body .conteneur .HPDiapo #contenu-diapo h2 {
     color: white;
     padding: 0.3125em;
     font-family: "Arista", Trebuchet MS, sans-serif;
     line-height: 1.3em;
   }
-  /* line 103, ../sass/layout/_layout-diapo-frontpage.scss */
+  /* line 78, ../sass/layout/_layout-diapo-frontpage.scss */
   body .conteneur .HPDiapo #contenu-diapo a {
     text-decoration: none;
+  }
+  /* line 82, ../sass/layout/_layout-diapo-frontpage.scss */
+  body .conteneur .HPDiapo #contenu-diapo p {
+    margin-top: 0.2em;
   }
 }
 
@@ -3604,8 +3574,12 @@ body .conteneur .HPDiapo {
     display: block;
     clear: both;
   }
+  /* line 29, ../sass/layout/_layout-homepage-pano.scss */
+  .HPDiapo aside.DiapoPanoHP {
+    max-height: 12.7em;
+  }
 
-  /* line 30, ../sass/layout/_layout-homepage-pano.scss */
+  /* line 33, ../sass/layout/_layout-homepage-pano.scss */
   .HPBasGauche {
     overflow: hidden;
     *zoom: 1;
@@ -3615,7 +3589,7 @@ body .conteneur .HPDiapo {
     margin-right: 1.64474%;
   }
 
-  /* line 35, ../sass/layout/_layout-homepage-pano.scss */
+  /* line 38, ../sass/layout/_layout-homepage-pano.scss */
   .HPBasDroit {
     width: 49.17763%;
     float: left;
@@ -3626,7 +3600,7 @@ body .conteneur .HPDiapo {
 }
 @media (min-width: 800px) and (max-width: 989px) {
   /*     //Dimensions pour les tablettes*/
-  /* line 46, ../sass/layout/_layout-homepage-pano.scss */
+  /* line 49, ../sass/layout/_layout-homepage-pano.scss */
   .HPBasGauche {
     width: 48.75622%;
     float: left;
@@ -3634,7 +3608,7 @@ body .conteneur .HPDiapo {
     margin-right: -100%;
   }
 
-  /* line 47, ../sass/layout/_layout-homepage-pano.scss */
+  /* line 50, ../sass/layout/_layout-homepage-pano.scss */
   .HPBasDroit {
     width: 48.75622%;
     float: left;
@@ -3722,17 +3696,37 @@ body .conteneur .HPBasGauche iframe, body .conteneur .HPBasDroit iframe {
   width: 98%;
   margin: 0 auto;
 }
+/* line 61, ../sass/content-type-style/_frontpage-pano.scss */
+body .conteneur .HPBasGauche h3.block-title, body .conteneur .HPBasDroit h3.block-title {
+  font-size: 1.125em;
+  color: #DE603A;
+  text-align: center;
+  text-transform: inherit;
+  margin: 1.25em 0;
+}
+/* line 69, ../sass/content-type-style/_frontpage-pano.scss */
+body .conteneur .HPBasGauche aside.HPBasG .views-field-title span a, body .conteneur .HPBasGauche aside.HPBasD .views-field-title span a, body .conteneur .HPBasDroit aside.HPBasG .views-field-title span a, body .conteneur .HPBasDroit aside.HPBasD .views-field-title span a {
+  color: #01ABCF;
+}
+/* line 75, ../sass/content-type-style/_frontpage-pano.scss */
+body .conteneur .HPBasGauche aside.HPBasG .views-field-teaser span a, body .conteneur .HPBasGauche aside.HPBasD .views-field-teaser span a, body .conteneur .HPBasDroit aside.HPBasG .views-field-teaser span a, body .conteneur .HPBasDroit aside.HPBasD .views-field-teaser span a {
+  color: #606070;
+}
+/* line 77, ../sass/content-type-style/_frontpage-pano.scss */
+body .conteneur .HPBasGauche aside.HPBasG .views-field-teaser span a:hover, body .conteneur .HPBasGauche aside.HPBasD .views-field-teaser span a:hover, body .conteneur .HPBasDroit aside.HPBasG .views-field-teaser span a:hover, body .conteneur .HPBasDroit aside.HPBasD .views-field-teaser span a:hover {
+  text-decoration: none;
+}
 
 /*## Nav Statique ##*/
-/* line 65, ../sass/content-type-style/_frontpage-pano.scss */
+/* line 85, ../sass/content-type-style/_frontpage-pano.scss */
 body .conteneur {
   /*couleur différente pour le bouton restaurant*/
 }
-/* line 66, ../sass/content-type-style/_frontpage-pano.scss */
+/* line 86, ../sass/content-type-style/_frontpage-pano.scss */
 body .conteneur .menuImg a:hover {
   color: #970F7D;
 }
-/* line 68, ../sass/content-type-style/_frontpage-pano.scss */
+/* line 88, ../sass/content-type-style/_frontpage-pano.scss */
 body .conteneur .menuImg a.nav-resto {
   color: #970F7D;
   -webkit-animation-name: blinker;
@@ -3781,7 +3775,7 @@ body .conteneur .menuImg a.nav-resto {
     opacity: 1;
   }
 }
-/* line 70, ../sass/content-type-style/_frontpage-pano.scss */
+/* line 90, ../sass/content-type-style/_frontpage-pano.scss */
 body .conteneur .menuImg a.nav-resto:hover {
   color: #11B0D5;
 }
@@ -4045,7 +4039,7 @@ h1.title-page-bloc {
 
 /* line 42, ../sass/content-type-style/_page-pole.scss */
 h3.block-title {
-  font-size: 18px;
+  font-size: 1.125em;
   color: #ADC91F;
   text-align: center;
   text-transform: uppercase;

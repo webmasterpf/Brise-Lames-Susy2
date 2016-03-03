@@ -31,103 +31,24 @@ body .conteneur .conteneur-flex{
     }
     
 }
-
-h1.titre_pl{
-    font-size: 24px;
-    color: #911381;
-    line-height: 1.0em
+/*######-------- ||| STYLE ||| --------######*/
+.liste-filtre ul #liste_filtre ul {
+    list-style: circle outside none;
+    margin: 0 0 0 15px;
 }
-h1.titre_pl a{}
-h1.titre_pl a:hover{}
-/*######-------- COLONNE G1 --------######*/
-#colonne-1.page-lycee {
-    h2{}h3{}h4{}p{}ul{}
-    img{   @include cadre-ombre();}
-    a{&:hover{}}
-    h2 a{&:hover{}}
-    h3 a{&:hover{}}
-    h4 a{&:hover{}}
-    .imagecache{
-        //pour centrer l'image
-        margin: 0 auto;
-        display: block;
-        width: span(2);
-        @include breakpoint ($desktop){
-            width: span(5.3/2);
-        }
-    }
+#liste_filtre ul li, .liste-filtre ul li{
+    list-style: inherit;
 }
-
-/*######-------- COLONNE G2 --------######*/
-#colonne-2.page-lycee{
-     h2{color: $vert;padding: em(5px);}
-h3{color: #911381;padding: 5px;}
-h4{padding: 5px; color: #F29803;}
-p{ padding: 5px;}
-ul{padding: 5px;}
-a img { background: 0;}
-a{
-    background: #AEC821;
-    color: #EFEFEF;
-    text-decoration: none;
-    padding: 3px;
-    margin: 5px;
-    &:hover{
-    color: #AEC821;
-    background: none;
-     -moz-box-shadow: #AAAAAA 0px 0px 5px ;
-    -webkit-box-shadow: #AAAAAA 0px 0px 5px;
-    box-shadow: #AAAAAA 0px 0px 5px;
+#liste_filtre .views-field-title a, .liste-filtre .views-field-title a{
+    color: #11B0D5;
+    font-size: 14px;
 }
+#liste_filtre p, .liste-filtre p{
+    color: black;
+    text-transform: lowercase;
 }
-iframe#slideshare-embed, iframe{@include adaptable-img;}
-}
-/*------ LISTE VUE ACTU LYCEE (Colonne G3) ---------*/
-#colonne-3 #bloc-actu-lycee{
-    width: 90%;
-    margin: 0 auto;
-    h3{
-    color: $violet;
-    font-family: arista,Trebuchet MS, sans-serif;
-    font-size: x-large;
-    margin:em(5px);
-    display: block;
-    text-align: center;
-
-}
-}
-.liste-actu-lycee {
-    ul{
-    margin: 0 auto;
-    
-    background: transparent url(../images/zebra-gros-clair.gif) repeat ;
-    list-style: none;
-    padding: em(5px);
-    font-size: small;
-    @include arrondis;
-}
-ul,p{
-    line-height: normal;
-    }
-    p{
-        margin: 0.3em;
-    }
-}
-
-
-.element-actu-lycee{
-    width: 95%;
-    margin: 0 auto;
-    a{
-    color:  $gris-anthracite;
-    background: $gris-clair;
-    display: block;
-    font-weight: bold;
-    text-decoration: none;
-    padding: em(2px);
-}
-a:hover{
-    background: $vert;
-    color: white;
-}
+#liste_filtre h3,strong, .liste-filtre h3{
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
 }

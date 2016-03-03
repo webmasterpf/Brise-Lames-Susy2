@@ -3,9 +3,7 @@ global $theme_path;
 include ($theme_path.'/includes/inc_header.php');
 ?>
  <!-- ______________________ LAYOUT PAGE LYCEE OVERRIDE PAR NODE.TPL CUSTOM _______________________ -->
-  <!-- ______________________ CONTENU _______________________ -->
-
-      <div class="content-global">
+  
 
        <!-- ______________________ CONTENT INNER GLOBAL _______________________ -->
 
@@ -66,7 +64,7 @@ include ($theme_path.'/includes/inc_header.php');
               <?php print $content_bottom; ?>
             </div><!-- /#content-bottom -->
           <?php endif; ?>
-	 </div> <!-- /content-global -->
+	
 <?php
 global $theme_path;
 include ($theme_path.'/includes/inc_footer.php');
