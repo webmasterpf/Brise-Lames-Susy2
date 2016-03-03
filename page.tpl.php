@@ -58,7 +58,7 @@ include ($theme_path.'/includes/inc_header.php');
             </div> <!-- /#content-header -->
           <?php endif; ?>
 		  <!-- ______________________ CONTENU CENTRAL _______________________ -->
-              <article class="middle-content page-MODELE">
+              <article class="middle-content">
 
             <?php print $content; ?>
               <?php print $feed_icons; ?>

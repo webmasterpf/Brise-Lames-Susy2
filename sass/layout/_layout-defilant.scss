@@ -2,18 +2,17 @@
 // créer des fichiers _node-TYPE.scss et les importer dans application.scss
 
 /*-------------------------------------|
-|       CONTENU CUSTOM NODE.TPL        |
 |           DEFILANT VIEW              |
 |--------------------------------------*/
 
-  //@include susy-breakpoint ($mobile){}
-  //@include susy-breakpoint ($desktop){}
-  //@include susy-breakpoint ($tablet){}
+  //@include breakpoint ($mobile){}
+  //@include breakpoint ($desktop){}
+  //@include breakpoint ($tablet){}
 
 .annonce-container{}
 /*-- DEFILANT ACCUEIL --*/
 
-aside.content_top .annonce-container .annonce
+aside.annonce-container .annonce
 {
 // max-width: container();
  
@@ -26,6 +25,7 @@ aside.content_top .annonce-container .annonce
     color: $color-defilant-a;
     text-decoration: none;
     font-weight: bold;
+    text-transform:capitalize;
     &:hover {
       text-decoration: underline;
     }

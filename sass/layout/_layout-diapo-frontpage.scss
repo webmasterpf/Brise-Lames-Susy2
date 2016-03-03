@@ -45,42 +45,17 @@ body .conteneur .HPDiapo{
 body .conteneur .HPDiapo .field-content{
     
 }
-#transparency{
 
-height:em(65px);
-bottom:4.7em; 
-left:em(12px);
-position:relative;
-z-index:15;
-width: 98%;
-@include rgba-background($violet,0.6);/*Couleur et opacité du fond*/
-
-h2 {
-    color: white;
-    padding: em(5px);
-    font-family: $AristaFont;
-    font-size: larger;
-     bottom:0.75em;
-     
-  }
-  a {
-    
-    text-decoration: none;
-  }
-  p{
-      margin-top: 0.2em;
-  }
-}
 body .conteneur .HPDiapo{
     display: none;
     @include breakpoint ($desktop){
         display: block;
         #transparency{
-            background:none repeat scroll 0 0 $vert;/*Couleur du fond*/
+            
             height:em(60px);
-            bottom:em(75px); 
+            bottom:em(73px); 
             left:em(12px);
-            width: 93.5%;
+            width: 98%;
             position:relative;
             z-index:15;
             @include rgba-background($bleu-turquoise,0.6);/*Couleur et opacité du fond*/
@@ -88,7 +63,7 @@ body .conteneur .HPDiapo{
         #contenu-diapo {
 
             position: relative;
-            bottom:10.375em;
+            bottom:8.375em;
             left: em(10px);
             color: white;
             z-index: 20;
@@ -104,6 +79,9 @@ body .conteneur .HPDiapo{
 
                 text-decoration: none;
             }
+              p{
+      margin-top: 0.2em;
+  }
         }
     }
 }

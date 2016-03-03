@@ -58,7 +58,27 @@ body .conteneur{
         iframe{
             width: 98%; margin: 0 auto;
         }
-
+        h3.block-title{
+            font-size: em(18px);
+            color: $orange-fonce;
+            text-align: center;
+            text-transform: inherit;
+            margin: em(20px) 0;
+        }
+        aside.HPBasG, aside.HPBasD{
+            .views-field-title span a{
+                color: $bleu-turquoise;
+                &:hover{
+                    
+                }
+            }
+            .views-field-teaser span a{
+                color: $gris-anthracite;
+                &:hover{
+                  text-decoration: none;  
+                }
+            }
+        }
     }
 }
 /*## Nav Statique ##*/
