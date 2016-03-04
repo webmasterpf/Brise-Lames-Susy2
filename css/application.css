@@ -633,6 +633,9 @@ th {
 
 ----- TYPOS PROVENCE FORMATION -----
 ¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤¤*/
+/* Ressources
+http://www.developerdrive.com/2015/02/control-vertical-rhythm-using-sass-and-compass/
+*/
 /* line 106, ../../../../../../../../home/webmaster/.rvm/gems/ruby-1.9.3-p484/gems/compass-core-1.0.3/stylesheets/compass/typography/_vertical_rhythm.scss */
 html {
   font-size: 100%;
@@ -651,85 +654,86 @@ html {
 /*====================================|
 ==             CSS H                ==|
 =====================================*/
-/* line 31, ../sass/global/_typos.scss */
+/* line 33, ../sass/global/_typos.scss */
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   padding: 0.3em;
   margin: 0.3em 0 0 0;
   color: #000;
 }
 
-/* line 35, ../sass/global/_typos.scss */
+/* line 37, ../sass/global/_typos.scss */
 h1, .h1 {
   font-size: 1.25em;
 }
 
-/* line 40, ../sass/global/_typos.scss */
+/* line 42, ../sass/global/_typos.scss */
 h2, .h2 {
   font-size: 1.125em;
 }
 
-/* line 44, ../sass/global/_typos.scss */
+/* line 46, ../sass/global/_typos.scss */
 h2.title {
   font-size: 1.125em;
 }
-/* line 49, ../sass/global/_typos.scss */
+/* line 51, ../sass/global/_typos.scss */
 h2.title a {
   color: #E3001C;
 }
 
-/* line 53, ../sass/global/_typos.scss */
+/* line 55, ../sass/global/_typos.scss */
 h3, .h3 {
   font-size: 1em;
 }
 
-/* line 58, ../sass/global/_typos.scss */
+/* line 60, ../sass/global/_typos.scss */
 h4, .h4 {
   font-size: 0.875em;
 }
 
-/* line 62, ../sass/global/_typos.scss */
+/* line 64, ../sass/global/_typos.scss */
 h5, .h5 {
   font-size: 0.75em;
 }
 
-/* line 70, ../sass/global/_typos.scss */
+/* line 72, ../sass/global/_typos.scss */
 h6, .h6 {
   font-size: 0.625em;
 }
 
 /*---------------- TITRES -----------------------*/
 /*------------ PARAGRAPHES ---------------*/
-/* line 97, ../sass/global/_typos.scss */
+/* line 99, ../sass/global/_typos.scss */
 .conteneur p {
-  margin-top: 1.5em;
+  font-size: 0.625em;
+  line-height: 2.4em;
 }
-/* line 98, ../sass/global/_typos.scss */
+/* line 105, ../sass/global/_typos.scss */
 .conteneur #header {
   font-size: 0.75em;
   line-height: 2em;
 }
-/* line 102, ../sass/global/_typos.scss */
+/* line 109, ../sass/global/_typos.scss */
 .conteneur .content-inner p, .conteneur .content-inner td, .conteneur .content-inner ul {
-  padding: 0.3em;
+  padding: 0.15em;
   font-size: small;
 }
-/* line 107, ../sass/global/_typos.scss */
+/* line 114, ../sass/global/_typos.scss */
 .conteneur .content-inner ul {
   list-style: inside;
 }
-/* line 112, ../sass/global/_typos.scss */
+/* line 119, ../sass/global/_typos.scss */
 .conteneur #footer {
   font-size: 0.625em;
   line-height: 2.4em;
 }
-/* line 113, ../sass/global/_typos.scss */
+/* line 120, ../sass/global/_typos.scss */
 .conteneur #footer p {
   margin-bottom: 1.5em;
   font-size: small;
   padding: 0.3em;
 }
 
-/* line 120, ../sass/global/_typos.scss */
+/* line 127, ../sass/global/_typos.scss */
 .HPBasGauche p, .HPBasDroit p {
   font-size: 0.75em;
   line-height: 2em;
@@ -741,10 +745,10 @@ h6, .h6 {
 /*------- EFFETS VISUELS GENERIQUES--------------*/
 /* line 6, ../sass/global/_style.scss */
 .ombrage {
-  border: 5px solid #fff;
-  -moz-box-shadow: 8px 8px 12px #aaa;
-  -webkit-box-shadow: 8px 8px 12px #aaa;
-  box-shadow: 8px 8px 12px #555;
+  border: 0.5em solid #fff;
+  -moz-box-shadow: 0.5em 0.5em 12px #aaa;
+  -webkit-box-shadow: 0.5em 0.5em 12px #aaa;
+  box-shadow: 0.5em 0.5em 12px #aaa;
 }
 
 /* line 9, ../sass/global/_style.scss */
@@ -1056,14 +1060,39 @@ Ne s'applique que si présence d'un node-TYPE.tpl.php
 /*//////////////////////\\\\\\\\\\\
 ********** LAYOUT NODE.TPL OVERRIDE **********
 \\\\\\\\\\\\//////////////////////*/
-/*//////////////// 1 COLONNE \\\\\\\\*/
+/*//////////////// 1 COLONNE PLEINE LARGEUR \\\\\\\\*/
 /* line 12, ../sass/layout/_layout-nodes.scss */
-body .conteneur .col1_12 {
-  max-width: 19.6em;
+body .conteneur .col1_layout_max {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  overflow: hidden;
+  *zoom: 1;
+}
+@media (max-width: 799px) {
+  /* line 12, ../sass/layout/_layout-nodes.scss */
+  body .conteneur .col1_layout_max {
+    clear: both;
+  }
+}
+@media (min-width: 990px) {
+  /* line 12, ../sass/layout/_layout-nodes.scss */
+  body .conteneur .col1_layout_max {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+    /*            &:after{
+                    content: " ";
+                    display: block;
+                    clear: both;
+                } */
+  }
 }
 
 /*//////////////// 3 COLONNES \\\\\\\\*/
-/* line 19, ../sass/layout/_layout-nodes.scss */
+/* line 32, ../sass/layout/_layout-nodes.scss */
 body .conteneur .col1_layout_3_6_3 {
   width: 100%;
   float: left;
@@ -1073,7 +1102,7 @@ body .conteneur .col1_layout_3_6_3 {
   *zoom: 1;
 }
 @media (min-width: 800px) and (max-width: 989px) {
-  /* line 19, ../sass/layout/_layout-nodes.scss */
+  /* line 32, ../sass/layout/_layout-nodes.scss */
   body .conteneur .col1_layout_3_6_3 {
     width: 23.13433%;
     float: left;
@@ -1081,21 +1110,22 @@ body .conteneur .col1_layout_3_6_3 {
   }
 }
 @media (min-width: 990px) {
-  /* line 19, ../sass/layout/_layout-nodes.scss */
+  /* line 32, ../sass/layout/_layout-nodes.scss */
   body .conteneur .col1_layout_3_6_3 {
     width: 23.76645%;
     float: left;
+    margin-right: 1.64474%;
   }
 }
 @media (min-height: 767px) and (max-width: 1024px) and (orientation: landscape) {
-  /* line 19, ../sass/layout/_layout-nodes.scss */
+  /* line 32, ../sass/layout/_layout-nodes.scss */
   body .conteneur .col1_layout_3_6_3 {
     width: 28.61386%;
     float: left;
     margin-right: 1.9802%;
   }
 }
-/* line 37, ../sass/layout/_layout-nodes.scss */
+/* line 50, ../sass/layout/_layout-nodes.scss */
 body .conteneur .col2_layout_3_6_3 {
   width: 100%;
   float: left;
@@ -1105,7 +1135,7 @@ body .conteneur .col2_layout_3_6_3 {
   *zoom: 1;
 }
 @media (min-width: 800px) and (max-width: 989px) {
-  /* line 37, ../sass/layout/_layout-nodes.scss */
+  /* line 50, ../sass/layout/_layout-nodes.scss */
   body .conteneur .col2_layout_3_6_3 {
     width: 48.75622%;
     float: left;
@@ -1113,7 +1143,7 @@ body .conteneur .col2_layout_3_6_3 {
   }
 }
 @media (min-width: 990px) {
-  /* line 37, ../sass/layout/_layout-nodes.scss */
+  /* line 50, ../sass/layout/_layout-nodes.scss */
   body .conteneur .col2_layout_3_6_3 {
     width: 49.17763%;
     float: left;
@@ -1121,14 +1151,14 @@ body .conteneur .col2_layout_3_6_3 {
   }
 }
 @media (min-height: 767px) and (max-width: 1024px) and (orientation: landscape) {
-  /* line 37, ../sass/layout/_layout-nodes.scss */
+  /* line 50, ../sass/layout/_layout-nodes.scss */
   body .conteneur .col2_layout_3_6_3 {
     width: 38.81188%;
     float: left;
     margin-right: 1.9802%;
   }
 }
-/* line 57, ../sass/layout/_layout-nodes.scss */
+/* line 70, ../sass/layout/_layout-nodes.scss */
 body .conteneur .col3_layout_3_6_3 {
   width: 100%;
   float: left;
@@ -1138,7 +1168,7 @@ body .conteneur .col3_layout_3_6_3 {
   *zoom: 1;
 }
 @media (min-width: 800px) and (max-width: 989px) {
-  /* line 57, ../sass/layout/_layout-nodes.scss */
+  /* line 70, ../sass/layout/_layout-nodes.scss */
   body .conteneur .col3_layout_3_6_3 {
     float: left;
     margin-left: 0.3%;
@@ -1146,16 +1176,16 @@ body .conteneur .col3_layout_3_6_3 {
   }
 }
 @media (min-width: 990px) {
-  /* line 57, ../sass/layout/_layout-nodes.scss */
+  /* line 70, ../sass/layout/_layout-nodes.scss */
   body .conteneur .col3_layout_3_6_3 {
     width: 23.76645%;
     float: left;
-    margin-right: 1.64474%;
-    margin-right: 0.5em;
+    margin-left: 76.23355%;
+    margin-right: -100%;
   }
 }
 @media (min-height: 767px) and (max-width: 1024px) and (orientation: landscape) {
-  /* line 57, ../sass/layout/_layout-nodes.scss */
+  /* line 70, ../sass/layout/_layout-nodes.scss */
   body .conteneur .col3_layout_3_6_3 {
     float: left;
     margin-left: 0.3%;
@@ -1163,7 +1193,7 @@ body .conteneur .col3_layout_3_6_3 {
   }
 }
 
-/* line 78, ../sass/layout/_layout-nodes.scss */
+/* line 90, ../sass/layout/_layout-nodes.scss */
 body .conteneur .col1_layout_2_7_3 {
   width: 100%;
   float: left;
@@ -1173,7 +1203,7 @@ body .conteneur .col1_layout_2_7_3 {
   *zoom: 1;
 }
 @media (min-width: 800px) and (max-width: 989px) {
-  /* line 78, ../sass/layout/_layout-nodes.scss */
+  /* line 90, ../sass/layout/_layout-nodes.scss */
   body .conteneur .col1_layout_2_7_3 {
     width: 10.32338%;
     float: left;
@@ -1181,7 +1211,7 @@ body .conteneur .col1_layout_2_7_3 {
   }
 }
 @media (min-width: 990px) {
-  /* line 78, ../sass/layout/_layout-nodes.scss */
+  /* line 90, ../sass/layout/_layout-nodes.scss */
   body .conteneur .col1_layout_2_7_3 {
     width: 15.29605%;
     float: left;
@@ -1189,14 +1219,14 @@ body .conteneur .col1_layout_2_7_3 {
   }
 }
 @media (min-height: 767px) and (max-width: 1024px) and (orientation: landscape) {
-  /* line 78, ../sass/layout/_layout-nodes.scss */
+  /* line 90, ../sass/layout/_layout-nodes.scss */
   body .conteneur .col1_layout_2_7_3 {
     width: 18.41584%;
     float: left;
     margin-right: 1.9802%;
   }
 }
-/* line 96, ../sass/layout/_layout-nodes.scss */
+/* line 108, ../sass/layout/_layout-nodes.scss */
 body .conteneur .col2_layout_2_7_3 {
   width: 100%;
   float: left;
@@ -1206,7 +1236,7 @@ body .conteneur .col2_layout_2_7_3 {
   *zoom: 1;
 }
 @media (min-width: 800px) and (max-width: 989px) {
-  /* line 96, ../sass/layout/_layout-nodes.scss */
+  /* line 108, ../sass/layout/_layout-nodes.scss */
   body .conteneur .col2_layout_2_7_3 {
     width: 61.56716%;
     float: left;
@@ -1214,22 +1244,24 @@ body .conteneur .col2_layout_2_7_3 {
   }
 }
 @media (min-width: 990px) {
-  /* line 96, ../sass/layout/_layout-nodes.scss */
+  /* line 108, ../sass/layout/_layout-nodes.scss */
   body .conteneur .col2_layout_2_7_3 {
     width: 57.64803%;
     float: left;
     margin-right: 1.64474%;
+    margin-right: 0.3em;
+    /*Toujours en dernier pour override de la taille des gouttieres*/
   }
 }
 @media (min-height: 767px) and (max-width: 1024px) and (orientation: landscape) {
-  /* line 96, ../sass/layout/_layout-nodes.scss */
+  /* line 108, ../sass/layout/_layout-nodes.scss */
   body .conteneur .col2_layout_2_7_3 {
     width: 49.0099%;
     float: left;
     margin-right: 1.9802%;
   }
 }
-/* line 115, ../sass/layout/_layout-nodes.scss */
+/* line 128, ../sass/layout/_layout-nodes.scss */
 body .conteneur .col3_layout_2_7_3 {
   width: 100%;
   float: left;
@@ -1239,7 +1271,7 @@ body .conteneur .col3_layout_2_7_3 {
   *zoom: 1;
 }
 @media (min-width: 800px) and (max-width: 989px) {
-  /* line 115, ../sass/layout/_layout-nodes.scss */
+  /* line 128, ../sass/layout/_layout-nodes.scss */
   body .conteneur .col3_layout_2_7_3 {
     float: left;
     margin-left: 0.3%;
@@ -1247,15 +1279,19 @@ body .conteneur .col3_layout_2_7_3 {
   }
 }
 @media (min-width: 990px) {
-  /* line 115, ../sass/layout/_layout-nodes.scss */
+  /* line 128, ../sass/layout/_layout-nodes.scss */
   body .conteneur .col3_layout_2_7_3 {
+    width: 23.76645%;
+    float: left;
+    margin-left: 76.23355%;
+    margin-right: -100%;
     float: left;
     margin-left: 0.3%;
     margin-right: -100%;
   }
 }
 @media (min-height: 767px) and (max-width: 1024px) and (orientation: landscape) {
-  /* line 115, ../sass/layout/_layout-nodes.scss */
+  /* line 128, ../sass/layout/_layout-nodes.scss */
   body .conteneur .col3_layout_2_7_3 {
     float: left;
     margin-left: 0.3%;
@@ -1263,7 +1299,7 @@ body .conteneur .col3_layout_2_7_3 {
   }
 }
 
-/* line 136, ../sass/layout/_layout-nodes.scss */
+/* line 150, ../sass/layout/_layout-nodes.scss */
 body .conteneur .col1_layout_2_6_4 {
   width: 100%;
   float: left;
@@ -1273,7 +1309,7 @@ body .conteneur .col1_layout_2_6_4 {
   *zoom: 1;
 }
 @media (min-width: 800px) and (max-width: 989px) {
-  /* line 136, ../sass/layout/_layout-nodes.scss */
+  /* line 150, ../sass/layout/_layout-nodes.scss */
   body .conteneur .col1_layout_2_6_4 {
     width: 23.13433%;
     float: left;
@@ -1281,7 +1317,7 @@ body .conteneur .col1_layout_2_6_4 {
   }
 }
 @media (min-width: 990px) {
-  /* line 136, ../sass/layout/_layout-nodes.scss */
+  /* line 150, ../sass/layout/_layout-nodes.scss */
   body .conteneur .col1_layout_2_6_4 {
     width: 15.29605%;
     float: left;
@@ -1289,14 +1325,14 @@ body .conteneur .col1_layout_2_6_4 {
   }
 }
 @media (min-height: 767px) and (max-width: 1024px) and (orientation: landscape) {
-  /* line 136, ../sass/layout/_layout-nodes.scss */
+  /* line 150, ../sass/layout/_layout-nodes.scss */
   body .conteneur .col1_layout_2_6_4 {
     width: 28.61386%;
     float: left;
     margin-right: 1.9802%;
   }
 }
-/* line 155, ../sass/layout/_layout-nodes.scss */
+/* line 169, ../sass/layout/_layout-nodes.scss */
 body .conteneur .col2_layout_2_6_4 {
   width: 100%;
   float: left;
@@ -1306,7 +1342,7 @@ body .conteneur .col2_layout_2_6_4 {
   *zoom: 1;
 }
 @media (min-width: 800px) and (max-width: 989px) {
-  /* line 155, ../sass/layout/_layout-nodes.scss */
+  /* line 169, ../sass/layout/_layout-nodes.scss */
   body .conteneur .col2_layout_2_6_4 {
     width: 48.75622%;
     float: left;
@@ -1314,7 +1350,7 @@ body .conteneur .col2_layout_2_6_4 {
   }
 }
 @media (min-width: 990px) {
-  /* line 155, ../sass/layout/_layout-nodes.scss */
+  /* line 169, ../sass/layout/_layout-nodes.scss */
   body .conteneur .col2_layout_2_6_4 {
     width: 49.17763%;
     float: left;
@@ -1322,14 +1358,14 @@ body .conteneur .col2_layout_2_6_4 {
   }
 }
 @media (min-height: 767px) and (max-width: 1024px) and (orientation: landscape) {
-  /* line 155, ../sass/layout/_layout-nodes.scss */
+  /* line 169, ../sass/layout/_layout-nodes.scss */
   body .conteneur .col2_layout_2_6_4 {
     width: 38.81188%;
     float: left;
     margin-right: 1.9802%;
   }
 }
-/* line 175, ../sass/layout/_layout-nodes.scss */
+/* line 189, ../sass/layout/_layout-nodes.scss */
 body .conteneur .col3_layout_2_6_4 {
   width: 100%;
   float: left;
@@ -1339,7 +1375,7 @@ body .conteneur .col3_layout_2_6_4 {
   *zoom: 1;
 }
 @media (min-width: 800px) and (max-width: 989px) {
-  /* line 175, ../sass/layout/_layout-nodes.scss */
+  /* line 189, ../sass/layout/_layout-nodes.scss */
   body .conteneur .col3_layout_2_6_4 {
     width: 23.13433%;
     float: left;
@@ -1347,7 +1383,7 @@ body .conteneur .col3_layout_2_6_4 {
   }
 }
 @media (min-width: 990px) {
-  /* line 175, ../sass/layout/_layout-nodes.scss */
+  /* line 189, ../sass/layout/_layout-nodes.scss */
   body .conteneur .col3_layout_2_6_4 {
     width: 100%;
     float: left;
@@ -1356,7 +1392,7 @@ body .conteneur .col3_layout_2_6_4 {
   }
 }
 @media (min-height: 767px) and (max-width: 1024px) and (orientation: landscape) {
-  /* line 175, ../sass/layout/_layout-nodes.scss */
+  /* line 189, ../sass/layout/_layout-nodes.scss */
   body .conteneur .col3_layout_2_6_4 {
     width: 28.61386%;
     float: left;
@@ -1365,110 +1401,8 @@ body .conteneur .col3_layout_2_6_4 {
   }
 }
 
-/* line 198, ../sass/layout/_layout-nodes.scss */
-body .conteneur .col1_layout_3_2_7 {
-  width: 100%;
-  float: left;
-  margin-left: 0;
-  margin-right: 0;
-  overflow: hidden;
-  *zoom: 1;
-}
 @media (min-width: 800px) and (max-width: 989px) {
-  /* line 198, ../sass/layout/_layout-nodes.scss */
-  body .conteneur .col1_layout_3_2_7 {
-    width: 23.13433%;
-    float: left;
-    margin-right: 2.48756%;
-  }
-}
-@media (min-width: 990px) {
-  /* line 198, ../sass/layout/_layout-nodes.scss */
-  body .conteneur .col1_layout_3_2_7 {
-    width: 23.76645%;
-    float: left;
-    margin-right: 1.64474%;
-  }
-}
-@media (min-height: 767px) and (max-width: 1024px) and (orientation: landscape) {
-  /* line 198, ../sass/layout/_layout-nodes.scss */
-  body .conteneur .col1_layout_3_2_7 {
-    width: 28.61386%;
-    float: left;
-    margin-right: 1.9802%;
-  }
-}
-/* line 217, ../sass/layout/_layout-nodes.scss */
-body .conteneur .col2_layout_3_2_7 {
-  width: 100%;
-  float: left;
-  margin-left: 0;
-  margin-right: 0;
-  overflow: hidden;
-  *zoom: 1;
-}
-@media (min-width: 800px) and (max-width: 989px) {
-  /* line 217, ../sass/layout/_layout-nodes.scss */
-  body .conteneur .col2_layout_3_2_7 {
-    width: 23.13433%;
-    float: left;
-    margin-right: 2.48756%;
-  }
-}
-@media (min-width: 990px) {
-  /* line 217, ../sass/layout/_layout-nodes.scss */
-  body .conteneur .col2_layout_3_2_7 {
-    width: 15.29605%;
-    float: left;
-    margin-right: 1.64474%;
-  }
-}
-@media (min-height: 767px) and (max-width: 1024px) and (orientation: landscape) {
-  /* line 217, ../sass/layout/_layout-nodes.scss */
-  body .conteneur .col2_layout_3_2_7 {
-    width: 28.61386%;
-    float: left;
-    margin-right: 1.9802%;
-  }
-}
-/* line 237, ../sass/layout/_layout-nodes.scss */
-body .conteneur .col3_layout_3_2_7 {
-  width: 100%;
-  float: left;
-  margin-left: 0;
-  margin-right: 0;
-  overflow: hidden;
-  *zoom: 1;
-}
-@media (min-width: 800px) and (max-width: 989px) {
-  /* line 237, ../sass/layout/_layout-nodes.scss */
-  body .conteneur .col3_layout_3_2_7 {
-    width: 48.75622%;
-    float: left;
-    margin-right: 2.48756%;
-  }
-}
-@media (min-width: 990px) {
-  /* line 237, ../sass/layout/_layout-nodes.scss */
-  body .conteneur .col3_layout_3_2_7 {
-    width: 57.64803%;
-    float: left;
-    margin-right: 1.64474%;
-    margin-right: -100%;
-  }
-}
-@media (min-height: 767px) and (max-width: 1024px) and (orientation: landscape) {
-  /* line 237, ../sass/layout/_layout-nodes.scss */
-  body .conteneur .col3_layout_3_2_7 {
-    width: 49.0099%;
-    float: left;
-    margin-left: 50.9901%;
-    margin-right: -100%;
-  }
-}
-
-@media (min-width: 800px) and (max-width: 989px) {
-  /* line 261, ../sass/layout/_layout-nodes.scss */
+  /* line 212, ../sass/layout/_layout-nodes.scss */
   body .conteneur .layout_3col_all4 {
     width: 35.94527%;
     float: left;
@@ -1476,7 +1410,7 @@ body .conteneur .col3_layout_3_2_7 {
   }
 }
 @media (min-width: 990px) {
-  /* line 261, ../sass/layout/_layout-nodes.scss */
+  /* line 212, ../sass/layout/_layout-nodes.scss */
   body .conteneur .layout_3col_all4 {
     width: 32.23684%;
     float: left;
@@ -1485,7 +1419,7 @@ body .conteneur .col3_layout_3_2_7 {
   }
 }
 @media (min-width: 800px) and (max-width: 989px) {
-  /* line 272, ../sass/layout/_layout-nodes.scss */
+  /* line 223, ../sass/layout/_layout-nodes.scss */
   body .conteneur .layout_3col_all4last {
     width: 23.13433%;
     float: left;
@@ -1494,7 +1428,7 @@ body .conteneur .col3_layout_3_2_7 {
   }
 }
 @media (min-width: 990px) {
-  /* line 272, ../sass/layout/_layout-nodes.scss */
+  /* line 223, ../sass/layout/_layout-nodes.scss */
   body .conteneur .layout_3col_all4last {
     width: 32.23684%;
     float: left;
@@ -1505,7 +1439,7 @@ body .conteneur .col3_layout_3_2_7 {
 
 /*//////////////// 2 COLONNES ASYMETRIQUES \\\\\\\\*/
 @media (min-width: 800px) and (max-width: 989px) {
-  /* line 287, ../sass/layout/_layout-nodes.scss */
+  /* line 240, ../sass/layout/_layout-nodes.scss */
   body .conteneur .col1_layout_4_8 {
     width: 35.94527%;
     float: left;
@@ -1514,7 +1448,7 @@ body .conteneur .col3_layout_3_2_7 {
   }
 }
 @media (min-width: 990px) {
-  /* line 287, ../sass/layout/_layout-nodes.scss */
+  /* line 240, ../sass/layout/_layout-nodes.scss */
   body .conteneur .col1_layout_4_8 {
     width: 32.23684%;
     float: left;
@@ -1523,7 +1457,7 @@ body .conteneur .col3_layout_3_2_7 {
   }
 }
 @media (min-width: 800px) and (max-width: 989px) {
-  /* line 297, ../sass/layout/_layout-nodes.scss */
+  /* line 250, ../sass/layout/_layout-nodes.scss */
   body .conteneur .col2_layout_4_8 {
     width: 61.56716%;
     float: left;
@@ -1532,7 +1466,7 @@ body .conteneur .col3_layout_3_2_7 {
   }
 }
 @media (min-width: 990px) {
-  /* line 297, ../sass/layout/_layout-nodes.scss */
+  /* line 250, ../sass/layout/_layout-nodes.scss */
   body .conteneur .col2_layout_4_8 {
     width: 66.11842%;
     float: left;
@@ -1541,7 +1475,7 @@ body .conteneur .col3_layout_3_2_7 {
   }
 }
 @media (min-width: 800px) and (max-width: 989px) {
-  /* line 312, ../sass/layout/_layout-nodes.scss */
+  /* line 265, ../sass/layout/_layout-nodes.scss */
   body .conteneur .col1_layout_3_9 {
     width: 23.13433%;
     float: left;
@@ -1550,7 +1484,7 @@ body .conteneur .col3_layout_3_2_7 {
   }
 }
 @media (min-width: 990px) {
-  /* line 312, ../sass/layout/_layout-nodes.scss */
+  /* line 265, ../sass/layout/_layout-nodes.scss */
   body .conteneur .col1_layout_3_9 {
     width: 23.76645%;
     float: left;
@@ -1559,7 +1493,7 @@ body .conteneur .col3_layout_3_2_7 {
   }
 }
 @media (min-width: 800px) and (max-width: 989px) {
-  /* line 322, ../sass/layout/_layout-nodes.scss */
+  /* line 275, ../sass/layout/_layout-nodes.scss */
   body .conteneur .col2_layout_3_9 {
     width: 74.37811%;
     float: left;
@@ -1568,7 +1502,7 @@ body .conteneur .col3_layout_3_2_7 {
   }
 }
 @media (min-width: 990px) {
-  /* line 322, ../sass/layout/_layout-nodes.scss */
+  /* line 275, ../sass/layout/_layout-nodes.scss */
   body .conteneur .col2_layout_3_9 {
     width: 74.58882%;
     float: left;
@@ -1577,7 +1511,7 @@ body .conteneur .col3_layout_3_2_7 {
   }
 }
 @media (min-width: 990px) {
-  /* line 343, ../sass/layout/_layout-nodes.scss */
+  /* line 296, ../sass/layout/_layout-nodes.scss */
   body .conteneur .col1_layout_7_5 {
     width: 57.64803%;
     float: left;
@@ -1586,7 +1520,7 @@ body .conteneur .col3_layout_3_2_7 {
   }
 }
 @media (min-width: 990px) {
-  /* line 349, ../sass/layout/_layout-nodes.scss */
+  /* line 302, ../sass/layout/_layout-nodes.scss */
   body .conteneur .col2_layout_7_5 {
     width: 40.70724%;
     float: left;
@@ -1595,7 +1529,7 @@ body .conteneur .col3_layout_3_2_7 {
   }
 }
 @media (min-width: 800px) and (max-width: 989px) {
-  /* line 356, ../sass/layout/_layout-nodes.scss */
+  /* line 309, ../sass/layout/_layout-nodes.scss */
   body .conteneur .col1_layout_8_4 {
     width: 61.56716%;
     float: left;
@@ -1604,7 +1538,7 @@ body .conteneur .col3_layout_3_2_7 {
   }
 }
 @media (min-width: 990px) {
-  /* line 356, ../sass/layout/_layout-nodes.scss */
+  /* line 309, ../sass/layout/_layout-nodes.scss */
   body .conteneur .col1_layout_8_4 {
     width: 66.11842%;
     float: left;
@@ -1613,7 +1547,7 @@ body .conteneur .col3_layout_3_2_7 {
   }
 }
 @media (min-width: 800px) and (max-width: 989px) {
-  /* line 367, ../sass/layout/_layout-nodes.scss */
+  /* line 320, ../sass/layout/_layout-nodes.scss */
   body .conteneur .col2_layout_8_4 {
     width: 35.94527%;
     float: left;
@@ -1622,7 +1556,7 @@ body .conteneur .col3_layout_3_2_7 {
   }
 }
 @media (min-width: 990px) {
-  /* line 367, ../sass/layout/_layout-nodes.scss */
+  /* line 320, ../sass/layout/_layout-nodes.scss */
   body .conteneur .col2_layout_8_4 {
     width: 32.23684%;
     float: left;
@@ -1630,53 +1564,10 @@ body .conteneur .col3_layout_3_2_7 {
     margin-right: -100%;
   }
 }
-@media (min-width: 800px) and (max-width: 989px) {
-  /* line 380, ../sass/layout/_layout-nodes.scss */
-  body .conteneur .col1_layout_10_2 {
-    width: 74.37811%;
-    float: left;
-    margin-left: 0;
-    margin-right: -100%;
-  }
-}
-@media (min-width: 990px) {
-  /* line 380, ../sass/layout/_layout-nodes.scss */
-  body .conteneur .col1_layout_10_2 {
-    width: 83.05921%;
-    float: left;
-    margin-left: 0;
-    margin-right: -100%;
-  }
-}
-@media (min-width: 800px) and (max-width: 989px) {
-  /* line 390, ../sass/layout/_layout-nodes.scss */
-  body .conteneur .col2_layout_10_2 {
-    width: 23.13433%;
-    float: left;
-    margin-left: 76.86567%;
-    margin-right: -100%;
-  }
-}
-@media (min-width: 990px) {
-  /* line 390, ../sass/layout/_layout-nodes.scss */
-  body .conteneur .col2_layout_10_2 {
-    width: 15.29605%;
-    float: left;
-    margin-left: 84.70395%;
-    margin-right: -100%;
-  }
-}
 
 /*//////////////// 4 COLONNES \\\\\\\\*/
-/* line 404, ../sass/layout/_layout-nodes.scss */
-body .conteneur .layout_4col_all3 {
-  width: 100%;
-  float: left;
-  margin-left: 0;
-  margin-right: 0;
-}
 @media (min-width: 800px) and (max-width: 989px) {
-  /* line 404, ../sass/layout/_layout-nodes.scss */
+  /* line 340, ../sass/layout/_layout-nodes.scss */
   body .conteneur .layout_4col_all3 {
     width: 23.13433%;
     float: left;
@@ -1684,22 +1575,17 @@ body .conteneur .layout_4col_all3 {
   }
 }
 @media (min-width: 990px) {
-  /* line 404, ../sass/layout/_layout-nodes.scss */
+  /* line 340, ../sass/layout/_layout-nodes.scss */
   body .conteneur .layout_4col_all3 {
     width: 23.76645%;
     float: left;
     margin-right: 1.64474%;
+    margin-right: 0.3em;
+    /*Toujours en dernier pour override de la taille des gouttieres*/
   }
 }
-/* line 417, ../sass/layout/_layout-nodes.scss */
-body .conteneur .layout_4col_all3last {
-  width: 100%;
-  float: left;
-  margin-left: 0;
-  margin-right: 0;
-}
 @media (min-width: 800px) and (max-width: 989px) {
-  /* line 417, ../sass/layout/_layout-nodes.scss */
+  /* line 352, ../sass/layout/_layout-nodes.scss */
   body .conteneur .layout_4col_all3last {
     width: 23.13433%;
     float: left;
@@ -1708,25 +1594,27 @@ body .conteneur .layout_4col_all3last {
   }
 }
 @media (min-width: 990px) {
-  /* line 417, ../sass/layout/_layout-nodes.scss */
+  /* line 352, ../sass/layout/_layout-nodes.scss */
   body .conteneur .layout_4col_all3last {
-    width: 23.76645%;
+    width: 15.29605%;
     float: left;
-    margin-left: 76.23355%;
+    margin-right: 1.64474%;
+    float: left;
+    margin-left: 0.3%;
     margin-right: -100%;
   }
 }
 
 /*\\\\\\ LAYOUT IMBRIQUE (NESTED) - SPECIAUX ///////////*/
 @media (min-width: 990px) {
-  /* line 435, ../sass/layout/_layout-nodes.scss */
+  /* line 371, ../sass/layout/_layout-nodes.scss */
   body .conteneur .layout_2col_items_4_8 {
     width: 310.20408%;
     float: left;
     margin-left: 0;
     margin-right: -100%;
   }
-  /* line 437, ../sass/layout/_layout-nodes.scss */
+  /* line 373, ../sass/layout/_layout-nodes.scss */
   body .conteneur .layout_2col_items_4_8:nth-child(odd) {
     clear: both;
     width: 32.23684%;
@@ -1734,7 +1622,7 @@ body .conteneur .layout_4col_all3last {
     margin-left: 0;
     margin-right: -100%;
   }
-  /* line 442, ../sass/layout/_layout-nodes.scss */
+  /* line 378, ../sass/layout/_layout-nodes.scss */
   body .conteneur .layout_2col_items_4_8:nth-child(even) {
     width: 66.11842%;
     float: left;
@@ -3854,143 +3742,107 @@ body .conteneur .conteneur-flex #colonne-3.page-lycee {
 /*######-------- ||| BORDURES ||| --------######*/
 @media (min-width: 990px) {
   /* line 30, ../sass/content-type-style/_page-lycee.scss */
-  body .conteneur .conteneur-flex #colonne-2.page-lycee {
-    border-left: 0.0625em solid #ADC91F;
-    border-right: 0.0625em solid #93117E;
+  body .conteneur #colonne-1.page-lycee {
+    border-right: 0.0625em solid #01ABCF;
   }
 }
 
-/* line 35, ../sass/content-type-style/_page-lycee.scss */
-h1.titre_pl {
-  font-size: 24px;
+/*######-------- ||| STYLE ||| --------######*/
+/* line 36, ../sass/content-type-style/_page-lycee.scss */
+.page-lycee .titre_page {
+  font-size: x-large;
+  margin: 0.1em;
+  line-height: 1.875em;
   color: #911381;
-  line-height: 1em;
 }
-
-/*######-------- COLONNE G1 --------######*/
-/* line 45, ../sass/content-type-style/_page-lycee.scss */
-#colonne-1.page-lycee img {
-  border: 0.5em solid #fff;
-  -moz-box-shadow: #AAAAAA 0px 0px 5px;
-  -webkit-box-shadow: #AAAAAA 0px 0px 5px;
-  box-shadow: #AAAAAA 0px 0px 5px;
+/* line 43, ../sass/content-type-style/_page-lycee.scss */
+.page-lycee a {
+  color: #01ABCF;
+  text-decoration: none;
+}
+/* line 46, ../sass/content-type-style/_page-lycee.scss */
+.page-lycee a:hover {
+  text-decoration: underline;
 }
 /* line 50, ../sass/content-type-style/_page-lycee.scss */
-#colonne-1.page-lycee .imagecache {
-  margin: 0 auto;
+.page-lycee strong {
+  color: #E30078;
+}
+/* line 53, ../sass/content-type-style/_page-lycee.scss */
+.page-lycee .logo-resto {
+  float: right;
+}
+/* line 56, ../sass/content-type-style/_page-lycee.scss */
+.page-lycee .menu-resto {
+  text-align: center;
+  margin: 5px;
+  background: azure;
+}
+/* line 60, ../sass/content-type-style/_page-lycee.scss */
+.page-lycee .menu-resto a {
+  color: #E30078;
+  padding: 0.625em;
   display: block;
-  width: 47.44898%;
-}
-@media (min-width: 990px) {
-  /* line 50, ../sass/content-type-style/_page-lycee.scss */
-  #colonne-1.page-lycee .imagecache {
-    width: 64.52806%;
-  }
-}
-
-/*######-------- COLONNE G2 --------######*/
-/* line 63, ../sass/content-type-style/_page-lycee.scss */
-#colonne-2.page-lycee h2 {
-  color: #ADC91F;
-  padding: 0.3125em;
 }
 /* line 64, ../sass/content-type-style/_page-lycee.scss */
-#colonne-2.page-lycee h3 {
-  color: #911381;
-  padding: 5px;
-}
-/* line 65, ../sass/content-type-style/_page-lycee.scss */
-#colonne-2.page-lycee h4 {
-  padding: 5px;
-  color: #F29803;
-}
-/* line 66, ../sass/content-type-style/_page-lycee.scss */
-#colonne-2.page-lycee p {
-  padding: 5px;
-}
-/* line 67, ../sass/content-type-style/_page-lycee.scss */
-#colonne-2.page-lycee ul {
-  padding: 5px;
+.page-lycee .menu-resto a:hover {
+  color: #01ABCF;
 }
 /* line 68, ../sass/content-type-style/_page-lycee.scss */
-#colonne-2.page-lycee a img {
-  background: 0;
+.page-lycee .menu-resto .filefield-icon {
+  display: none;
 }
-/* line 69, ../sass/content-type-style/_page-lycee.scss */
-#colonne-2.page-lycee a {
-  background: #AEC821;
-  color: #EFEFEF;
-  text-decoration: none;
-  padding: 3px;
-  margin: 5px;
+/* line 72, ../sass/content-type-style/_page-lycee.scss */
+.page-lycee .liste-filtre ul {
+  list-style: circle outside none;
+  margin: 0 0 0 15px;
 }
-/* line 75, ../sass/content-type-style/_page-lycee.scss */
-#colonne-2.page-lycee a:hover {
-  color: #AEC821;
-  background: none;
-  -moz-box-shadow: #AAAAAA 0px 0px 5px;
-  -webkit-box-shadow: #AAAAAA 0px 0px 5px;
-  box-shadow: #AAAAAA 0px 0px 5px;
+/* line 76, ../sass/content-type-style/_page-lycee.scss */
+.page-lycee .liste-filtre ul li {
+  list-style: inherit;
+}
+/* line 79, ../sass/content-type-style/_page-lycee.scss */
+.page-lycee .liste-filtre .views-field-title a {
+  color: #01ABCF;
+  font-size: small;
 }
 /* line 83, ../sass/content-type-style/_page-lycee.scss */
-#colonne-2.page-lycee iframe#slideshare-embed, #colonne-2.page-lycee iframe {
-  max-width: 100%;
+.page-lycee .liste-filtre p {
+  color: black;
+  text-transform: lowercase;
+}
+/* line 87, ../sass/content-type-style/_page-lycee.scss */
+.page-lycee .liste-filtre h3 {
+  font-size: 0.75em;
+  margin: 0;
+  padding: 0;
 }
 
-/*------ LISTE VUE ACTU LYCEE (Colonne G3) ---------*/
-/* line 86, ../sass/content-type-style/_page-lycee.scss */
-#colonne-3 #bloc-actu-lycee {
-  width: 90%;
-  margin: 0 auto;
+/* line 97, ../sass/content-type-style/_page-lycee.scss */
+#colonne-2.page-lycee p {
+  margin: 0;
 }
-/* line 89, ../sass/content-type-style/_page-lycee.scss */
-#colonne-3 #bloc-actu-lycee h3 {
-  color: #911381;
-  font-family: arista,Trebuchet MS, sans-serif;
-  font-size: x-large;
-  margin: 0.3125em;
-  display: block;
-  text-align: center;
-}
-
 /* line 100, ../sass/content-type-style/_page-lycee.scss */
-.liste-actu-lycee ul {
-  margin: 0 auto;
-  background: transparent url(../images/zebra-gros-clair.gif) repeat;
-  list-style: none;
-  padding: 0.3125em;
-  font-size: small;
-  -moz-border-radius: 0.5em;
-  -webkit-border-radius: 0.5em;
-  border-radius: 0.5em;
+#colonne-2.page-lycee h3 {
+  text-align: center;
+  color: #911381;
+  font-size: x-large;
+  margin: 0.27em;
 }
-/* line 109, ../sass/content-type-style/_page-lycee.scss */
-.liste-actu-lycee ul, .liste-actu-lycee p {
-  line-height: normal;
-}
-/* line 112, ../sass/content-type-style/_page-lycee.scss */
-.liste-actu-lycee p {
-  margin: 0.3em;
-}
-
-/* line 118, ../sass/content-type-style/_page-lycee.scss */
-.element-actu-lycee {
-  width: 95%;
-  margin: 0 auto;
-}
-/* line 121, ../sass/content-type-style/_page-lycee.scss */
-.element-actu-lycee a {
-  color: #606070;
-  background: #ECECED;
+/* line 101, ../sass/content-type-style/_page-lycee.scss */
+#colonne-2.page-lycee iframe {
+  max-width: 100%;
   display: block;
-  font-weight: bold;
-  text-decoration: none;
-  padding: 0.125em;
+  margin: 0 auto;
 }
-/* line 129, ../sass/content-type-style/_page-lycee.scss */
-.element-actu-lycee a:hover {
-  background: #ADC91F;
-  color: white;
+/* line 106, ../sass/content-type-style/_page-lycee.scss */
+#colonne-2.page-lycee .node_col_2 img {
+  display: block;
+  margin: 0 auto;
+}
+/* line 110, ../sass/content-type-style/_page-lycee.scss */
+#colonne-2.page-lycee .menu-resto h3 {
+  color: #01ABCF;
 }
 
 /*-------------------------------------|
@@ -4196,7 +4048,7 @@ body .conteneur #colonne-3.vdl-liste {
   /* line 26, ../sass/content-type-style/_page-vdl-liste.scss */
   body .conteneur #colonne-2.contenu-vdl {
     border-left: 0.0625em solid #ADC91F;
-    border-right: 0.0625em solid #93117E;
+    border-right: 0.0625em solid #911381;
   }
 }
 
@@ -4707,7 +4559,7 @@ body .conteneur .conteneur-flex #colonne-3.page-actualites {
   /* line 28, ../sass/content-type-style/_page-actualites.scss */
   body .conteneur .conteneur-flex #colonne-2.page-actualites {
     border-left: 0.0625em solid #ADC91F;
-    border-right: 0.0625em solid #93117E;
+    border-right: 0.0625em solid #911381;
   }
 }
 
@@ -5014,7 +4866,7 @@ body .conteneur .conteneur-flex #colonne-3.contenu-actu {
   /* line 25, ../sass/content-type-style/_contenu-actualite.scss */
   body .conteneur .conteneur-flex #colonne-2.contenu-actu {
     border-left: 0.0625em solid #ADC91F;
-    border-right: 0.0625em solid #93117E;
+    border-right: 0.0625em solid #911381;
   }
 }
 
@@ -5151,7 +5003,7 @@ body .conteneur #colonne-3.partenaires {
   /* line 27, ../sass/content-type-style/_contenu-vdl.scss */
   body .conteneur #colonne-2.contenu-vdl {
     border-left: 0.0625em solid #ADC91F;
-    border-right: 0.0625em solid #93117E;
+    border-right: 0.0625em solid #911381;
   }
 }
 
@@ -5325,7 +5177,7 @@ body .conteneur .conteneur-flex #colonne-3.contenu-actu {
   /* line 25, ../sass/content-type-style/_contenu-cdi.scss */
   body .conteneur .conteneur-flex #colonne-2.contenu-actu {
     border-left: 0.0625em solid #ADC91F;
-    border-right: 0.0625em solid #93117E;
+    border-right: 0.0625em solid #911381;
   }
 }
 
@@ -5426,7 +5278,7 @@ body .conteneur .conteneur-flex #colonne-3.CLASS_NAME {
 @media (min-width: 990px) {
   /* line 25, ../sass/content-type-style/_webform-contact.scss */
   body .conteneur #colonne-1.contact {
-    border-right: 0.0625em solid #93117E;
+    border-right: 0.0625em solid #911381;
   }
 }
 
@@ -5468,7 +5320,7 @@ body .conteneur .conteneur-flex #colonne-3.CLASS_NAME {
   }
   /* line 27, ../sass/content-type-style/_fiche-formation.scss */
   body .conteneur #colonne-3.fiche-formation {
-    border-left: 0.0625em solid #93117E;
+    border-left: 0.0625em solid #911381;
   }
 }
 
@@ -6607,6 +6459,147 @@ VIEWS 3 CYCLE: DIAPO CONTENU ===================================
 .galerie .views_slideshow_controls_text_next a:hover {
   background: url("../css_galeries/images/arrow-rond-pf.png") 0 11.2em;
   float: right;
+}
+
+/*
+Override du style de galerie flexslider
+Indiquer les classes ou les IDs des enveloppes des galeries
+*/
+/* line 11, ../sass/galeries/_flexslider-cyrano.scss */
+#bloc-galerie-vdl .flexslider, .galerie-resto .flexslider {
+  background: transparent;
+  border: 0;
+}
+/* line 14, ../sass/galeries/_flexslider-cyrano.scss */
+#bloc-galerie-vdl .flexslider .flex-control-nav, .galerie-resto .flexslider .flex-control-nav {
+  bottom: -1.1em;
+}
+/* line 18, ../sass/galeries/_flexslider-cyrano.scss */
+#bloc-galerie-vdl .flexslider .flex-control-paging li a, .galerie-resto .flexslider .flex-control-paging li a {
+  margin: 0.1em;
+  background: #911381;
+  border: 0.1em solid #fff;
+  -moz-box-shadow: 0.1em 0.1em 12px #aaa;
+  -webkit-box-shadow: 0.1em 0.1em 12px #aaa;
+  box-shadow: 0.1em 0.1em 12px #aaa;
+}
+/* line 22, ../sass/galeries/_flexslider-cyrano.scss */
+#bloc-galerie-vdl .flexslider .flex-control-paging li a:hover, .galerie-resto .flexslider .flex-control-paging li a:hover {
+  background: #01ABCF;
+}
+/* line 26, ../sass/galeries/_flexslider-cyrano.scss */
+#bloc-galerie-vdl .flexslider .flex-control-paging li a.flex-active, .galerie-resto .flexslider .flex-control-paging li a.flex-active {
+  background: #01ABCF;
+}
+/* line 33, ../sass/galeries/_flexslider-cyrano.scss */
+#bloc-galerie-vdl .flexslider ul.flex-direction-nav, .galerie-resto .flexslider ul.flex-direction-nav {
+  list-style: none;
+}
+/* line 36, ../sass/galeries/_flexslider-cyrano.scss */
+#bloc-galerie-vdl .flexslider .flex-direction-nav a, .galerie-resto .flexslider .flex-direction-nav a {
+  height: 2em;
+}
+/* line 39, ../sass/galeries/_flexslider-cyrano.scss */
+#bloc-galerie-vdl .flexslider .flex-direction-nav a:before, .galerie-resto .flexslider .flex-direction-nav a:before {
+  font-size: 2.5em;
+  display: inline-block;
+}
+/* line 43, ../sass/galeries/_flexslider-cyrano.scss */
+#bloc-galerie-vdl .flexslider .flex-direction-nav a.flex-next:before, .galerie-resto .flexslider .flex-direction-nav a.flex-next:before {
+  content: '\f002';
+}
+/* line 46, ../sass/galeries/_flexslider-cyrano.scss */
+#bloc-galerie-vdl .flexslider .flex-direction-nav .flex-prev, .galerie-resto .flexslider .flex-direction-nav .flex-prev {
+  left: -3.125em;
+}
+/* line 49, ../sass/galeries/_flexslider-cyrano.scss */
+#bloc-galerie-vdl .flexslider .flex-direction-nav .flex-next, .galerie-resto .flexslider .flex-direction-nav .flex-next {
+  right: -3.125em;
+}
+/* line 53, ../sass/galeries/_flexslider-cyrano.scss */
+#bloc-galerie-vdl .flexslider .flexslider:hover .flex-direction-nav .flex-prev, .galerie-resto .flexslider .flexslider:hover .flex-direction-nav .flex-prev {
+  opacity: 0.7;
+  left: 0.625em;
+}
+/* line 57, ../sass/galeries/_flexslider-cyrano.scss */
+#bloc-galerie-vdl .flexslider .flexslider:hover .flex-direction-nav .flex-prev:hover, .galerie-resto .flexslider .flexslider:hover .flex-direction-nav .flex-prev:hover {
+  opacity: 1;
+}
+/* line 60, ../sass/galeries/_flexslider-cyrano.scss */
+#bloc-galerie-vdl .flexslider .flexslider:hover .flex-direction-nav .flex-next, .galerie-resto .flexslider .flexslider:hover .flex-direction-nav .flex-next {
+  opacity: 0.7;
+  right: 0.625em;
+}
+/* line 64, ../sass/galeries/_flexslider-cyrano.scss */
+#bloc-galerie-vdl .flexslider .flexslider:hover .flex-direction-nav .flex-next:hover, .galerie-resto .flexslider .flexslider:hover .flex-direction-nav .flex-next:hover {
+  opacity: 1;
+}
+/* line 69, ../sass/galeries/_flexslider-cyrano.scss */
+#bloc-galerie-vdl .flexslider, #bloc-galerie-vdl .flexslider-thumbs, .galerie-resto .flexslider, .galerie-resto .flexslider-thumbs {
+  width: 95%;
+  display: inline-block;
+  margin: 0 auto;
+}
+/* line 73, ../sass/galeries/_flexslider-cyrano.scss */
+#bloc-galerie-vdl .flexslider li, #bloc-galerie-vdl .flexslider ul.slides li, #bloc-galerie-vdl .flexslider-thumbs li, #bloc-galerie-vdl .flexslider-thumbs ul.slides li, .galerie-resto .flexslider li, .galerie-resto .flexslider ul.slides li, .galerie-resto .flexslider-thumbs li, .galerie-resto .flexslider-thumbs ul.slides li {
+  padding: 0;
+}
+/* line 76, ../sass/galeries/_flexslider-cyrano.scss */
+#bloc-galerie-vdl .flexslider .slides img, #bloc-galerie-vdl .flexslider-thumbs .slides img, .galerie-resto .flexslider .slides img, .galerie-resto .flexslider-thumbs .slides img {
+  padding: 0.2em;
+  border: 0.1em solid #ECECED;
+  -moz-border-radius: 0.5em;
+  -webkit-border-radius: 0.5em;
+  border-radius: 0.5em;
+}
+/* line 82, ../sass/galeries/_flexslider-cyrano.scss */
+#bloc-galerie-vdl .flexslider *.flex-caption, #bloc-galerie-vdl .flexslider-thumbs *.flex-caption, .galerie-resto .flexslider *.flex-caption, .galerie-resto .flexslider-thumbs *.flex-caption {
+  position: relative;
+  z-index: 3;
+  padding: 2%;
+  width: 94%;
+  left: 0.8em;
+  bottom: 6em;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+  font-size: x-small;
+  line-height: 1.15em;
+}
+@media (min-width: 990px) {
+  /* line 99, ../sass/galeries/_flexslider-cyrano.scss */
+  #bloc-galerie-vdl .flexslider .slides img, #bloc-galerie-vdl .flexslider-thumbs .slides img, .galerie-resto .flexslider .slides img, .galerie-resto .flexslider-thumbs .slides img {
+    border: 0.3em solid #ECECED;
+  }
+  /* line 102, ../sass/galeries/_flexslider-cyrano.scss */
+  #bloc-galerie-vdl .flexslider .slides > li, #bloc-galerie-vdl .flexslider-thumbs .slides > li, .galerie-resto .flexslider .slides > li, .galerie-resto .flexslider-thumbs .slides > li {
+    max-height: 33em;
+  }
+  /* line 107, ../sass/galeries/_flexslider-cyrano.scss */
+  #bloc-galerie-vdl .flexslider *.flex-caption, #bloc-galerie-vdl .flexslider-thumbs *.flex-caption, .galerie-resto .flexslider *.flex-caption, .galerie-resto .flexslider-thumbs *.flex-caption {
+    font-size: small;
+  }
+}
+
+/*
+Override du style de galerie Bxslider
+*/
+/* line 8, ../sass/galeries/_bxslider-cyrano.scss */
+#bloc-galerie-vdl .bx-wrapper {
+  margin: 0 auto;
+  width: 95%;
+}
+/* line 14, ../sass/galeries/_bxslider-cyrano.scss */
+#bloc-galerie-vdl .bx-wrapper li {
+  padding: 0;
+}
+/* line 17, ../sass/galeries/_bxslider-cyrano.scss */
+#bloc-galerie-vdl .bx-wrapper .bx-viewport {
+  height: auto;
+}
+/* line 20, ../sass/galeries/_bxslider-cyrano.scss */
+#bloc-galerie-vdl .bx-wrapper .bx-pager {
+  margin: 0 0.1em;
 }
 
 /*# sourceMappingURL=application.css.map */
