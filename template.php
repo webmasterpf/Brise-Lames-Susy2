@@ -33,13 +33,15 @@ $term = preg_replace('<code>\s+</code>', '<em>', trim($term));
 
 function cyranod6_bl_susy2_preprocess_node(&$vars, $hook) {
 //Partie regions génériques dans node.tpl- ajoute les regions utiles au node.tpl
- $vars['pole_1'] = theme('blocks', 'pole_1');
- $vars['pole_2'] = theme('blocks', 'pole_2');
- $vars['pole_3'] = theme('blocks', 'pole_3');
- $vars['pole_4'] = theme('blocks', 'pole_4');
+ $vars['pole_col1'] = theme('blocks', 'pole_col1');
+ $vars['pole_col2'] = theme('blocks', 'pole_col2');
+ $vars['pole_col3'] = theme('blocks', 'pole_col3');
+ $vars['pole_col4'] = theme('blocks', 'pole_col4');
  $vars['node_col_1'] = theme('blocks', 'node_col_1');
  $vars['node_col_2'] = theme('blocks', 'node_col_2');
  $vars['node_col_3'] = theme('blocks', 'node_col_3');
+ $vars['node_col_4'] = theme('blocks', 'node_col_4');
+ $vars['node_col_5'] = theme('blocks', 'node_col_5');
  //Regions custom pour theme suite generalisation node.tpl
 // $vars['pole_bloc_G'] = theme('blocks', 'pole_bloc_G');
 // $vars['pole_bloc_C'] = theme('blocks', 'pole_bloc_C');
