@@ -7,29 +7,26 @@
     <div class="node-inner">
         <!--______________COLONNE 1________________ -->
        <div id="colonne-1" class="col1_layout_4_8 fiche-formation">
-             <?php if ($decoTitre): ?>
-                <div id="decoTitreImg"><?php print $decoTitre; ?></div>
-              <?php endif; ?>
+      
               <?php if ($title): ?>
                 <h1 class="titre-fiche-formation"><?php print $title; ?></h1>
               <?php endif; ?>
-          <?php if ($node->field_complement_info_formation[0]['view']): ?>
-                    <div class="complement_titre_fiche">
-                        <?php (print $node->field_complement_info_formation[0]['view']); /* Info complementaire sur formation */ ?>
-                    </div>
-                <?php endif; ?>
-                
-   <?php if ($node->field_intro_fiche_formation[0]['view']): ?>
-                    <div class="complement_titre_fiche">
-                        <?php (print $node->field_intro_fiche_formation[0]['view']); /* Info complementaire sur formation */ ?>
-                    </div>
-                <?php endif; ?>
-                
-   <?php if ($node->field_savoir_plus_fiche_formatio[0]['view']): ?>
-                    <div class="complement_titre_fiche">
-                        <?php (print $node->field_savoir_plus_fiche_formatio[0]['view']); /* Info complementaire sur formation */ ?>
-                    </div>
-                <?php endif; ?>                
+       
+            <?php if ($node->field_fiche_complement[0]['view']): ?>
+            <div class="complement-fiche">
+                    <?php  print $node->field_fiche_complement[0]['view']  ?>
+            </div>
+            <?php endif;?>
+            <?php if ($node->field_programme_formation[0]['view']): ?>
+            <div class="programme-fiche">
+                    <?php  print $node->content['field_programme_formation']['field']['#title'] ?>:<?php  print $node->field_programme_formation[0]['view']  ?>
+            </div>
+            <?php endif;?>
+            <?php if ($node->field_fiche_poursuite[0]['view']): ?>
+            <div class="poursuite-fiche">
+                    <?php  print $node->field_fiche_poursuite[0]['view']  ?>
+            </div>
+            <?php endif;?>             
        <?php
               global $theme_path;
               include ($theme_path.'/includes/inc_region_col_1.php');

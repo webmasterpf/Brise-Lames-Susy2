@@ -47,7 +47,7 @@
 
                  <?php if ($node->field_fichier_attache[0]['view']): ?>
             <div class="menu-resto">
-                <h3>Le Menu du Restaurant</h3>
+                <h3>Les Formules du Restaurant</h3>
                     <?php  print $node->field_fichier_attache[0]['view']  ?>
             </div>
             <?php endif;?>

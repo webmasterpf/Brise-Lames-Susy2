@@ -2,8 +2,8 @@
 global $theme_path;
 include ($theme_path.'/includes/inc_header.php');
 ?>
- <!-- ______________________ LAYOUT PAGE POLE _______________________ -->
-  <!-- ______________________ CONTENT INNER GLOBAL _______________________ -->
+ <!-- ______________________ LAYOUT FICHES FORMATION _______________________ -->
+   <!-- ______________________ CONTENT INNER GLOBAL _______________________ -->
 
         <div class="content-inner">
               <!-- ______________________ CONTENT TOP _______________________ -->

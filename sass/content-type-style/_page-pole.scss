@@ -31,128 +31,39 @@ body .conteneur .conteneur-flex{
 }
 
 /*######-------- ||| STYLE ||| --------######*/
-h1.title-page-bloc{
-    font-size: xx-large;
-    font-family: arista,Trebuchet MS, sans-serif;
+
+h1.page-pole{
+    color: $bleu-turquoise;
     text-align: center;
-    color: $violet;
-    text-transform: uppercase;
-    
 }
-h3.block-title{
-    font-size: em(18px);
-    color: $vert;
-    text-align: center;
-    text-transform: uppercase;
-    margin: em(20px) 0;
-}
-#middle-content .page-pole{
-    .view-content h3{
-        color: $violet;
-        text-decoration: none;
-        padding: em(2px);
-
-    }
-    .views-field-title {
-        font-size: 14px;
-
-    }
-    .views-field-title a{
-        color: $vert;
-        text-decoration: none;
-        padding: em(2px);
-
-    }
-    .views-field-title a:hover{
-        background: $vert;
-        color: white;
-    }
+/*--------------------------------------
+**** POLE FORMATION REDESIGN 2012 ******
+_________________________________________*/
+.bloc-pole{
+     a{text-align: center;}
+     a{
+         color: $bleu-turquoise;text-decoration: none;line-height: 1.6em;padding: 1px;text-align: center;display: block;
+     &:hover{background: $violet;color: whitesmoke;}
+     }
+     
+     h3{text-align: center;margin:0 0 em(5px) 0;}
+     .complement{text-align: center;font-style: italic;color: #7A7B85;display: block;}
 }
 
-#block-views-Formations_par_poles-block_1,
-#block-views-Formations_par_poles-block_2,
-#block-views-Formations_par_poles-block_3{
-    width: auto; 
-    display: block;
-    padding: em(71px) em(20px);    
+/**** MODIF 2014 ****/
+#orange table,#bleu table,#vert table,#rose table{
+    background: $gris-clair;
+    width: 100%;
 }
-#block-views-Formations_par_poles-block_1{
-    background: white url('../images/bg_pole_tertiaire.jpg') no-repeat top left; 
- background-size: contain;
-}
+#orange table{border:em(3px) solid $orange;padding: em(3px);}
+#bleu table{border:em(3px) solid $bleu-turquoise;padding: em(3px);margin: em(22px) 0 0 0;}
+#vert table{;border:em(3px) solid $vert;padding: em(3px);}
+#rose table{border:em(3px) solid $rose-fushia;padding: em(3px);margin: em(22px) 0 0 0;}
 
-#block-views-Formations_par_poles-block_2{
-    background: white url('../images/bg_pole_services.jpg') no-repeat left em(1px);
-     background-size: contain;
-}
-#block-views-Formations_par_poles-block_3{
-    background: white url('../images/bg_pole_arts.jpg') no-repeat top left;
-     background-size: contain;
-}
+#orange h3{color: $orange;}
+#bleu h3{color: $bleu-turquoise;}
+#vert h3{color: $vert;}
+#rose h3{color: $rose-fushia;}
+#orange tr,#vert tr,#bleu tr,#rose tr{margin: 2px 0;}
+#orange td,#vert td,#bleu td,#rose td{padding: em(10px) em(5px);display: block;}
 
-
-/*TABLE PAGE FORMATION PAR POLES*/
-.table_bloc_form_pole{
-    width: 98%;
-}
-
-.table_bloc_form_pole td{
-    margin: 2px 0;
-    padding: 4px 0;
-    border-bottom: 1px solid #94127F;
-}
-/*--------------------*/
-/*POLE SERVICE LISTE*/
-#liste_formation_pole_services, #liste_formation_pole_tertiaire, #liste_formation_pole_arts{
-    background: white url('../images/bg_coin_vierge.jpg') no-repeat top left;
-    margin: 0 auto;
-    padding: em(20px) 0;
-    width: auto;
-    h3 {
-        color: $vert;
-        margin: 0 auto;
-        text-align: center;
-    }
-    view{
-        width: 99%;
-    }
-    view-content{
-        width: 80%;
-        margin: 0 auto;
-    padding: em(20px) 0;
-    }
-    table{
-        margin: 0 auto;
-        text-align: center;
-    }
-    tbody{
-        margin: 0 auto;
-        padding: 0;
-    }
-    tr{
-        padding: 0;
-    }
-    td{
-        padding: 0;
-    }
-.view-content h3{
-    color: $violet;
-    text-decoration: none;
-    padding: em(2px);
-
-}
-.views-field-title {
-   font-size: medium;
-
-}
- .views-field-title a{
-    color: $vert;
-    text-decoration: none;
-    padding: 2px;
-
-}
- .views-field-title a:hover{
-    background: $violet;
-    color: white;
-}
-}

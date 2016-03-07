@@ -23,64 +23,45 @@
         
         <!--______________COLONNE 1________________ -->
       
-        <div class="layout_3col_all4">
-           <?php if ($node->field_vue_test[0]['view']): ?>
-            <div class="pole1">
-                    <?php  print $node->field_vue_test[0]['view']  ?>
-            </div>
-            <?php endif;?>
-             <?php
-              global $theme_path;
-              include ($theme_path.'/includes/inc_region_col_1.php');
-              ?>
+        <div class="layout_4col_all3">
+ 
+            <?php if ($pole_col1): ?>
+            <div id="orange" class="bloc-pole">
+                <?php print $pole_col1; ?>
+                </div>
+              <?php endif; ?>
         </div>
         <!--______________COLONNE 2________________ -->
          <!-- <pre> <?php //print_r($node); ?> </pre>-->   <!-- listage des variables du $content -->
-        <div  class="layout_3col_all4">
+        <div  class="layout_4col_all3">
             
-               <?php if ($node->field_vue_test2[0]['view']): ?>
-            <div class="pole2">
-                    <?php  print $node->field_vue_test2[0]['view']  ?>
-            </div>
-            <?php endif;?>
-           <?php
-              global $theme_path;
-              include ($theme_path.'/includes/inc_region_col_2.php');
-              ?>
-
+         <?php if ($pole_col2): ?>
+                 <div id="bleu" class="bloc-pole">
+                <?php print $pole_col2; ?>
+                </div>
+              <?php endif; ?>
         </div>
 
         <!--______________COLONNE 3________________ -->
-        <div  class="layout_3col_all4last">
+        <div  class="layout_4col_all3">
             
-               <?php if ($node->field_vue_test3[0]['view']): ?>
-            <div class="pole3">
-                    <?php  print $node->field_vue_test3[0]['view']  ?>
-            </div>
-            <?php endif;?>
-            <?php
-              global $theme_path;
-              include ($theme_path.'/includes/inc_region_col_3.php');
-              ?>
+    <?php if ($pole_col3): ?>
+                <div id="vert" class="bloc-pole">
+                <?php print $pole_col3; ?>
+                </div>
+              <?php endif; ?>
             
-            
-            <!--***********!!!!!!  EXEMPLE DE CHAMP CCK INCLUS AVEC CONDITION !!!!!!!!************ -->
-            <?php if ($node->nom_du_champ[0]['view']): ?>
-            <div id="nom-css">
-                    <?php  print $node->nom_du_champ[0]['view']  ?>
-            </div>
-            <?php endif;?>
-
-
         </div>
-
-        <?php if ($terms): ?>
-        <div class="taxonomy"><?php //print $terms; ?></div>
-        <?php endif;?>
-
-        <?php if ($links): ?>
-        <div class="links"> <?php //print $links; ?></div>
-        <?php endif; ?>
+             <!--______________COLONNE 4________________ -->
+        <div  class="layout_4col_all3last">
+            
+        <?php if ($pole_col4): ?>
+                  <div id="rose" class="bloc-pole">
+                <?php print $pole_col4; ?>
+                </div>
+              <?php endif; ?>
+        </div>
+   
 
     </div> <!-- /node-inner -->
 </div> <!-- /node-->

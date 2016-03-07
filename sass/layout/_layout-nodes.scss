@@ -345,20 +345,24 @@ body .conteneur{
         }
         @include breakpoint ($desktop){
             @include span(3 of $desktopcol);
-            @include gutters(.3em);/*Toujours en dernier pour override de la taille des gouttieres*/
+            //@include gutters(.3em);/*Toujours en dernier pour override de la taille des gouttieres*/
                 
         }
     }
     .layout_4col_all3last{
+        @include span($mobilecol);
+        
        @include breakpoint ($tablet){
             @include span(last 2 of $tabletcol);
+            @include isolate(0%);
         
         }
         @include breakpoint ($desktop){
             
-           @include span(2 of $desktopcol);//sinon colonne trop large, 
+           @include span(last 3 of $desktopcol);//sinon colonne trop large, 
            //possible aussi avec no-gutters
-           @include isolate(.3%);//permet d'isoler la colonne du flux sans qu'elle en sorte
+          // @include gutters(0em);/*Toujours en dernier pour override de la taille des gouttieres,fixe le margin-right*/
+           @include isolate(0%);//permet d'isoler la colonne du flux sans qu'elle en sorte
            //, fixe le margin-left, possible aussi avec option no-gutters
         
         }

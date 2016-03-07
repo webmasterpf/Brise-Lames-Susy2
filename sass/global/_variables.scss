@@ -7,7 +7,8 @@ $gutter-width: 1em;            // taille de la gouttière entre colonnes (px,em,
 $container-style: magic; // default to magic. Switch to fluid or fixed if desired
 //$container-width: 100%; //seulement si utilisé avec fluid grid
 $susy: (
-  output: isolate, // float | isolate
+  output: isolate,
+  // float | isolate
   column-width: $column-width, // false | value
   columns: $total-columns,
   gutters: $gutter-width / $column-width,
@@ -17,16 +18,16 @@ $susy: (
   
   //Style de grille
   math: if($container-style == magic, fluid, $container-style),
-  
-  //Debug
-  debug: (
-  image: show,
-  color: rgba(#66f, .25),
-  output: overlay,
-  toggle: top right,
-  )
+
+      //Debug - cette map créer une erreur si incluse dans $susy
+ //debug: (
+  //image: show,
+  //color: rgba(#66f, .25),
+  //output: overlay,
+  //toggle: top right
+  //),
   );
-  
+
 
  
 /* Makes border-box properties */
