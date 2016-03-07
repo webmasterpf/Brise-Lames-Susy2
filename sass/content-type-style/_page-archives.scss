@@ -23,93 +23,95 @@ body .conteneur {
 /*######-------- ||| BORDURES ||| --------######*/
 body .conteneur {
     @include breakpoint ($desktop){
-        #colonne-2.contenu-vdl{
-            @include border-vert-violet;
+        #colonne-2.page-archives{
+            @include border-L-bleu;
         }
         }
     
 }
 /*######-------- ||| STYLE ||| --------######*/
 .content-archive{
-    border-left: 1px solid #11B0D5;
+    border-left: 1px solid $bleu-turquoise;
     padding: 5px;
 }
-/*Bloc filtre exposé archives*/
-.archives-exposed{
-    width: 405px;
-    margin: 0 auto;
-}
-.archives-exposed .views-widget-filter-field_date_evenement_value{
-    width: 150px;
-}
-.archives-exposed .views-exposed-widgets{
-    width: inherit;
-    padding: 5px;
-    margin: 5px;
-    background: #EFEFEF;
-    border: #11B0D5 solid 2px;
-    box-shadow: inset 0px 0px 3px #606171;
-}
-.archives-exposed{}
-.archives-exposed{}
+
 
 /*Liste des archives*/
-.archives{}
+
 .archives table{
-    width: 98%
+    width: 98%;
+    margin: 0 auto;
+    tbody{}
+    tr{
+        background: $gris-clair;
+        background-color: $gris-clair;
+        display: block;
+        margin: em(2px) 0;
+        &:hover{
+            background: #C2E7EF;   
+        }
+        a{
+            color: $bleu-turquoise;
+            text-decoration: none;
+            padding: em(2px);
+            font-weight: bold;
+            &:hover{
+                color: white;
+            }
+        }
+
+    }
+    td{
+        padding: em(2px) 0;
+        display: inline-block;
+        width: 100%;
+        &:hover{
+            border-right: $bleu-turquoise solid em(2px);
+        }
+    }
+    img{
+        border: em(1px) solid $violet;
+        float: right;
+        margin: em(2px) em(4px);
+        padding: em(2px);
+    }
+    .views-field-tid{
+        text-align: right;
+        font-size: em(10px);
+        font-style: italic;   
+    }
+    .pager li.pager-current{background: $bleu-turquoise;color:$gris-clair;padding: em(2px); }
 }
-.archives tbody{}
-.archives tr{
-    background: #EFEFEF;
-    background-color: #EFEFEF;
-    display: block;
-    margin: 2px 0;
-}
-.archives tr :hover{
-    background: #C2E7EF;   
-    
-}
-.archives td{
-    padding: 2px 0;
-    display: inline-block;
-    width: 100%;
-}
-.archives td:hover{
-    border-right: #11B0D5 solid 2px;
-}
-.archives img{
-    border: #911381 1px solid;
-    float: right;
-    margin: 2px 4px;
-    padding: 2px;
-}
-.archives tr a{
-    color: #11B0D5;
-    text-decoration: none;
-    padding: 2px;
-    font-weight: bold;
-}
-.archives tr a:hover{
-    color: white;
-}
-.archives .views-field-tid{
-    text-align: right;
-    font-size: 10px;
-    font-style: italic;   
-}
-.archives .pager li.pager-current{background: #01AAD3;color:#EFEFEF;padding: 2px; }
 
 /*==
 == Pager pour pages archives ===
 ==*/
-.archives ul.pager{margin: 3px auto;width: 95%;display: block;padding: 3px;}
+.archives ul.pager{margin: em(3px) auto;width: 95%;display: block;padding: em(3px);}
 .archives .pager li
 {float: left;}
 .archives .pager li a{color:#1F1F1F;}
 .archives .pager li.pager-item,.archives .pager li.pager-current
-{padding: 3px;border-radius: 10px; height: 15px;width: 15px;}
+{padding: em(3px);border-radius: em(10px); height: 1.9em;width: 1.9em;}
 .archives .pager li.pager-item
-{background:#91127D ;color:#EFEFEF;}
-.archives .pager li.pager-item a{color:#EFEFEF;}
+{background:$violet ;color:$gris-clair;}
+.archives .pager li.pager-item a{color:$gris-clair;}
 .archives .pager li.pager-current
-{background: #01A9D2;color:#3F3F3F;}
+{background: $bleu-turquoise;color:$gris-anthracite;}
+
+/*Bloc filtre exposé archives*/
+.archives-exposed{
+    max-width: 60%;
+    margin: 0 auto;
+    .views-widget-filter-field_date_evenement_value{
+        width: em(150px);
+    }
+    .views-exposed-widgets{
+        width: inherit;
+        padding: em(5px);
+        margin: em(5px);
+        background: $gris-clair;
+        border: $bleu-turquoise solid em(2px);
+        @include ombrage-interne(0,0.1em,0.1em,0.3em,$gris-anthracite)
+        
+    }
+}

@@ -31,11 +31,8 @@ include ($theme_path.'/includes/inc_header.php');
             
             <div id="content-top">
 			 <?php print $breadcrumb; ?>
+             
                 
-                
-			 <?php if ($title): ?>
-                <h1 class="title"><?php print $title; ?></h1>
-              <?php endif; ?>
               <?php print $content_top; ?>
             </div> <!-- /#content-top -->
             <?php endif; ?>
