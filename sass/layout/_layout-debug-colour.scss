@@ -471,7 +471,7 @@ body .conteneur{
 /*//////////////// 4 COLONNES \\\\\\\\\\\\\\\\*/
 body .conteneur{
     .layout_4col_all3{
-       @include span($mobilecol);
+       
         
         background: khaki;
         @include breakpoint ($tablet){
