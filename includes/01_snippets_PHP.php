@@ -85,3 +85,11 @@ if (!empty($node->field_NAME[0]['view'])): ?>
                 }
                 
                 ?>
+<!--Code à finaliser pour theming de views field-->
+<ul class="bxslider">
+               <?php
+               foreach ($fields['field_galerie_image_vdl_fid']->content as $key => $lien) {
+                    print '<li>'.$fields['field_galerie_image_vdl_fid']->content.'</li>';
+               }
+               ?>  
+                  </ul>
