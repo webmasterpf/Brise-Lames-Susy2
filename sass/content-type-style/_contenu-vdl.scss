@@ -13,9 +13,9 @@
 /*######-------- ||| ORDRE FLEXBOX ||| --------######*/
 body .conteneur {
 
-    #colonne-1.partenaires{order:1;}
-    #colonne-2.partenaires{order:2;}
-    #colonne-3.partenaires{order:3;}
+    #colonne-1.contenu-vdl{order:1;}
+    #colonne-2.contenu-vdl{order:2;}
+    #colonne-3.contenu-vdl{order:3;}
     @include breakpoint ($desktop){
    
     }
@@ -25,7 +25,7 @@ body .conteneur {
 body .conteneur {
     @include breakpoint ($desktop){
         #colonne-2.contenu-vdl{
-            @include border-vert-violet;
+            @include border-L-rose;
         }
         }
     
@@ -37,136 +37,65 @@ body .conteneur {
     margin: 0 auto;
 }
 .vdl-liste-docs{}
-.vdl-galerie-image{}
+.vdl-galerie-image{
+    padding-bottom: 1em;
+}
 .vdl-galerie-image .gallery-slides
 {
     img{@include adaptable-img;}
 }
-/*----------------------------------------
-*****~~~~~~ PAGE VDL  ~~~~~~~~~~~~*********
------LISTE DES VDL - TEMPLATE VUES - LAYOUT CSS-----
-------------------------------------------*/
-h1.titre_vdl,h1.titre_vdl_sortie{
-  color: $vert;
-  line-height: inherit;
-  width: 80%;
-  text-align: center;
-  margin: 0 auto;
-}
-/*######-------- COLONNE G1 --------######*/
-
 .contenu-vdl{
-    p{
-        padding: em(5px);
-        a{
-            color: $violet;
-            text-decoration: none;
-            &:hover{
-                color: $vert;
-                text-decoration: underline;
-            }
-        }
+    h1.titre_vdl{
+        @include titre-page;
+        color: $bleu-turquoise;
     }
-    #table_infos_plus{
-    margin: 1em auto;
-}
-}
-
-
-
-
-/*------- LISTE VDL SIMILAIRE ------------*/
-#bloc-autres-vdl {
+    p, ul{
+        padding: em(5px);
+        margin: 0;
+    }
+    ul,li{
+        list-style: none;
+    }
     h3{
-        font-family: arista,Trebuchet MS, sans-serif;
+        color: $bleu-turquoise;
+        padding: em(2px);
+    }
+    h2{
         text-align: center;
         color: $bleu-turquoise;
-        font-size: large;
-        margin: em(5px) 0;
     }
-    #liste-vdl-similaires{
-        width: em(200px);
-        margin: 0 auto;
-        background: transparent url(../images/zebra-gros-clair.gif) repeat ;
-        @include arrondis();
-        ul{
-            margin: 0;
-            padding: em(5px) 0;
-           
-        }
-        li{
-            margin: em(3px) 0;
-             list-style: none;
-        }
-    }
-}
-
-
-.element-vdl-similaire {
-    background: $gris-clair;
-    display: block;
-    width: auto;
-    margin: 0 auto;
-
-    a{
-        background: $gris-clair;
-        display: block;
-        color: #4F4F4F;
-        font-size: smaller;
-        padding: 0.1em;
-        &:hover{
-            background: $vert;
-            color: white;
-        }
-    }
-
-    span{
-        display: block;
-        p{
-            font-size: smaller;
-        }
-    }
-}
-
-/*----------------------------------------
-*****~~~~~~ PAGE VDL  ~~~~~~~~~~~~*********
------SORTIE-ACTION-EUROPE-PARTENAIRES-----
-------------------------------------------*/
-
-/*---- Galerie images au choix -------*/
-#bloc-galerie-vdl{
-    margin: 0;
-    padding: 0;
-   
-    h3{
-        text-align: center;
-        font-family: arista,Trebuchet MS, sans-serif;
-        font-size: larger;
-        margin: em(5px);
-        color: $violet;
-
+    h4{
+        color: #94127F;
+        padding: em(2px);
+        text-indent: em(3px);
     }
     a{
-        background:none;
-        margin: 0;
-        padding: 0;
+        color: $bleu-turquoise;
         text-decoration: none;
-    }
-    .overlay-inner p{
-        color: white;
-    }
-    .vignettes-zoom {
-        a, a:hover{
-            background: 0;
-            text-decoration: none;
-            -moz-box-shadow: none ;
-            -webkit-box-shadow: none ;
-            box-shadow: none ;
-            color: none;
+        padding: em(2px);
+        text-indent: em(3px);
+        &:hover{
+            color: white;
+            background: $bleu-turquoise;
         }
-        img{
-            border: em(3px) solid $violet;
-           
-        }
+    }
+    strong{
+        color: $rose-fushia;
     }
 }
+/*_________________________________
+ ****  NODE.TPL CUSTOM VDL 
+    SORTIE,PROJET,INNOVATION,INTERVENANT ****
+----------------------------------*/
+.docs-joints-vdl{
+    padding: em(10px);background: $gris-clair;display: block;
+h3{text-align: center;color: $rose-fushia;@include adjust-font-size-to(14px);}
+a{
+    @include adjust-font-size-to(14px);
+}
+}
+
+.fiche-action-vdl a,.fichier-joint-vdl a{color: $bleu-turquoise;padding: em(2px);text-decoration: none;text-indent: em(3px);}
+.fiche-action-vdl a:hover,.fichier-joint-vdl a:hover{background:$bleu-turquoise;color:white;}
+.video-embed-vdl{margin: 0 auto;padding: em(2px);width: 425px;border: em(2px) solid $bleu-turquoise;}
+.vdl-galerie-image .view-GA-theming img{border: em(1px) solid $violet;padding: em(2px);}

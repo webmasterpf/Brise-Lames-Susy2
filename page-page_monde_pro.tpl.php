@@ -1,39 +1,45 @@
-<?php
-global $theme_path;
-include ($theme_path.'/includes/inc_header.php');
-?>
+<?php include "inc_header.php"; ?>
+ <!-- __________ LAYOUT  - Page monde pro ______________ -->
   <!-- ______________________ CONTENU _______________________ -->
   
-     
-   
+      <div id="contentPage">
       
-       <!-- ______________________ COLONNE GAUCHE _______________________ -->
-		
-			  <?php if ($left): ?>
-         <div id="left-content">
-            <?php print $left; ?>
-          </div>
-             <?php endif; ?> <!-- /sidebar-left -->
-		
-		<!--fin du contenu gauche -->
-        
-        <div class="content-inner" class="inner column center">
-		  <!-- ______________________ CONTENT TOP _______________________ -->
-      <?php if ($breadcrumb ||$content_top): ?>
+          <!-- ______________________ CONTENT TOP _______________________ -->
+      <?php if ($breadcrumb ||$content_top ): ?>
             <div id="content-top">
-	<span class="ariane"> <?php print $breadcrumb; ?></span>
+	<span id="ariane"> <?php print $breadcrumb; ?></span>
 
               <?php print $content_top; ?>
             </div> <!-- /#content-top -->
-            <?php endif; ?>
 
-  <!-- ______________________ CONTENT TOP NODE_______________________ -->
+            <!-- ______________________ CONTENT TOP NODE_______________________ -->
                <?php if ($content_top_node): ?>
             <div id="content-top-node">
 	              <?php print $content_top_node; ?>
             </div> <!-- /#content-top-node -->
-            <?php endif; ?>
+            <?php endif; ?>  
             
+            <!-- ______________________ COLONNE GAUCHE _______________________ -->
+
+			 
+         <div id="left-content-pageMondePro">
+            <?php if ($title): ?>
+                <h1 class="title"><?php print $title; ?></h1>
+              <?php endif; ?>
+                 <?php if ($left): ?>
+            <?php print $left; ?>
+                 <?php endif; ?>
+          </div>
+             <!-- /sidebar-left -->
+      
+       <!-- ______________________ CONTENT INNER _______________________ -->
+		
+        
+        <div id="content-inner-pageMondePro" class="inner column center">
+		             
+		   
+           
+
           <?php if ($mission || $messages || $help || $tabs): ?>
             <div id="content-header">              
 
@@ -52,17 +58,18 @@ include ($theme_path.'/includes/inc_header.php');
             </div> <!-- /#content-header -->
           <?php endif; ?>
 		  <!-- ______________________ CONTENU CENTRAL _______________________ -->
-              <article class="middle-content">
-
+          <div id="middle-content-pageMondePro">
             <?php print $content; ?>
               <?php print $feed_icons; ?>
-                  </article> <!-- /#content-area -->
+          </div> <!-- /#content-area -->
+
         
 
-       
+          
           
       </div> <!-- /content-inner /content -->
 
+            
         <?php if (!empty($primary_links) or !empty($secondary_links)): ?>
           <div id="navigation" class="menu <?php if (!empty($primary_links)) { print "with-main-menu"; } if (!empty($secondary_links)) { print " with-sub-menu"; } ?>">
             <?php if (!empty($primary_links)){ print theme('links', $primary_links, array('id' => 'primary', 'class' => 'links main-menu')); } ?>
@@ -74,24 +81,23 @@ include ($theme_path.'/includes/inc_header.php');
 		  <!-- ______________________ COLONNE DROITE _______________________ -->
         <?php if ($right): ?>
          <!--debut du contenu droit -->
-		<div id="right-content">
-			<?php if ($search_box) : ?>
-				<div id="recherche">
-				<?php print $search_box ?>
-				</div><!-- //div recherche -->
-				<?php endif; ?>
+		<div id="right-content-pageMondePro">
+			
+				
             <?php print $right; ?>
         </div>
         <?php endif; ?> <!-- /sidebar-right -->
 
-	 <!-- ______________________ CONTENU BAS _______________________ -->
+   
+    	 <br clear="all"/>
+         <!-- ______________________ CONTENU BAS _______________________ -->
 <?php if ($content_bottom): ?>
-            <div class="content-bottom">
+            <div id="content-bottom">
               <?php print $content_bottom; ?>
             </div><!-- /#content-bottom -->
           <?php endif; ?>
-	
-<?php
-global $theme_path;
-include ($theme_path.'/includes/inc_footer.php');
-?>
+	 </div> <!-- /contentPage -->
+	  
+	  <?php include "inc_footer.php";?>
+         <?php endif; ?>
+     

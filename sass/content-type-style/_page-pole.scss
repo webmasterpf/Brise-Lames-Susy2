@@ -11,11 +11,6 @@
 //@include breakpoint ($tablet){}
 
 
-
-.vdl-galerie-image .gallery-slides
-{
-    img{@include adaptable-img;}
-}
 /*######-------- ||| ORDRE FLEXBOX ||| --------######*/
 body .conteneur .conteneur-flex{
     .titre-flex{order:0;}

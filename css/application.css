@@ -702,38 +702,38 @@ h6, .h6 {
 
 /*---------------- TITRES -----------------------*/
 /*------------ PARAGRAPHES ---------------*/
-/* line 99, ../sass/global/_typos.scss */
+/* line 98, ../sass/global/_typos.scss */
 .conteneur p {
   font-size: 0.625em;
   line-height: 2.4em;
 }
-/* line 105, ../sass/global/_typos.scss */
+/* line 104, ../sass/global/_typos.scss */
 .conteneur #header {
   font-size: 0.75em;
   line-height: 2em;
 }
-/* line 109, ../sass/global/_typos.scss */
+/* line 108, ../sass/global/_typos.scss */
 .conteneur .content-inner p, .conteneur .content-inner td, .conteneur .content-inner ul {
   padding: 0.15em;
   font-size: small;
 }
-/* line 114, ../sass/global/_typos.scss */
+/* line 113, ../sass/global/_typos.scss */
 .conteneur .content-inner ul {
   list-style: inside;
 }
-/* line 119, ../sass/global/_typos.scss */
+/* line 118, ../sass/global/_typos.scss */
 .conteneur #footer {
   font-size: 0.625em;
   line-height: 2.4em;
 }
-/* line 120, ../sass/global/_typos.scss */
+/* line 119, ../sass/global/_typos.scss */
 .conteneur #footer p {
   margin-bottom: 1.5em;
   font-size: small;
   padding: 0.3em;
 }
 
-/* line 127, ../sass/global/_typos.scss */
+/* line 126, ../sass/global/_typos.scss */
 .HPBasGauche p, .HPBasDroit p {
   font-size: 0.75em;
   line-height: 2em;
@@ -3704,7 +3704,6 @@ body .conteneur .conteneur-flex #colonne-3.page-lycee {
 .page-lycee .titre_page {
   font-size: x-large;
   margin: 0.1em;
-  line-height: 1.875em;
   color: #911381;
 }
 /* line 43, ../sass/content-type-style/_page-lycee.scss */
@@ -3934,184 +3933,6 @@ _________________________________________*/
 #orange td, #vert td, #bleu td, #rose td {
   padding: 0.625em 0.3125em;
   display: block;
-}
-
-/*----------------------------------------
-*****~~~~~~ PAGE VDL  ~~~~~~~~~~~~*********
------LISTE DES VDL - TEMPLATE VUES -----
-------------------------------------------*/
-/*######-------- ||| ORDRE FLEXBOX ||| --------######*/
-/* line 15, ../sass/content-type-style/_page-vdl-liste.scss */
-body .conteneur #colonne-1.vdl-liste {
-  order: 1;
-}
-/* line 16, ../sass/content-type-style/_page-vdl-liste.scss */
-body .conteneur #colonne-2.vdl-liste {
-  order: 2;
-}
-/* line 17, ../sass/content-type-style/_page-vdl-liste.scss */
-body .conteneur #colonne-3.vdl-liste {
-  order: 3;
-}
-
-/*######-------- ||| BORDURES ||| --------######*/
-@media (min-width: 990px) {
-  /* line 26, ../sass/content-type-style/_page-vdl-liste.scss */
-  body .conteneur #colonne-2.contenu-vdl {
-    border-left: 0.0625em solid #ADC91F;
-    border-right: 0.0625em solid #911381;
-  }
-}
-
-/*######-------- ||| STYLE ||| --------######*/
-/*
-== Bloc filtre exposé de view pour l'année - archives ===
-*/
-/*Avec views 3 nvx noms de classes et ids : 
-views-exposed-form-liste-actu-lycee-block-5
-views-exposed-form-Actualites-liste-globale-block-1
-*/
-/* line 42, ../sass/content-type-style/_page-vdl-liste.scss */
-#views-exposed-form-liste-actu-lycee-block-5,
-#views-exposed-form-liste-actu-lycee-block-4,
-#views-exposed-form-liste-actu-lycee-block-3 {
-  width: 45%;
-  margin: 0.9375em auto;
-  background: transparent url(../images/zebra-gros-clair.gif) repeat;
-  border-radius: 0.3125em;
-  padding: 0.3125em;
-}
-/* line 53, ../sass/content-type-style/_page-vdl-liste.scss */
-#views-exposed-form-liste-actu-lycee-block-5 h3,
-#views-exposed-form-liste-actu-lycee-block-4 h3,
-#views-exposed-form-liste-actu-lycee-block-3 h3 {
-  font-family: "Arista", Trebuchet MS, sans-serif;
-  text-align: center;
-  color: #01ABCF;
-  font-size: medium;
-  margin: 0;
-}
-/* line 60, ../sass/content-type-style/_page-vdl-liste.scss */
-#views-exposed-form-liste-actu-lycee-block-5 select,
-#views-exposed-form-liste-actu-lycee-block-4 select,
-#views-exposed-form-liste-actu-lycee-block-3 select {
-  margin: 0 auto;
-}
-/* line 63, ../sass/content-type-style/_page-vdl-liste.scss */
-#views-exposed-form-liste-actu-lycee-block-5 .date-views-filter-wrapper .form-item,
-#views-exposed-form-liste-actu-lycee-block-4 .date-views-filter-wrapper .form-item,
-#views-exposed-form-liste-actu-lycee-block-3 .date-views-filter-wrapper .form-item {
-  margin: 0 0.75em;
-  width: auto;
-  display: block;
-}
-@media (min-width: 990px) {
-  /* line 63, ../sass/content-type-style/_page-vdl-liste.scss */
-  #views-exposed-form-liste-actu-lycee-block-5 .date-views-filter-wrapper .form-item,
-  #views-exposed-form-liste-actu-lycee-block-4 .date-views-filter-wrapper .form-item,
-  #views-exposed-form-liste-actu-lycee-block-3 .date-views-filter-wrapper .form-item {
-    margin: 1px auto;
-    width: 10em;
-  }
-}
-/* line 69, ../sass/content-type-style/_page-vdl-liste.scss */
-#views-exposed-form-liste-actu-lycee-block-5 .views-exposed-form .views-exposed-widget .form-submit,
-#views-exposed-form-liste-actu-lycee-block-4 .views-exposed-form .views-exposed-widget .form-submit,
-#views-exposed-form-liste-actu-lycee-block-3 .views-exposed-form .views-exposed-widget .form-submit {
-  margin: 0 0 0 1.3em;
-}
-@media (min-width: 990px) {
-  /* line 69, ../sass/content-type-style/_page-vdl-liste.scss */
-  #views-exposed-form-liste-actu-lycee-block-5 .views-exposed-form .views-exposed-widget .form-submit,
-  #views-exposed-form-liste-actu-lycee-block-4 .views-exposed-form .views-exposed-widget .form-submit,
-  #views-exposed-form-liste-actu-lycee-block-3 .views-exposed-form .views-exposed-widget .form-submit {
-    margin: 0 0 0 3.3em;
-  }
-}
-/* line 76, ../sass/content-type-style/_page-vdl-liste.scss */
-#views-exposed-form-liste-actu-lycee-block-5 .views-exposed-form label,
-#views-exposed-form-liste-actu-lycee-block-4 .views-exposed-form label,
-#views-exposed-form-liste-actu-lycee-block-3 .views-exposed-form label {
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
-  -o-hyphens: auto;
-  hyphens: auto;
-}
-@media (max-width: 799px) {
-  /* line 76, ../sass/content-type-style/_page-vdl-liste.scss */
-  #views-exposed-form-liste-actu-lycee-block-5 .views-exposed-form label,
-  #views-exposed-form-liste-actu-lycee-block-4 .views-exposed-form label,
-  #views-exposed-form-liste-actu-lycee-block-3 .views-exposed-form label {
-    display: block;
-    width: 55%;
-    text-align: center;
-  }
-}
-
-/*Table pour la vue filtre dyn sur tid*/
-/* line 87, ../sass/content-type-style/_page-vdl-liste.scss */
-#table-bloc-vdl-liste {
-  width: 95%;
-  margin: 0 auto;
-  border: 0;
-  border-top: 0.1875em solid #ADC91F;
-}
-
-/* line 88, ../sass/content-type-style/_page-vdl-liste.scss */
-#table-bloc-vdl-liste thead th {
-  border-bottom: 0.1875em solid #ADC91F;
-}
-
-/* line 92, ../sass/content-type-style/_page-vdl-liste.scss */
-#table-bloc-vdl-liste tr {
-  margin: 0.1875em;
-}
-
-/* line 97, ../sass/content-type-style/_page-vdl-liste.scss */
-#table-bloc-vdl-liste td {
-  background: white;
-  border: 0;
-  margin: 0.125em 0;
-  padding: 0.3125em;
-  display: block;
-  border-bottom: 0.125em solid #911381;
-  font-size: smaller;
-}
-
-/* line 106, ../sass/content-type-style/_page-vdl-liste.scss */
-#table-bloc-vdl-liste td:hover {
-  background: #ADC91F;
-}
-
-/* line 109, ../sass/content-type-style/_page-vdl-liste.scss */
-#table-bloc-vdl-liste td img {
-  border: 0.125em solid #911381;
-}
-
-/* line 112, ../sass/content-type-style/_page-vdl-liste.scss */
-#table-bloc-vdl-liste a {
-  color: #911381;
-  text-decoration: none;
-  font-weight: bold;
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
-  -o-hyphens: auto;
-  hyphens: auto;
-}
-
-/* line 118, ../sass/content-type-style/_page-vdl-liste.scss */
-#table-bloc-vdl-liste a:hover {
-  text-decoration: underline;
-  color: white;
-}
-
-/* line 122, ../sass/content-type-style/_page-vdl-liste.scss */
-#table-bloc-vdl-liste span.date-display-single, #table-bloc-vdl-liste .views-field-field-date-evenement-value {
-  text-align: right;
-  /*float: right;*/
-  font-style: italic;
 }
 
 /*-------------------------------------|
@@ -4897,15 +4718,15 @@ body .conteneur .conteneur-flex #colonne-3.contenu-actu {
 |--------------------------------------*/
 /*######-------- ||| ORDRE FLEXBOX ||| --------######*/
 /* line 16, ../sass/content-type-style/_contenu-vdl.scss */
-body .conteneur #colonne-1.partenaires {
+body .conteneur #colonne-1.contenu-vdl {
   order: 1;
 }
 /* line 17, ../sass/content-type-style/_contenu-vdl.scss */
-body .conteneur #colonne-2.partenaires {
+body .conteneur #colonne-2.contenu-vdl {
   order: 2;
 }
 /* line 18, ../sass/content-type-style/_contenu-vdl.scss */
-body .conteneur #colonne-3.partenaires {
+body .conteneur #colonne-3.contenu-vdl {
   order: 3;
 }
 
@@ -4913,8 +4734,7 @@ body .conteneur #colonne-3.partenaires {
 @media (min-width: 990px) {
   /* line 27, ../sass/content-type-style/_contenu-vdl.scss */
   body .conteneur #colonne-2.contenu-vdl {
-    border-left: 0.0625em solid #ADC91F;
-    border-right: 0.0625em solid #911381;
+    border-left: 0.0625em solid #E30078;
   }
 }
 
@@ -4930,138 +4750,98 @@ body .conteneur #colonne-3.partenaires {
   max-width: 100%;
 }
 
-/*----------------------------------------
-*****~~~~~~ PAGE VDL  ~~~~~~~~~~~~*********
------LISTE DES VDL - TEMPLATE VUES - LAYOUT CSS-----
-------------------------------------------*/
-/* line 49, ../sass/content-type-style/_contenu-vdl.scss */
-h1.titre_vdl, h1.titre_vdl_sortie {
-  color: #ADC91F;
-  line-height: inherit;
-  width: 80%;
-  text-align: center;
-  margin: 0 auto;
-}
-
-/*######-------- COLONNE G1 --------######*/
-/* line 59, ../sass/content-type-style/_contenu-vdl.scss */
-.contenu-vdl p {
-  padding: 0.3125em;
-}
-/* line 61, ../sass/content-type-style/_contenu-vdl.scss */
-.contenu-vdl p a {
-  color: #911381;
-  text-decoration: none;
-}
-/* line 64, ../sass/content-type-style/_contenu-vdl.scss */
-.contenu-vdl p a:hover {
-  color: #ADC91F;
-  text-decoration: underline;
-}
-/* line 70, ../sass/content-type-style/_contenu-vdl.scss */
-.contenu-vdl #table_infos_plus {
-  margin: 1em auto;
-}
-
-/*------- LISTE VDL SIMILAIRE ------------*/
-/* line 80, ../sass/content-type-style/_contenu-vdl.scss */
-#bloc-autres-vdl h3 {
-  font-family: arista,Trebuchet MS, sans-serif;
-  text-align: center;
+/* line 46, ../sass/content-type-style/_contenu-vdl.scss */
+.contenu-vdl h1.titre_vdl {
+  font-size: x-large;
+  margin: 0.1em;
   color: #01ABCF;
-  font-size: large;
-  margin: 0.3125em 0;
 }
-/* line 87, ../sass/content-type-style/_contenu-vdl.scss */
-#bloc-autres-vdl #liste-vdl-similaires {
-  width: 12.5em;
-  margin: 0 auto;
-  background: transparent url(../images/zebra-gros-clair.gif) repeat;
-  -moz-border-radius: 0.5em;
-  -webkit-border-radius: 0.5em;
-  border-radius: 0.5em;
-}
-/* line 92, ../sass/content-type-style/_contenu-vdl.scss */
-#bloc-autres-vdl #liste-vdl-similaires ul {
+/* line 50, ../sass/content-type-style/_contenu-vdl.scss */
+.contenu-vdl p, .contenu-vdl ul {
+  padding: 0.3125em;
   margin: 0;
-  padding: 0.3125em 0;
 }
-/* line 97, ../sass/content-type-style/_contenu-vdl.scss */
-#bloc-autres-vdl #liste-vdl-similaires li {
-  margin: 0.1875em 0;
+/* line 54, ../sass/content-type-style/_contenu-vdl.scss */
+.contenu-vdl ul, .contenu-vdl li {
   list-style: none;
 }
-
-/* line 105, ../sass/content-type-style/_contenu-vdl.scss */
-.element-vdl-similaire {
-  background: #ECECED;
-  display: block;
-  width: auto;
-  margin: 0 auto;
+/* line 57, ../sass/content-type-style/_contenu-vdl.scss */
+.contenu-vdl h3 {
+  color: #01ABCF;
+  padding: 0.125em;
 }
-/* line 111, ../sass/content-type-style/_contenu-vdl.scss */
-.element-vdl-similaire a {
-  background: #ECECED;
-  display: block;
-  color: #4F4F4F;
-  font-size: smaller;
-  padding: 0.1em;
-}
-/* line 117, ../sass/content-type-style/_contenu-vdl.scss */
-.element-vdl-similaire a:hover {
-  background: #ADC91F;
-  color: white;
-}
-/* line 123, ../sass/content-type-style/_contenu-vdl.scss */
-.element-vdl-similaire span {
-  display: block;
-}
-/* line 125, ../sass/content-type-style/_contenu-vdl.scss */
-.element-vdl-similaire span p {
-  font-size: smaller;
-}
-
-/*----------------------------------------
-*****~~~~~~ PAGE VDL  ~~~~~~~~~~~~*********
------SORTIE-ACTION-EUROPE-PARTENAIRES-----
-------------------------------------------*/
-/*---- Galerie images au choix -------*/
-/* line 137, ../sass/content-type-style/_contenu-vdl.scss */
-#bloc-galerie-vdl {
-  margin: 0;
-  padding: 0;
-}
-/* line 141, ../sass/content-type-style/_contenu-vdl.scss */
-#bloc-galerie-vdl h3 {
+/* line 61, ../sass/content-type-style/_contenu-vdl.scss */
+.contenu-vdl h2 {
   text-align: center;
-  font-family: arista,Trebuchet MS, sans-serif;
-  font-size: larger;
-  margin: 0.3125em;
-  color: #911381;
+  color: #01ABCF;
 }
-/* line 149, ../sass/content-type-style/_contenu-vdl.scss */
-#bloc-galerie-vdl a {
-  background: none;
-  margin: 0;
-  padding: 0;
+/* line 65, ../sass/content-type-style/_contenu-vdl.scss */
+.contenu-vdl h4 {
+  color: #94127F;
+  padding: 0.125em;
+  text-indent: 0.1875em;
+}
+/* line 70, ../sass/content-type-style/_contenu-vdl.scss */
+.contenu-vdl a {
+  color: #01ABCF;
   text-decoration: none;
+  padding: 0.125em;
+  text-indent: 0.1875em;
 }
-/* line 155, ../sass/content-type-style/_contenu-vdl.scss */
-#bloc-galerie-vdl .overlay-inner p {
+/* line 75, ../sass/content-type-style/_contenu-vdl.scss */
+.contenu-vdl a:hover {
+  color: white;
+  background: #01ABCF;
+}
+/* line 80, ../sass/content-type-style/_contenu-vdl.scss */
+.contenu-vdl strong {
+  color: #E30078;
+}
+
+/*_________________________________
+ ****  NODE.TPL CUSTOM VDL 
+    SORTIE,PROJET,INNOVATION,INTERVENANT ****
+----------------------------------*/
+/* line 88, ../sass/content-type-style/_contenu-vdl.scss */
+.docs-joints-vdl {
+  padding: 0.625em;
+  background: #ECECED;
+  display: block;
+}
+/* line 90, ../sass/content-type-style/_contenu-vdl.scss */
+.docs-joints-vdl h3 {
+  text-align: center;
+  color: #E30078;
+  font-size: 0.875em;
+  line-height: 1.71429em;
+}
+
+/* line 93, ../sass/content-type-style/_contenu-vdl.scss */
+.fiche-action-vdl a, .fichier-joint-vdl a {
+  color: #01ABCF;
+  padding: 0.125em;
+  text-decoration: none;
+  text-indent: 0.1875em;
+}
+
+/* line 94, ../sass/content-type-style/_contenu-vdl.scss */
+.fiche-action-vdl a:hover, .fichier-joint-vdl a:hover {
+  background: #01ABCF;
   color: white;
 }
-/* line 159, ../sass/content-type-style/_contenu-vdl.scss */
-#bloc-galerie-vdl .vignettes-zoom a, #bloc-galerie-vdl .vignettes-zoom a:hover {
-  background: 0;
-  text-decoration: none;
-  -moz-box-shadow: none;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  color: none;
+
+/* line 95, ../sass/content-type-style/_contenu-vdl.scss */
+.video-embed-vdl {
+  margin: 0 auto;
+  padding: 0.125em;
+  width: 425px;
+  border: 0.125em solid #01ABCF;
 }
-/* line 167, ../sass/content-type-style/_contenu-vdl.scss */
-#bloc-galerie-vdl .vignettes-zoom img {
-  border: 0.1875em solid #911381;
+
+/* line 97, ../sass/content-type-style/_contenu-vdl.scss */
+.galerie-vdl .view-GA-theming img {
+  border: 0.0625em solid #911381;
+  padding: 0.125em;
 }
 
 /*-------------------------------------|
@@ -5310,6 +5090,165 @@ ___________________________________*/
   font-style: italic;
   font-size: 0.8125em;
   line-height: 1.84615em;
+}
+
+/*----------------------------------------
+*****~~~~~~ PAGE VDL  ~~~~~~~~~~~~*********
+-----LISTE DES VDL - TEMPLATE VUES -----
+------------------------------------------*/
+/*######-------- ||| ORDRE FLEXBOX ||| --------######*/
+/* line 15, ../sass/content-type-style/_page-archives.scss */
+body .conteneur #colonne-1.vdl-liste {
+  order: 1;
+}
+/* line 16, ../sass/content-type-style/_page-archives.scss */
+body .conteneur #colonne-2.vdl-liste {
+  order: 2;
+}
+/* line 17, ../sass/content-type-style/_page-archives.scss */
+body .conteneur #colonne-3.vdl-liste {
+  order: 3;
+}
+
+/*######-------- ||| BORDURES ||| --------######*/
+@media (min-width: 990px) {
+  /* line 26, ../sass/content-type-style/_page-archives.scss */
+  body .conteneur #colonne-2.page-archives {
+    border-left: 0.0625em solid #01ABCF;
+  }
+}
+
+/*######-------- ||| STYLE ||| --------######*/
+/* line 33, ../sass/content-type-style/_page-archives.scss */
+.content-archive {
+  border-left: 1px solid #01ABCF;
+  padding: 5px;
+}
+
+/*Liste des archives*/
+/* line 41, ../sass/content-type-style/_page-archives.scss */
+.archives table {
+  width: 98%;
+  margin: 0 auto;
+}
+/* line 45, ../sass/content-type-style/_page-archives.scss */
+.archives table tr {
+  background: #ECECED;
+  background-color: #ECECED;
+  display: block;
+  margin: 0.125em 0;
+}
+/* line 50, ../sass/content-type-style/_page-archives.scss */
+.archives table tr:hover {
+  background: #C2E7EF;
+}
+/* line 53, ../sass/content-type-style/_page-archives.scss */
+.archives table tr a {
+  color: #01ABCF;
+  text-decoration: none;
+  padding: 0.125em;
+  font-weight: bold;
+}
+/* line 58, ../sass/content-type-style/_page-archives.scss */
+.archives table tr a:hover {
+  color: white;
+}
+/* line 64, ../sass/content-type-style/_page-archives.scss */
+.archives table td {
+  padding: 0.125em 0;
+  display: inline-block;
+  width: 100%;
+}
+/* line 68, ../sass/content-type-style/_page-archives.scss */
+.archives table td:hover {
+  border-right: #01ABCF solid 0.125em;
+}
+/* line 72, ../sass/content-type-style/_page-archives.scss */
+.archives table img {
+  border: 0.0625em solid #911381;
+  float: right;
+  margin: 0.125em 0.25em;
+  padding: 0.125em;
+}
+/* line 78, ../sass/content-type-style/_page-archives.scss */
+.archives table .views-field-tid {
+  text-align: right;
+  font-size: 0.625em;
+  font-style: italic;
+}
+/* line 83, ../sass/content-type-style/_page-archives.scss */
+.archives table .pager li.pager-current {
+  background: #01ABCF;
+  color: #ECECED;
+  padding: 0.125em;
+}
+
+/*==
+== Pager pour pages archives ===
+==*/
+/* line 89, ../sass/content-type-style/_page-archives.scss */
+.archives ul.pager {
+  margin: 0.1875em auto;
+  width: 95%;
+  display: block;
+  padding: 0.1875em;
+}
+
+/* line 90, ../sass/content-type-style/_page-archives.scss */
+.archives .pager li {
+  float: left;
+}
+
+/* line 92, ../sass/content-type-style/_page-archives.scss */
+.archives .pager li a {
+  color: #1F1F1F;
+}
+
+/* line 93, ../sass/content-type-style/_page-archives.scss */
+.archives .pager li.pager-item, .archives .pager li.pager-current {
+  padding: 0.1875em;
+  border-radius: 0.625em;
+  height: 1.9em;
+  width: 1.9em;
+}
+
+/* line 95, ../sass/content-type-style/_page-archives.scss */
+.archives .pager li.pager-item {
+  background: #911381;
+  color: #ECECED;
+}
+
+/* line 97, ../sass/content-type-style/_page-archives.scss */
+.archives .pager li.pager-item a {
+  color: #ECECED;
+}
+
+/* line 98, ../sass/content-type-style/_page-archives.scss */
+.archives .pager li.pager-current {
+  background: #01ABCF;
+  color: #606070;
+}
+
+/*Bloc filtre exposé archives*/
+/* line 102, ../sass/content-type-style/_page-archives.scss */
+.archives-exposed {
+  max-width: 60%;
+  margin: 0 auto;
+}
+/* line 105, ../sass/content-type-style/_page-archives.scss */
+.archives-exposed .views-widget-filter-field_date_evenement_value {
+  width: 9.375em;
+}
+/* line 108, ../sass/content-type-style/_page-archives.scss */
+.archives-exposed .views-exposed-widgets {
+  width: inherit;
+  padding: 0.3125em;
+  margin: 0.3125em;
+  background: #ECECED;
+  border: #01ABCF solid 0.125em;
+  -moz-box-shadow: inset 0.1em 0.1em 0.3em #606070;
+  -webkit-box-shadow: inset 0.1em 0.1em 0.3em #606070;
+  box-shadow: inset 0.1em 0.1em 0.3em #606070;
 }
 
 /*
@@ -6171,16 +6110,16 @@ Override du style de galerie flexslider
 Indiquer les classes ou les IDs des enveloppes des galeries
 */
 /* line 11, ../sass/galeries/_flexslider-cyrano.scss */
-#bloc-galerie-vdl .flexslider, .galerie-resto .flexslider {
+.galerie-vdl .flexslider, .galerie-resto .flexslider {
   background: transparent;
   border: 0;
 }
 /* line 14, ../sass/galeries/_flexslider-cyrano.scss */
-#bloc-galerie-vdl .flexslider .flex-control-nav, .galerie-resto .flexslider .flex-control-nav {
+.galerie-vdl .flexslider .flex-control-nav, .galerie-resto .flexslider .flex-control-nav {
   bottom: -1.1em;
 }
 /* line 18, ../sass/galeries/_flexslider-cyrano.scss */
-#bloc-galerie-vdl .flexslider .flex-control-paging li a, .galerie-resto .flexslider .flex-control-paging li a {
+.galerie-vdl .flexslider .flex-control-paging li a, .galerie-resto .flexslider .flex-control-paging li a {
   margin: 0.1em;
   background: #911381;
   border: 0.1em solid #fff;
@@ -6189,68 +6128,68 @@ Indiquer les classes ou les IDs des enveloppes des galeries
   box-shadow: 0.1em 0.1em 12px #aaa;
 }
 /* line 22, ../sass/galeries/_flexslider-cyrano.scss */
-#bloc-galerie-vdl .flexslider .flex-control-paging li a:hover, .galerie-resto .flexslider .flex-control-paging li a:hover {
+.galerie-vdl .flexslider .flex-control-paging li a:hover, .galerie-resto .flexslider .flex-control-paging li a:hover {
   background: #01ABCF;
 }
 /* line 26, ../sass/galeries/_flexslider-cyrano.scss */
-#bloc-galerie-vdl .flexslider .flex-control-paging li a.flex-active, .galerie-resto .flexslider .flex-control-paging li a.flex-active {
+.galerie-vdl .flexslider .flex-control-paging li a.flex-active, .galerie-resto .flexslider .flex-control-paging li a.flex-active {
   background: #01ABCF;
 }
 /* line 33, ../sass/galeries/_flexslider-cyrano.scss */
-#bloc-galerie-vdl .flexslider ul.flex-direction-nav, .galerie-resto .flexslider ul.flex-direction-nav {
+.galerie-vdl .flexslider ul.flex-direction-nav, .galerie-resto .flexslider ul.flex-direction-nav {
   list-style: none;
 }
 /* line 36, ../sass/galeries/_flexslider-cyrano.scss */
-#bloc-galerie-vdl .flexslider .flex-direction-nav a, .galerie-resto .flexslider .flex-direction-nav a {
+.galerie-vdl .flexslider .flex-direction-nav a, .galerie-resto .flexslider .flex-direction-nav a {
   height: 2em;
 }
 /* line 39, ../sass/galeries/_flexslider-cyrano.scss */
-#bloc-galerie-vdl .flexslider .flex-direction-nav a:before, .galerie-resto .flexslider .flex-direction-nav a:before {
+.galerie-vdl .flexslider .flex-direction-nav a:before, .galerie-resto .flexslider .flex-direction-nav a:before {
   font-size: 2.5em;
   display: inline-block;
 }
 /* line 43, ../sass/galeries/_flexslider-cyrano.scss */
-#bloc-galerie-vdl .flexslider .flex-direction-nav a.flex-next:before, .galerie-resto .flexslider .flex-direction-nav a.flex-next:before {
+.galerie-vdl .flexslider .flex-direction-nav a.flex-next:before, .galerie-resto .flexslider .flex-direction-nav a.flex-next:before {
   content: '\f002';
 }
 /* line 46, ../sass/galeries/_flexslider-cyrano.scss */
-#bloc-galerie-vdl .flexslider .flex-direction-nav .flex-prev, .galerie-resto .flexslider .flex-direction-nav .flex-prev {
+.galerie-vdl .flexslider .flex-direction-nav .flex-prev, .galerie-resto .flexslider .flex-direction-nav .flex-prev {
   left: -3.125em;
 }
 /* line 49, ../sass/galeries/_flexslider-cyrano.scss */
-#bloc-galerie-vdl .flexslider .flex-direction-nav .flex-next, .galerie-resto .flexslider .flex-direction-nav .flex-next {
+.galerie-vdl .flexslider .flex-direction-nav .flex-next, .galerie-resto .flexslider .flex-direction-nav .flex-next {
   right: -3.125em;
 }
 /* line 53, ../sass/galeries/_flexslider-cyrano.scss */
-#bloc-galerie-vdl .flexslider .flexslider:hover .flex-direction-nav .flex-prev, .galerie-resto .flexslider .flexslider:hover .flex-direction-nav .flex-prev {
+.galerie-vdl .flexslider .flexslider:hover .flex-direction-nav .flex-prev, .galerie-resto .flexslider .flexslider:hover .flex-direction-nav .flex-prev {
   opacity: 0.7;
   left: 0.625em;
 }
 /* line 57, ../sass/galeries/_flexslider-cyrano.scss */
-#bloc-galerie-vdl .flexslider .flexslider:hover .flex-direction-nav .flex-prev:hover, .galerie-resto .flexslider .flexslider:hover .flex-direction-nav .flex-prev:hover {
+.galerie-vdl .flexslider .flexslider:hover .flex-direction-nav .flex-prev:hover, .galerie-resto .flexslider .flexslider:hover .flex-direction-nav .flex-prev:hover {
   opacity: 1;
 }
 /* line 60, ../sass/galeries/_flexslider-cyrano.scss */
-#bloc-galerie-vdl .flexslider .flexslider:hover .flex-direction-nav .flex-next, .galerie-resto .flexslider .flexslider:hover .flex-direction-nav .flex-next {
+.galerie-vdl .flexslider .flexslider:hover .flex-direction-nav .flex-next, .galerie-resto .flexslider .flexslider:hover .flex-direction-nav .flex-next {
   opacity: 0.7;
   right: 0.625em;
 }
 /* line 64, ../sass/galeries/_flexslider-cyrano.scss */
-#bloc-galerie-vdl .flexslider .flexslider:hover .flex-direction-nav .flex-next:hover, .galerie-resto .flexslider .flexslider:hover .flex-direction-nav .flex-next:hover {
+.galerie-vdl .flexslider .flexslider:hover .flex-direction-nav .flex-next:hover, .galerie-resto .flexslider .flexslider:hover .flex-direction-nav .flex-next:hover {
   opacity: 1;
 }
 /* line 69, ../sass/galeries/_flexslider-cyrano.scss */
-#bloc-galerie-vdl .flexslider, #bloc-galerie-vdl .flexslider-thumbs, .galerie-resto .flexslider, .galerie-resto .flexslider-thumbs {
+.galerie-vdl .flexslider, .galerie-vdl .flexslider-thumbs, .galerie-resto .flexslider, .galerie-resto .flexslider-thumbs {
   width: 95%;
   display: inline-block;
   margin: 0 auto;
 }
 /* line 73, ../sass/galeries/_flexslider-cyrano.scss */
-#bloc-galerie-vdl .flexslider li, #bloc-galerie-vdl .flexslider ul.slides li, #bloc-galerie-vdl .flexslider-thumbs li, #bloc-galerie-vdl .flexslider-thumbs ul.slides li, .galerie-resto .flexslider li, .galerie-resto .flexslider ul.slides li, .galerie-resto .flexslider-thumbs li, .galerie-resto .flexslider-thumbs ul.slides li {
+.galerie-vdl .flexslider li, .galerie-vdl .flexslider ul.slides li, .galerie-vdl .flexslider-thumbs li, .galerie-vdl .flexslider-thumbs ul.slides li, .galerie-resto .flexslider li, .galerie-resto .flexslider ul.slides li, .galerie-resto .flexslider-thumbs li, .galerie-resto .flexslider-thumbs ul.slides li {
   padding: 0;
 }
 /* line 76, ../sass/galeries/_flexslider-cyrano.scss */
-#bloc-galerie-vdl .flexslider .slides img, #bloc-galerie-vdl .flexslider-thumbs .slides img, .galerie-resto .flexslider .slides img, .galerie-resto .flexslider-thumbs .slides img {
+.galerie-vdl .flexslider .slides img, .galerie-vdl .flexslider-thumbs .slides img, .galerie-resto .flexslider .slides img, .galerie-resto .flexslider-thumbs .slides img {
   padding: 0.2em;
   border: 0.1em solid #ECECED;
   -moz-border-radius: 0.5em;
@@ -6258,7 +6197,7 @@ Indiquer les classes ou les IDs des enveloppes des galeries
   border-radius: 0.5em;
 }
 /* line 82, ../sass/galeries/_flexslider-cyrano.scss */
-#bloc-galerie-vdl .flexslider *.flex-caption, #bloc-galerie-vdl .flexslider-thumbs *.flex-caption, .galerie-resto .flexslider *.flex-caption, .galerie-resto .flexslider-thumbs *.flex-caption {
+.galerie-vdl .flexslider *.flex-caption, .galerie-vdl .flexslider-thumbs *.flex-caption, .galerie-resto .flexslider *.flex-caption, .galerie-resto .flexslider-thumbs *.flex-caption {
   position: relative;
   z-index: 3;
   padding: 2%;
@@ -6273,15 +6212,15 @@ Indiquer les classes ou les IDs des enveloppes des galeries
 }
 @media (min-width: 990px) {
   /* line 99, ../sass/galeries/_flexslider-cyrano.scss */
-  #bloc-galerie-vdl .flexslider .slides img, #bloc-galerie-vdl .flexslider-thumbs .slides img, .galerie-resto .flexslider .slides img, .galerie-resto .flexslider-thumbs .slides img {
+  .galerie-vdl .flexslider .slides img, .galerie-vdl .flexslider-thumbs .slides img, .galerie-resto .flexslider .slides img, .galerie-resto .flexslider-thumbs .slides img {
     border: 0.3em solid #ECECED;
   }
   /* line 102, ../sass/galeries/_flexslider-cyrano.scss */
-  #bloc-galerie-vdl .flexslider .slides > li, #bloc-galerie-vdl .flexslider-thumbs .slides > li, .galerie-resto .flexslider .slides > li, .galerie-resto .flexslider-thumbs .slides > li {
+  .galerie-vdl .flexslider .slides > li, .galerie-vdl .flexslider-thumbs .slides > li, .galerie-resto .flexslider .slides > li, .galerie-resto .flexslider-thumbs .slides > li {
     max-height: 33em;
   }
   /* line 107, ../sass/galeries/_flexslider-cyrano.scss */
-  #bloc-galerie-vdl .flexslider *.flex-caption, #bloc-galerie-vdl .flexslider-thumbs *.flex-caption, .galerie-resto .flexslider *.flex-caption, .galerie-resto .flexslider-thumbs *.flex-caption {
+  .galerie-vdl .flexslider *.flex-caption, .galerie-vdl .flexslider-thumbs *.flex-caption, .galerie-resto .flexslider *.flex-caption, .galerie-resto .flexslider-thumbs *.flex-caption {
     font-size: small;
   }
 }

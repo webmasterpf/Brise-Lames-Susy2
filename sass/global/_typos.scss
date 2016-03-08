@@ -80,8 +80,7 @@ h6, .h6 {
 @mixin titre-page ($margin : 0.1em){
      font-size : x-large;
      margin: $margin;
-     line-height: em(30px);
-     
+         
 }
 @mixin decotitre-formation ($margin : 0.1em, $paddingTop : 0.1em){
      font-size : x-large;

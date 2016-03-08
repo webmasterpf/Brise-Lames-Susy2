@@ -7,12 +7,12 @@ Indiquer les classes ou les IDs des enveloppes des galeries
 //@include breakpoint ($desktop){}
 //@include breakpoint ($tablet){}
 
-#bloc-galerie-vdl,.galerie-resto{
+.vdl-galerie-image,.galerie-resto{
     .flexslider{
         background : transparent;
         border: 0;
         .flex-control-nav{
-            bottom: -1.1em;
+            bottom: -1.1em;//position de la navigation
         }
         .flex-control-paging {
             li a{
@@ -35,6 +35,9 @@ Indiquer les classes ou les IDs des enveloppes des galeries
         }
         .flex-direction-nav a{
             height: 2em;
+            &:hover{
+                background: none;
+            }
         }
         .flex-direction-nav a:before {
             font-size: em(40px);
@@ -67,14 +70,15 @@ Indiquer les classes ou les IDs des enveloppes des galeries
     }
     //Pour le style des galeries quelques soit le type de nav
     .flexslider , .flexslider-thumbs{
-        width: 95%;
-        display:inline-block;
+        width: 90%;
+        display:inherit;
         margin: 0 auto;
+        padding:1em;    
         li, ul.slides li{
             padding: 0;
         }
         .slides img{
-            padding: 0.2em;
+            padding: 0em;
             border: 0.1em solid $gris-clair;
             @include arrondis;
 
@@ -107,10 +111,14 @@ Indiquer les classes ou les IDs des enveloppes des galeries
             *.flex-caption{
                 font-size: small;
             }
-
-
         }
-
     }
 }
 
+/*######-------- ||| POSITION NAV ||| --------######*/
+.vdl-galerie-image{
+    .flexslider{
+  
+        .flex-control-nav{
+          //  bottom: -3.1em;//position de la navigation
+        }}}
