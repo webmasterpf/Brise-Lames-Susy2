@@ -23,6 +23,7 @@
  * @ingroup views_templates
  */
 ?>
+   <ul class="bxslider">
 <?php foreach ($fields as $id => $field): ?>
   <?php if (!empty($field->separator)): ?>
     <?php print $field->separator; ?>
@@ -30,9 +31,26 @@
 
   <?php print $field->wrapper_prefix; ?>
     <?php print $field->label_html; ?>
+<!-- TEMPLATE DE VIEWS FIELDS CUSTOM BX SLIDER -->
+<?php 
+//création des variables utiles pour la mise en forme de la sortie de la vue
+  $imgurl = file_create_url($field->uri);  
+    
+    $img_thumb_filepath = strip_tags($fields['field_galerie_image_vdl_fid_1_value']->content);
+    $img_slide_size = strip_tags($fields['field_galerie_image_vdl_fid_value']->content);
+    $img_caption = strip_tags($fields['field_galerie_image_vdl_data_value']->content);
+    $img_delta = strip_tags($fields['delta']->content);
+    
 
-
-    <?php print $field->content; ?>
+    ?>
+  
+<?php //dpm($fields); ?>
 
   <?php print $field->wrapper_suffix; ?>
 <?php endforeach; ?>
+
+
+<?php
+global $theme_path;
+//include ($theme_path . '/includes/drupal_debug/inc_drupal_debug_views.php');
+?>

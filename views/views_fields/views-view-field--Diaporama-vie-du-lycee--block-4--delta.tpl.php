@@ -19,11 +19,4 @@
   * the view is modified.
   */
 ?>
-<div id="bx-pager">
-           <?php
-               foreach ($fields['field_galerie_image_vdl_fid_1']->content as $key => $lien) {
-                    print '<a data-slide-index="'.$fields['delta']->content.'" href="">'.$fields['field_galerie_image_vdl_fid_1']->content.'</a>';
-               }
-               ?> 
 <?php print $output; ?>
-</div>

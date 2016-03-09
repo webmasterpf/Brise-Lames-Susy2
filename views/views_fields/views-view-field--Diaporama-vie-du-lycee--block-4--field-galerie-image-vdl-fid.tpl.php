@@ -19,10 +19,8 @@
   * the view is modified.
   */
 ?>
+   <?php print $output; ?>
 
-<ul class="bxslider">
-               <?php print $output; ?>
-                  </ul>
 <?php
 //global $theme_path;
 //include ($theme_path . '/includes/drupal_debug/inc_drupal_debug_views.php');
