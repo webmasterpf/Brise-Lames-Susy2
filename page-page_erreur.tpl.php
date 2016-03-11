@@ -1,8 +1,8 @@
- <!-- ______________________ LAYOUT PAGE LYCEE OVERRIDE PAR NODE.TPL CUSTOM _______________________ -->
+ <!-- ______________________ LAYOUT PAGE ERREUR _______________________ -->
 <?php
 global $theme_path;
 include ($theme_path.'/includes/inc_header.php');
-?>  
+?> 
 
        <!-- ______________________ CONTENT INNER GLOBAL _______________________ -->
 
