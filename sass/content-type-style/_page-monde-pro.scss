@@ -21,12 +21,14 @@ body .conteneur .conteneur-flex{
 }
 
 /*######-------- ||| BORDURES ||| --------######*/
-body .conteneur #colonne-2{
-   @include breakpoint(($desktop,$tablet)){
-       @include border-L-rose;
-        }
+body .conteneur {
     
-}
+        @include breakpoint(($desktop,$tablet)){
+            #colonne-2.contenu-monde-pro{
+                @include border-L-rose;
+            }
+        }
+    }
 /*######-------- ||| STYLE ||| --------######*/
 table.table-fichiers{
     border: 0;

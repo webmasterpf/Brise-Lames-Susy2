@@ -22,16 +22,16 @@ body .conteneur .conteneur-flex{
 /*######-------- ||| BORDURES ||| --------######*/
 body .conteneur {
     @include breakpoint ($desktop){
-        #colonne-1.contact{
-            @include border-R-violet;
+        #colonne-2.contact{
+            @include border-vert-violet;
         }
     }
     
 }
 /*######-------- ||| STYLE ||| --------######*/
-#colonne-1.contact{
-    table,tbody,tr,td,form,input[type="text"],input[type="email"]{
-          width: 98%;display: block;
+#colonne-2.contact{
+    table,tbody,tr,td,iframe,form,input[type="text"],input[type="email"]{
+          width: 98%;display: block;margin: 0 auto;
       }
       tbody{
           border: 0;
