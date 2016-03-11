@@ -39,7 +39,7 @@ body .conteneur{
         }
         @include breakpoint ($desktop){
            @include span(3 of $desktopcol);
-            
+            @include gutters(.3em);/*Toujours en dernier pour override de la taille des gouttieres*/
         }
         //Pour orientation paysage
          @include breakpoint ($tabletlandscape){
@@ -69,15 +69,17 @@ body .conteneur{
     }
     .col3_layout_3_6_3{
         @include span($mobilecol);
-       
-        
         @include clearfix;
+       
         @include breakpoint ($tablet){
              @include isolate(.3%);
         }
+        
         @include breakpoint ($desktop){
-           @include span(last 3 of $desktopcol no-gutters);
+           @include span(3 of $desktopcol);
+           @include gutters(.3em);/*Toujours en dernier pour override de la taille des gouttieres*/
         }
+        
         //Pour orientation paysage
          @include breakpoint ($tabletlandscape){
             @include isolate(.3%);

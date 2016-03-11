@@ -6,21 +6,12 @@
 <div class="node <?php print $classes; ?>" id="node-<?php print $node->nid; ?>">
     <div class="node-inner">
         <!--______________COLONNE 1________________ -->
-        <?php /* choix du layout selon nombre de colonne
-         * .col1_layout_200_590_200{} .col1_layout_330_all{} .col1_layout_18_56_25{}
-         * .col2_layout_200_590_200{} .col2_layout_330_all{} .col2_layout_18_56_25{}
-         * .col3_layout_200_590_200{} .col3_layout_330_all{} .col3_layout_18_56_25{}
-         */?>
-        <div id="colonne-1" class="CHOIX_DU_LAYOUT">
+        <div id="colonne-1" class="col1_layout_3_6_3 contenu-monde-pro">
             <?php if ($title): /*copier le titre dans la colonne desirée*/?>
-            <h1 class="titre_page"><?php print $title; ?></h1>
+            <h1 class="titre-fiche-formation"><?php print $title; ?></h1>
             <?php endif; ?>
         
-            <?php 
-  $theme_path = drupal_get_path('theme', 'NOM_THEME');
-include($theme_path .'/includes/inc_region_col_1.php');
-?>
-            OU
+        
                   <?php
                global $theme_path;
               include ($theme_path.'/includes/inc_region_col_1.php');
@@ -28,7 +19,7 @@ include($theme_path .'/includes/inc_region_col_1.php');
         </div>
         <!--______________COLONNE 2________________ -->
          <!-- <pre> <?php //print_r($node); ?> </pre>-->   <!-- listage des variables du $content -->
-        <div id="colonne-2" class="CHOIX_DU_LAYOUT">
+        <div id="colonne-2" class="col2_layout_3_6_3 contenu-monde-pro">
 
             <?php print $picture; ?>
 
@@ -38,18 +29,41 @@ include($theme_path .'/includes/inc_region_col_1.php');
 
             <div class="content">
                 <?php   print $node->content['body']['#value'];/*déplacer le contenu dans la colonne désirée*/ ?>
+                
+                  <!-- <table>documents filefield -->
+ <?php if ( $node->field_fiches_info_stage_pfe[0] ): ?>
+<table class="table-fichiers">
+<tr>
+<?php $iteration = 0; ?>
+
+<?php foreach($node->field_fiches_info_stage_pfe as $item): ?>
+<?php if ($iteration % 2 == 0 && $iteration > 0): ?>
+   </tr>
+   <tr>
+<?php endif; ?>
+
+<td><?php  print $item['view'] ?></td>
+
+<?php $iteration++ ; ?>
+<?php endforeach; ?>
+
+  </tr>
+</table>
+
+<?php endif; ?>
+
+
+    <!--fin de la <table>fichiers  -->
             </div>
 
         </div>
 
         <!--______________COLONNE 3________________ -->
-        <div id="colonne-3" class="CHOIX_DU_LAYOUT">
-            <!--***********!!!!!!  EXEMPLE DE CHAMP CCK INCLUS AVEC CONDITION !!!!!!!!************ -->
-            <?php if ($node->nom_du_champ[0]['view']): ?>
-            <div class="nom-css">
-                    <?php  print $node->nom_du_champ[0]['view']  ?>
-            </div>
-            <?php endif;?>
+        <div id="colonne-3" class="col3_layout_3_6_3 contenu-monde-pro">
+         <?php
+               global $theme_path;
+              include ($theme_path.'/includes/inc_region_col_3.php');
+              ?>
 
 
         </div>
