@@ -7,7 +7,7 @@
     <div class="node-inner">
         <!--______________ TITRE ________________ -->
  
-        <div id="colonne-1" class="col1_12">
+        <div id="colonne-1" class="col1_layout_max page-actualites">
             <?php if ($title): /*copier le titre dans la colonne desirée*/?>
             <h1 class="titre_actualites"><?php print $title; ?></h1>
             <?php endif; ?>

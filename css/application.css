@@ -4305,49 +4305,54 @@ body .conteneur .conteneur-flex #colonne-3.page-actualites {
 
 /*######-------- ||| BORDURES ||| --------######*/
 /*######-------- ||| STYLES ||| --------######*/
+/* line 33, ../sass/content-type-style/_page-actualites.scss */
+h1.titre_actualites {
+  color: #01ABCF;
+}
+
 /*--------------------------------------
 **** PAGE ACTU REDESIGN - AFFICHE ******
 _________________________________________*/
-/* line 39, ../sass/content-type-style/_page-actualites.scss */
+/* line 42, ../sass/content-type-style/_page-actualites.scss */
 #last-sortie .views-field-teaser span, #last-projets .views-field-teaser span, #last-innovation .views-field-teaser span, #last-rp .views-field-teaser span, #last-annonce .views-field-teaser span {
   font-size: small;
 }
-/* line 41, ../sass/content-type-style/_page-actualites.scss */
+/* line 44, ../sass/content-type-style/_page-actualites.scss */
 #last-sortie .views-field-title, #last-projets .views-field-title, #last-innovation .views-field-title, #last-rp .views-field-title, #last-annonce .views-field-title {
   color: black;
   font-style: italic;
   font-size: medium;
 }
 
-/* line 50, ../sass/content-type-style/_page-actualites.scss */
+/* line 53, ../sass/content-type-style/_page-actualites.scss */
 #last-sortie .views-field-nothing {
   color: #911381;
   font-weight: bold;
 }
 
-/* line 51, ../sass/content-type-style/_page-actualites.scss */
+/* line 54, ../sass/content-type-style/_page-actualites.scss */
 #last-sortie img {
   border: 0.1875em solid #911381;
 }
 
-/* line 56, ../sass/content-type-style/_page-actualites.scss */
+/* line 59, ../sass/content-type-style/_page-actualites.scss */
 #other-sortie {
   border: 0.1875em solid #911381;
 }
 
-/* line 57, ../sass/content-type-style/_page-actualites.scss */
+/* line 60, ../sass/content-type-style/_page-actualites.scss */
 #other-sortie a {
   color: #606070;
   font-size: 0.6875em;
   padding: 0 5px;
 }
 
-/* line 58, ../sass/content-type-style/_page-actualites.scss */
+/* line 61, ../sass/content-type-style/_page-actualites.scss */
 #other-sortie a:hover {
   color: #911381;
 }
 
-/* line 59, ../sass/content-type-style/_page-actualites.scss */
+/* line 62, ../sass/content-type-style/_page-actualites.scss */
 #other-sortie .view-footer a {
   background: #911381;
   color: white;
@@ -4357,40 +4362,40 @@ _________________________________________*/
   margin: 0 auto;
 }
 
-/* line 60, ../sass/content-type-style/_page-actualites.scss */
+/* line 63, ../sass/content-type-style/_page-actualites.scss */
 #other-sortie .view-footer a:hover {
   text-decoration: underline;
 }
 
-/* line 62, ../sass/content-type-style/_page-actualites.scss */
+/* line 65, ../sass/content-type-style/_page-actualites.scss */
 #last-projets .views-field-nothing {
   color: #E30078;
   font-weight: bold;
 }
 
-/* line 63, ../sass/content-type-style/_page-actualites.scss */
+/* line 66, ../sass/content-type-style/_page-actualites.scss */
 #last-projets img {
   border: 0.1875em solid #E30078;
 }
 
-/* line 66, ../sass/content-type-style/_page-actualites.scss */
+/* line 69, ../sass/content-type-style/_page-actualites.scss */
 #other-projets {
   border: 0.1875em solid #E30078;
 }
 
-/* line 67, ../sass/content-type-style/_page-actualites.scss */
+/* line 70, ../sass/content-type-style/_page-actualites.scss */
 #other-projets a {
   color: #606070;
   font-size: 0.6875em;
   padding: 0 5px;
 }
 
-/* line 68, ../sass/content-type-style/_page-actualites.scss */
+/* line 71, ../sass/content-type-style/_page-actualites.scss */
 #other-projets a:hover {
   color: #E30078;
 }
 
-/* line 69, ../sass/content-type-style/_page-actualites.scss */
+/* line 72, ../sass/content-type-style/_page-actualites.scss */
 #other-projets .view-footer a {
   background: #E30078;
   color: white;
@@ -4400,45 +4405,45 @@ _________________________________________*/
   margin: 0 auto;
 }
 
-/* line 70, ../sass/content-type-style/_page-actualites.scss */
+/* line 73, ../sass/content-type-style/_page-actualites.scss */
 #other-projets .view-footer a:hover {
   text-decoration: underline;
 }
 
-/* line 72, ../sass/content-type-style/_page-actualites.scss */
+/* line 75, ../sass/content-type-style/_page-actualites.scss */
 #last-innovation .views-field-nothing {
   color: #DE603A;
   font-weight: bold;
 }
 
-/* line 73, ../sass/content-type-style/_page-actualites.scss */
+/* line 76, ../sass/content-type-style/_page-actualites.scss */
 #last-innovation img {
   border: 0.1875em solid #DE603A;
 }
 
-/* line 76, ../sass/content-type-style/_page-actualites.scss */
+/* line 79, ../sass/content-type-style/_page-actualites.scss */
 #other-innovations {
   border: 0.1875em solid #DE603A;
 }
 
-/* line 77, ../sass/content-type-style/_page-actualites.scss */
+/* line 80, ../sass/content-type-style/_page-actualites.scss */
 #other-innovations ul li {
   list-style: outside;
 }
 
-/* line 78, ../sass/content-type-style/_page-actualites.scss */
+/* line 81, ../sass/content-type-style/_page-actualites.scss */
 #other-innovations a {
   color: #606070;
   font-size: 0.6875em;
   padding: 0 5px;
 }
 
-/* line 79, ../sass/content-type-style/_page-actualites.scss */
+/* line 82, ../sass/content-type-style/_page-actualites.scss */
 #other-innovations a:hover {
   color: #DE603A;
 }
 
-/* line 80, ../sass/content-type-style/_page-actualites.scss */
+/* line 83, ../sass/content-type-style/_page-actualites.scss */
 #other-innovations .view-footer a {
   background: #DE603A;
   color: white;
@@ -4448,45 +4453,45 @@ _________________________________________*/
   margin: 2px auto;
 }
 
-/* line 81, ../sass/content-type-style/_page-actualites.scss */
+/* line 84, ../sass/content-type-style/_page-actualites.scss */
 #other-innovations .view-footer a:hover {
   text-decoration: underline;
 }
 
-/* line 83, ../sass/content-type-style/_page-actualites.scss */
+/* line 86, ../sass/content-type-style/_page-actualites.scss */
 #last-rp .views-field-nothing {
   color: #ADC91F;
   font-weight: bold;
 }
 
-/* line 84, ../sass/content-type-style/_page-actualites.scss */
+/* line 87, ../sass/content-type-style/_page-actualites.scss */
 #last-rp img {
   border: 0.1875em solid #ADC91F;
 }
 
-/* line 87, ../sass/content-type-style/_page-actualites.scss */
+/* line 90, ../sass/content-type-style/_page-actualites.scss */
 #other-rp {
   border: 0.1875em solid #ADC91F;
 }
 
-/* line 88, ../sass/content-type-style/_page-actualites.scss */
+/* line 91, ../sass/content-type-style/_page-actualites.scss */
 #other-rp ul li {
   list-style: outside;
 }
 
-/* line 89, ../sass/content-type-style/_page-actualites.scss */
+/* line 92, ../sass/content-type-style/_page-actualites.scss */
 #other-rp a {
   color: #606070;
   font-size: 0.6875em;
   padding: 0 5px;
 }
 
-/* line 90, ../sass/content-type-style/_page-actualites.scss */
+/* line 93, ../sass/content-type-style/_page-actualites.scss */
 #other-rp a:hover {
   color: #ADC91F;
 }
 
-/* line 91, ../sass/content-type-style/_page-actualites.scss */
+/* line 94, ../sass/content-type-style/_page-actualites.scss */
 #other-rp .view-footer a {
   background: #ADC91F;
   color: white;
@@ -4496,45 +4501,45 @@ _________________________________________*/
   margin: 2px auto;
 }
 
-/* line 92, ../sass/content-type-style/_page-actualites.scss */
+/* line 95, ../sass/content-type-style/_page-actualites.scss */
 #other-rp .view-footer a:hover {
   text-decoration: underline;
 }
 
-/* line 94, ../sass/content-type-style/_page-actualites.scss */
+/* line 97, ../sass/content-type-style/_page-actualites.scss */
 #last-annonce .views-field-nothing {
   color: #01ABCF;
   font-weight: bold;
 }
 
-/* line 95, ../sass/content-type-style/_page-actualites.scss */
+/* line 98, ../sass/content-type-style/_page-actualites.scss */
 #last-annonce img {
   border: 0.1875em solid #01ABCF;
 }
 
-/* line 98, ../sass/content-type-style/_page-actualites.scss */
+/* line 101, ../sass/content-type-style/_page-actualites.scss */
 #other-annonce {
   border: 0.1875em solid #01ABCF;
 }
 
-/* line 99, ../sass/content-type-style/_page-actualites.scss */
+/* line 102, ../sass/content-type-style/_page-actualites.scss */
 #other-annonce ul li {
   list-style: outside;
 }
 
-/* line 100, ../sass/content-type-style/_page-actualites.scss */
+/* line 103, ../sass/content-type-style/_page-actualites.scss */
 #other-annonce a {
   color: #606070;
   font-size: 0.6875em;
   padding: 0 5px;
 }
 
-/* line 101, ../sass/content-type-style/_page-actualites.scss */
+/* line 104, ../sass/content-type-style/_page-actualites.scss */
 #other-annonce a:hover {
   color: #01ABCF;
 }
 
-/* line 102, ../sass/content-type-style/_page-actualites.scss */
+/* line 105, ../sass/content-type-style/_page-actualites.scss */
 #other-annonce .view-footer a {
   background: #01ABCF;
   color: white;
@@ -4544,13 +4549,13 @@ _________________________________________*/
   margin: 2px auto;
 }
 
-/* line 103, ../sass/content-type-style/_page-actualites.scss */
+/* line 106, ../sass/content-type-style/_page-actualites.scss */
 #other-annonce .view-footer a:hover {
   text-decoration: underline;
 }
 
 @media (max-width: 799px) {
-  /* line 107, ../sass/content-type-style/_page-actualites.scss */
+  /* line 110, ../sass/content-type-style/_page-actualites.scss */
   .views-field-field-illus-vdl-fid img {
     margin: 0 auto;
     display: block;
@@ -4558,7 +4563,7 @@ _________________________________________*/
 }
 
 /*RSS site PF*/
-/* line 111, ../sass/content-type-style/_page-actualites.scss */
+/* line 114, ../sass/content-type-style/_page-actualites.scss */
 #block-aggregator-feed-1 {
   border: 0.125em solid #ADC91F;
   background: #ECECED;
@@ -4568,22 +4573,22 @@ _________________________________________*/
   text-align: center;
 }
 
-/* line 112, ../sass/content-type-style/_page-actualites.scss */
+/* line 115, ../sass/content-type-style/_page-actualites.scss */
 #block-aggregator-feed-1 h3 {
   color: #E30078;
 }
 
-/* line 113, ../sass/content-type-style/_page-actualites.scss */
+/* line 116, ../sass/content-type-style/_page-actualites.scss */
 #block-aggregator-feed-1 a {
   color: #606070;
 }
 
-/* line 114, ../sass/content-type-style/_page-actualites.scss */
+/* line 117, ../sass/content-type-style/_page-actualites.scss */
 #block-aggregator-feed-1 a:hover {
   color: #01ABCF;
 }
 
-/* line 116, ../sass/content-type-style/_page-actualites.scss */
+/* line 119, ../sass/content-type-style/_page-actualites.scss */
 #block-aggregator-feed-1 li {
   list-style: none;
 }

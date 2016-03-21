@@ -37,8 +37,8 @@ if (!empty($view->result)) {
   // S'il y a un resultat on récupère le titre (ajoute tag h3, et le contenu)
   $output = '<div id="other-sortie"><h3 class="CLASS_NAME">'.$view->get_title().'</h3>' .$view->preview($viewdisplay_ag5,$args_ag5).'</div>';
 //Debug
-drupal_set_message('$Footer Views3: '.$FooterV3,'status');
-drupal_set_message('$EmptyTextVue Views3 : '.$emptyTextVue_v3,'status');
+//drupal_set_message('$Footer Views3: '.$FooterV3,'status');
+//drupal_set_message('$EmptyTextVue Views3 : '.$emptyTextVue_v3,'status');
   //Affiche la vue si contenu
 print $output;
 }
