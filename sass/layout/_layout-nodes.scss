@@ -10,7 +10,7 @@ Ne s'applique que si présence d'un node-TYPE.tpl.php
 /*//////////////// 1 COLONNE PLEINE LARGEUR \\\\\\\\\\\\\\\\*/
 body .conteneur{
     .col1_layout_max{
-        @include span($mobilecol);
+        //@include span($mobilecol);
         @include clearfix;
         @include breakpoint ($mobile){
             @include break;
@@ -367,6 +367,22 @@ body .conteneur{
            @include isolate(0%);//permet d'isoler la colonne du flux sans qu'elle en sorte
            //, fixe le margin-left, possible aussi avec option no-gutters
         
+        }
+    }
+}
+/*//////////////// 5 COLONNES \\\\\\\\\\\\\\\\*/
+//technique inside-static
+body .conteneur{
+    .layout_5col{
+        @include span(5 inside-static);
+    }
+}
+@include with-layout(inside-static){
+    body .conteneur{
+        .layout_5col_is{
+            @include breakpoint ($desktop){
+                @include span($desktopcol/5 of $desktopcol);
+            }
         }
     }
 }
