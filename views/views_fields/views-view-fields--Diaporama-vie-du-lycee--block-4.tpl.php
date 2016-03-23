@@ -46,6 +46,8 @@
   
 <?php //dpm($fields); ?>
 
+<?php dpm(get_defined_vars());?>
+
   <?php print $field->wrapper_suffix; ?>
 <?php endforeach; ?>
 

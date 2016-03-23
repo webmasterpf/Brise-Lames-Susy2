@@ -28,15 +28,23 @@
         padding: 0 0 0 0.3em;
         color: #C0c0c0;
         text-decoration: none;
-        background: chocolate;//supprimer en PROD
+//        background: chocolate;//supprimer en PROD
         a {
-            color: #FFF;
+            color: $gris-anthracite;
             text-decoration: none;
               font-size: small;
             &:hover {
                 color: #000;
                 text-decoration: underline;
             }
+        }
+        span.menu-item-container{
+            color: $orange-fonce;
+            text-decoration: none;
+              font-size: small;
+              display: initial;
+              text-transform: capitalize;
+              font-weight: normal;
         }
     }
 

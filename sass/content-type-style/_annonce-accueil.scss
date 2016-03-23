@@ -1,0 +1,48 @@
+/*-------------------------------------|
+|       CONTENU CUSTOM               |
+|               NODE.TPL                     |
+|        ANNONCE ACCUEIL              |
+|--------------------------------------*/
+
+//@include breakpoint ($mobile){}
+//@include breakpoint ($desktop){}
+//@include breakpoint ($tablet){}
+//@include breakpoint(($desktop,$tablet)){}
+
+/*######-------- ||| ORDRE FLEXBOX ||| --------######*/
+body .conteneur .conteneur-flex{
+    #colonne-1.CLASS_NAME{order:1;}
+    #colonne-2.CLASS_NAME{order:2;}
+    #colonne-3.CLASS_NAME{order:3;}
+    @include breakpoint ($desktop){}
+}
+
+/*######-------- ||| BORDURES ||| --------######*/
+body .conteneur .conteneur-flex{
+   @include breakpoint(($desktop,$tablet)){
+        }
+    
+}
+/*######-------- ||| STYLE ||| --------######*/
+h1.titre-annonce{
+    color: $bleu-turquoise;
+}
+.annonce-accueil{
+    p{
+        padding: 0;
+        margin: 0;
+    }
+    a{
+        color:$violet;
+        text-decoration: none;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+    img{
+        @include adaptable-img;
+        float: right;
+        padding: 0.3em;
+        @include ombrage-bloc;
+    }
+}
