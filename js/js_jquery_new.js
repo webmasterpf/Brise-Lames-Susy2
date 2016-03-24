@@ -71,9 +71,10 @@
     //Pour le BxSlider
     jQuery(window).load(function (){
         console.log('Chargement de BxSlider');
-  $('.bxslider').bxSlider();
-   pagerCustom: '#bx-pager';
-    captions: true;
-    mode: 'fade'
+  $('.bxslider').bxSlider({
+  mode: 'fade',
+  adaptiveHeight: true,
+  captions: true
+});
 });
 })(jQuery);

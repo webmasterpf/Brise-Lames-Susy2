@@ -791,11 +791,10 @@ h6, .h6 {
     padding: 0 0 0 0.3em;
     color: #C0c0c0;
     text-decoration: none;
-    background: chocolate;
   }
   /* line 32, ../sass/global/_style.scss */
   .ariane .breadcrumb a {
-    color: #FFF;
+    color: #606070;
     text-decoration: none;
     font-size: small;
   }
@@ -803,6 +802,15 @@ h6, .h6 {
   .ariane .breadcrumb a:hover {
     color: #000;
     text-decoration: underline;
+  }
+  /* line 41, ../sass/global/_style.scss */
+  .ariane .breadcrumb span.menu-item-container {
+    color: #DE603A;
+    text-decoration: none;
+    font-size: small;
+    display: initial;
+    text-transform: capitalize;
+    font-weight: normal;
   }
 }
 
@@ -4806,14 +4814,14 @@ body .conteneur #colonne-3.contenu-vdl {
   text-indent: 0.1875em;
 }
 /* line 72, ../sass/content-type-style/_contenu-vdl.scss */
-.contenu-vdl a {
+.contenu-vdl a:not(.flexslider):not(.bxslider):not(.vdl-galerie-image) {
   color: #01ABCF;
   text-decoration: none;
   padding: 0.125em;
   text-indent: 0.1875em;
 }
 /* line 77, ../sass/content-type-style/_contenu-vdl.scss */
-.contenu-vdl a:hover {
+.contenu-vdl a:not(.flexslider):not(.bxslider):not(.vdl-galerie-image):hover {
   color: white;
   background: #01ABCF;
 }
@@ -5378,6 +5386,56 @@ h1.titre-erreur {
 /* line 40, ../sass/content-type-style/_page-erreur.scss */
 .page-erreur a:hover {
   text-decoration: underline;
+}
+
+/*-------------------------------------|
+|       CONTENU CUSTOM               |
+|               NODE.TPL                     |
+|        ANNONCE ACCUEIL              |
+|--------------------------------------*/
+/*######-------- ||| ORDRE FLEXBOX ||| --------######*/
+/* line 14, ../sass/content-type-style/_annonce-accueil.scss */
+body .conteneur .conteneur-flex #colonne-1.CLASS_NAME {
+  order: 1;
+}
+/* line 15, ../sass/content-type-style/_annonce-accueil.scss */
+body .conteneur .conteneur-flex #colonne-2.CLASS_NAME {
+  order: 2;
+}
+/* line 16, ../sass/content-type-style/_annonce-accueil.scss */
+body .conteneur .conteneur-flex #colonne-3.CLASS_NAME {
+  order: 3;
+}
+
+/*######-------- ||| BORDURES ||| --------######*/
+/*######-------- ||| STYLE ||| --------######*/
+/* line 27, ../sass/content-type-style/_annonce-accueil.scss */
+h1.titre-annonce {
+  color: #01ABCF;
+}
+
+/* line 31, ../sass/content-type-style/_annonce-accueil.scss */
+.annonce-accueil p {
+  padding: 0;
+  margin: 0;
+}
+/* line 35, ../sass/content-type-style/_annonce-accueil.scss */
+.annonce-accueil a {
+  color: #911381;
+  text-decoration: none;
+}
+/* line 38, ../sass/content-type-style/_annonce-accueil.scss */
+.annonce-accueil a:hover {
+  text-decoration: underline;
+}
+/* line 42, ../sass/content-type-style/_annonce-accueil.scss */
+.annonce-accueil img {
+  max-width: 100%;
+  float: right;
+  padding: 0.3em;
+  -moz-box-shadow: 2px 2px 5px #aaa;
+  -webkit-box-shadow: 2px 2px 5px #aaa;
+  box-shadow: 2px 2px 5px #555;
 }
 
 /*
@@ -6348,11 +6406,11 @@ Indiquer les classes ou les IDs des enveloppes des galeries
   .vdl-galerie-image .flexslider .slides img, .vdl-galerie-image .flexslider-thumbs .slides img, .galerie-resto .flexslider .slides img, .galerie-resto .flexslider-thumbs .slides img {
     border: 0.3em solid #ECECED;
   }
-  /* line 106, ../sass/galeries/_flexslider-cyrano.scss */
-  .vdl-galerie-image .flexslider .slides > li, .vdl-galerie-image .flexslider-thumbs .slides > li, .galerie-resto .flexslider .slides > li, .galerie-resto .flexslider-thumbs .slides > li {
+  /* line 107, ../sass/galeries/_flexslider-cyrano.scss */
+  .vdl-galerie-image .flexslider .slides > li, .vdl-galerie-image .flexslider .slides img, .vdl-galerie-image .flexslider-thumbs .slides > li, .vdl-galerie-image .flexslider-thumbs .slides img, .galerie-resto .flexslider .slides > li, .galerie-resto .flexslider .slides img, .galerie-resto .flexslider-thumbs .slides > li, .galerie-resto .flexslider-thumbs .slides img {
     max-height: 33em;
   }
-  /* line 111, ../sass/galeries/_flexslider-cyrano.scss */
+  /* line 112, ../sass/galeries/_flexslider-cyrano.scss */
   .vdl-galerie-image .flexslider *.flex-caption, .vdl-galerie-image .flexslider-thumbs *.flex-caption, .galerie-resto .flexslider *.flex-caption, .galerie-resto .flexslider-thumbs *.flex-caption {
     font-size: small;
   }
