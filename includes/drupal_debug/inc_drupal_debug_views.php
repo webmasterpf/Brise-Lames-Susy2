@@ -18,16 +18,18 @@ print var_dump($row);
 //print var_dump($field);
 
 // Debug avec le module Devel  !!!!
-dsm(get_defined_vars());
+//dsm(get_defined_vars());
+//dpm(get_defined_vars());
 
 // Le contenu de la variable $fields (au niveau d'une tpl de fields)
-dsm(array_keys($fields));
+//dsm(array_keys($fields));
 //dsm(array_keys($field));
-dsm(array_keys($row));
+//dsm(array_keys($row));
+// dpm($fields);
 
- dpm($row->field_field_fields);
- drupal_set_message($row['field_galerie_image_vdl_fid']);
+ //dpm($row->field_field_fields);
+ //drupal_set_message($row['field_galerie_image_vdl_fid']);
 // Le contenu de la variable $view (contenu de la vue au niveau d'un tpl de style)
-dsm($view);
+//dsm($view);
 
          ?>

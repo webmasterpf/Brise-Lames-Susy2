@@ -102,8 +102,9 @@ Indiquer les classes ou les IDs des enveloppes des galeries
             .slides{
                 img{
                     border: 0.3em solid $gris-clair;
+                    
                 }
-                > li{
+                > li, img{
                     max-height: 33em;//fixe le problème du vide entre image et pager dû à l'overlay
                 }
             }

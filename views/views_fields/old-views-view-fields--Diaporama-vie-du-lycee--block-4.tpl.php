@@ -24,7 +24,13 @@
  */
 ?>
    
+<?php foreach ($fields as $id => $field): ?>
+  <?php if (!empty($field->separator)): ?>
+    <?php print $field->separator; ?>
+  <?php endif; ?>
 
+  <?php print $field->wrapper_prefix; ?>
+    <?php print $field->label_html; ?>
 <!-- TEMPLATE DE VIEWS FIELDS CUSTOM BX SLIDER -->
 <?php 
 //création des variables utiles pour la mise en forme de la sortie de la vue
@@ -37,18 +43,12 @@
     
     print '<ul class="bxslider"><li>'.$fields['field_galerie_image_vdl_fid_value'].'</li> </ul>';    
     ?>
-  <ul class="bxslider">
-    <?php foreach($items as $item): ?>
-      <li><?php print $item['field_galerie_image_vdl_fid_value']; ?></li>
-    <?php endforeach; ?>
-  </ul>
-  
-    <div id="bxpager">
-      <?php foreach($items as $key => $item): ?>
-        <a data-slide-index="<?php print $key ?>" href=""><?php print $fields['field_galerie_image_vdl_data_value']; ?></a>
-      <?php endforeach; ?>
-    </div>
-  
+
+    
+
+
+  <?php print $field->wrapper_suffix; ?>
+<?php endforeach; ?>
 
 <?php
 global $theme_path;
