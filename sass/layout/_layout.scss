@@ -99,7 +99,10 @@ aside.content_top{
     background-color: #999;
     margin: 0 auto;
     padding: em(5px);  
-        }
+    @include susy-breakpoint ($mobile){
+        padding: 0.5em 0 0 0 ;
+    }
+            }
 //Images RWD pour nodes
 .node-inner
 {
