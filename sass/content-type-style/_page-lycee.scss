@@ -38,7 +38,8 @@ body .conteneur {
         color: $violet;
     }
     p{
-        //line-height: 1em;
+        line-height: normal;
+        margin: 0;
     }
     a{
         color: $bleu-turquoise;
