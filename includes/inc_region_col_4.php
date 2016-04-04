@@ -10,5 +10,3 @@
 if ($node_col_4): ?>
     <?php  print $node_col_4; ?>
 <?php endif; ?>
-<h3>La colonne 4 existe !</h3>
-

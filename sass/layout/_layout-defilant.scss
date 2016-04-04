@@ -11,8 +11,11 @@
 
 .annonce-container{}
 /*-- DEFILANT ACCUEIL --*/
-
-aside.annonce-container .annonce
+aside.content_top{
+    text-align: center;
+}
+aside.annonce-container .annonce,
+aside .annonce-container .annonce
 {
 // max-width: container();
  
@@ -33,6 +36,9 @@ aside.annonce-container .annonce
   p, h2, h2 a{
       margin: 0;
       padding: 0;
+  }
+  p{
+      font-size: small;
   }
   img{
       @include adaptable-img;

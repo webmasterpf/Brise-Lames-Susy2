@@ -9,4 +9,3 @@
 if ($node_col_2): ?>
     <?php  print $node_col_2; ?>
 <?php endif; ?>
-<h3>La colonne 2 existe !</h3>

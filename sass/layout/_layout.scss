@@ -36,7 +36,7 @@ body .conteneur{
     //Approche mobile-first,réglage pour mobile
     @include container($susy);// largeur stricte
     @debug susy-get(columns);
-    @include show-grid(overlay);
+    //@include show-grid(overlay); //affiche bouton des colonnes en dev
     
     // This is the default clearfix from Compass. You can opt to use other clearfix methods
   

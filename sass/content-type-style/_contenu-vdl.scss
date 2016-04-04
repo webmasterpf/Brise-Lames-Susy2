@@ -68,15 +68,18 @@ body .conteneur {
         color: #94127F;
         padding: em(2px);
         text-indent: em(3px);
-    }
-    a:not(.flexslider):not(.bxslider):not(.vdl-galerie-image){
-        color: $bleu-turquoise;
-        text-decoration: none;
-        padding: em(2px);
-        text-indent: em(3px);
-        &:hover{
-            color: white;
-            background: $bleu-turquoise;
+    }   
+    a{
+         color: $bleu-turquoise;
+            text-decoration: none;
+            padding: em(2px);
+            text-indent: em(3px);
+        &:not(.flexslider),&:not(.bxslider),&:not(.vdl-galerie-image){
+            text-indent: none;
+            &:hover{
+                color: white;
+                background: $bleu-turquoise;
+            }
         }
     }
     strong{

@@ -34,7 +34,11 @@ body .conteneur {
     border-left: 1px solid $bleu-turquoise;
     padding: 5px;
 }
-
+.page-archives{
+    h1{
+        color: $bleu-turquoise;
+    }
+}
 
 /*Liste des archives*/
 

@@ -119,8 +119,11 @@ function cyranod6_bl_susy2_preprocess_page(&$vars){
     drupal_add_js(drupal_get_path('theme', 'cyranod6_bl_susy2') . '/js/js_jquery_new.js', 'theme');
     //  mise à disposition des 2 versions de jQuery
     drupal_add_js(drupal_get_path('theme', 'cyranod6_bl_susy2') . '/js/jquery_exit.js', 'theme');
+   
 
     //die('les JS sont chargés');
+    // We need to rebuild the scripts variable with the new script included.
+    $vars['scripts'] = drupal_get_js();
 }
 ?>
 <?php

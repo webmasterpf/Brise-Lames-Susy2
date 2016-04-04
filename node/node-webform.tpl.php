@@ -12,7 +12,7 @@
       
 <div id="colonne-1" class="col1_layout_3_6_3 contact">
      <?php if ($title): /*insertion du titre de la page et style differencié*/?>
-     <h1 class="titre_pl"><?php print $title; ?></h1>
+     <h1 class="titre_vdl"><?php print $title; ?></h1>
 
     <?php endif; ?>
     
