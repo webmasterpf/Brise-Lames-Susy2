@@ -2598,9 +2598,15 @@ aside.content_top {
 #views_slideshow_cycle_main_liste_annonce_accueil-block_1 {
   display: block;
   max-width: 100%;
+  margin: 0 auto;
 }
 
-/* line 21, ../sass/layout/_layout-defilant.scss */
+/* line 22, ../sass/layout/_layout-defilant.scss */
+.views_slideshow_cycle_teaser_section {
+  margin: 0 auto;
+}
+
+/* line 25, ../sass/layout/_layout-defilant.scss */
 aside.annonce-container .annonce,
 aside .annonce-container .annonce {
   color: #E30078;
@@ -2610,7 +2616,7 @@ aside .annonce-container .annonce {
   font-size: 1em;
   line-height: 1.5em;
 }
-/* line 31, ../sass/layout/_layout-defilant.scss */
+/* line 35, ../sass/layout/_layout-defilant.scss */
 aside.annonce-container .annonce a,
 aside .annonce-container .annonce a {
   color: #911381;
@@ -2618,12 +2624,12 @@ aside .annonce-container .annonce a {
   font-weight: bold;
   text-transform: capitalize;
 }
-/* line 36, ../sass/layout/_layout-defilant.scss */
+/* line 40, ../sass/layout/_layout-defilant.scss */
 aside.annonce-container .annonce a:hover,
 aside .annonce-container .annonce a:hover {
   text-decoration: underline;
 }
-/* line 40, ../sass/layout/_layout-defilant.scss */
+/* line 44, ../sass/layout/_layout-defilant.scss */
 aside.annonce-container .annonce p, aside.annonce-container .annonce h2, aside.annonce-container .annonce h2 a,
 aside .annonce-container .annonce p,
 aside .annonce-container .annonce h2,
@@ -2631,25 +2637,25 @@ aside .annonce-container .annonce h2 a {
   margin: 0;
   padding: 0;
 }
-/* line 44, ../sass/layout/_layout-defilant.scss */
+/* line 48, ../sass/layout/_layout-defilant.scss */
 aside.annonce-container .annonce p,
 aside .annonce-container .annonce p {
   font-size: small;
 }
-/* line 47, ../sass/layout/_layout-defilant.scss */
+/* line 51, ../sass/layout/_layout-defilant.scss */
 aside.annonce-container .annonce img,
 aside .annonce-container .annonce img {
   max-width: 100%;
 }
 @media (min-width: 800px) and (max-width: 989px) {
-  /* line 21, ../sass/layout/_layout-defilant.scss */
+  /* line 25, ../sass/layout/_layout-defilant.scss */
   aside.annonce-container .annonce,
   aside .annonce-container .annonce {
     max-width: 40.2em;
   }
 }
 @media (min-width: 990px) {
-  /* line 21, ../sass/layout/_layout-defilant.scss */
+  /* line 25, ../sass/layout/_layout-defilant.scss */
   aside.annonce-container .annonce,
   aside .annonce-container .annonce {
     max-width: 60.8em;
