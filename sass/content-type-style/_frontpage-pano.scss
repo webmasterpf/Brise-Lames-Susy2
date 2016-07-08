@@ -55,9 +55,11 @@ body .conteneur{
                 text-decoration: underline;
             }
         }
-        iframe{
-            width: 98%; margin: 0 auto;
-        }
+       iframe{
+                max-width: 100%;
+                padding: em(1px);
+                border: em(1px) solid $violet;
+            }
         h3.block-title{
             font-size: em(18px);
             color: $orange-fonce;
