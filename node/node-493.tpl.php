@@ -45,12 +45,10 @@
             <span class="submitted"><?php print $submitted; ?></span>
             <?php endif; ?>
 
-                 <?php if ($node->field_fichier_attache[0]['view']): ?>
-            <div class="menu-resto">
-                <h3>Les Formules du Restaurant</h3>
-                    <?php  print $node->field_fichier_attache[0]['view']  ?>
-            </div>
-            <?php endif;?>
+              <?php
+        global $theme_path;
+              include ($theme_path.'/includes/inc_docs_restaurant.php');
+              ?>
                    <?php
         global $theme_path;
               include ($theme_path.'/includes/inc_region_col_2.php');

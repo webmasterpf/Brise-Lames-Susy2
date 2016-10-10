@@ -3859,58 +3859,66 @@ body .conteneur .conteneur-flex #colonne-3.page-lycee {
   color: #01ABCF;
 }
 /* line 69, ../sass/content-type-style/_page-lycee.scss */
+.page-lycee .menu-resto ul {
+  list-style: none;
+}
+/* line 72, ../sass/content-type-style/_page-lycee.scss */
+.page-lycee .menu-resto li {
+  list-style: none;
+}
+/* line 75, ../sass/content-type-style/_page-lycee.scss */
 .page-lycee .menu-resto .filefield-icon {
   display: none;
 }
-/* line 73, ../sass/content-type-style/_page-lycee.scss */
+/* line 79, ../sass/content-type-style/_page-lycee.scss */
 .page-lycee .liste-filtre ul {
   list-style: circle outside none;
   margin: 0 0 0 15px;
 }
-/* line 77, ../sass/content-type-style/_page-lycee.scss */
+/* line 83, ../sass/content-type-style/_page-lycee.scss */
 .page-lycee .liste-filtre ul li {
   list-style: inherit;
 }
-/* line 80, ../sass/content-type-style/_page-lycee.scss */
+/* line 86, ../sass/content-type-style/_page-lycee.scss */
 .page-lycee .liste-filtre .views-field-title a {
   color: #01ABCF;
   font-size: small;
 }
-/* line 84, ../sass/content-type-style/_page-lycee.scss */
+/* line 90, ../sass/content-type-style/_page-lycee.scss */
 .page-lycee .liste-filtre p {
   color: black;
   text-transform: lowercase;
 }
-/* line 88, ../sass/content-type-style/_page-lycee.scss */
+/* line 94, ../sass/content-type-style/_page-lycee.scss */
 .page-lycee .liste-filtre h3 {
   font-size: 0.75em;
   margin: 0;
   padding: 0;
 }
 
-/* line 98, ../sass/content-type-style/_page-lycee.scss */
+/* line 104, ../sass/content-type-style/_page-lycee.scss */
 #colonne-2.page-lycee p {
   margin: 0;
 }
-/* line 101, ../sass/content-type-style/_page-lycee.scss */
+/* line 107, ../sass/content-type-style/_page-lycee.scss */
 #colonne-2.page-lycee h3 {
   text-align: center;
   color: #911381;
   font-size: x-large;
   margin: 0.27em;
 }
-/* line 102, ../sass/content-type-style/_page-lycee.scss */
+/* line 108, ../sass/content-type-style/_page-lycee.scss */
 #colonne-2.page-lycee iframe {
   max-width: 100%;
   display: block;
   margin: 0 auto;
 }
-/* line 107, ../sass/content-type-style/_page-lycee.scss */
+/* line 113, ../sass/content-type-style/_page-lycee.scss */
 #colonne-2.page-lycee .node_col_2 img {
   display: block;
   margin: 0 auto;
 }
-/* line 111, ../sass/content-type-style/_page-lycee.scss */
+/* line 117, ../sass/content-type-style/_page-lycee.scss */
 #colonne-2.page-lycee .menu-resto h3 {
   color: #01ABCF;
 }
